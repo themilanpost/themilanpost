@@ -1,0 +1,34 @@
+---
+interface Props {
+  embedUrl: string;
+  title: string;
+}
+
+const { embedUrl, title } = Astro.props;
+---
+
+<div
+  class="google-maps-collection relative z-0 overflow-hidden rounded-lg border border-border bg-surface"
+  data-click-embed
+  data-embed-src={embedUrl}
+  data-embed-title={title}
+  data-embed-class="h-[min(70vh,560px)] w-full border-0"
+  data-embed-referrer="no-referrer-when-downgrade"
+>
+  <div
+    class="flex h-[min(70vh,560px)] flex-col items-center justify-center gap-4 bg-surface px-6 text-center"
+    data-click-embed-placeholder
+  >
+    <p class="max-w-md text-sm text-text-muted leading-relaxed">
+      Accept optional embeds once (banner) to load Google Maps automatically, or load this map now.
+      See <a href="/privacy" class="font-semibold text-primary hover:text-primary-light">Privacy</a>.
+    </p>
+    <button
+      type="button"
+      class="inline-flex min-h-[44px] items-center justify-center rounded-md bg-accent px-5 py-2.5 text-sm font-bold text-accent-fg transition-opacity hover:opacity-90"
+      data-click-embed-load
+    >
+      Load Google Map
+    </button>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import GlossarySections from '../../components/GlossarySections.astro';
+import { livingGlossaryCategories } from '../../config/living-glossary';
+import { paperworkGlossaryPath } from '../../config/paperwork-glossary';
+import { livingHub } from '../../config/living-hubs';
+
+const pageTitle = 'Living in Milan glossary';
+const description =
+  'Everyday Milan terms: fountains, transport, markets, waste, culture, and local services, explained in plain English.';
+---
+
+<BaseLayout title={pageTitle} description={description}>
+  <Header slot="header" />
+
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-site px-4 sm:px-6">
+      <nav aria-label="Breadcrumb" class="mb-4 text-sm text-text-muted">
+        <ol class="flex flex-wrap items-center gap-1.5">
+          <li><a href="/" class="transition-colors hover:text-primary">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li>
+            <a href="/living-in-milan" class="transition-colors hover:text-primary">{livingHub.title}</a>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page" class="text-text">Glossary</li>
+        </ol>
+      </nav>
+
+      <p class="text-topper font-bold uppercase tracking-widest text-primary">Living in Milan</p>
+      <h1 class="mt-3 max-w-3xl font-heading text-h1 font-semibold text-text">{pageTitle}</h1>
+      <p class="mt-4 max-w-2xl text-lead leading-relaxed text-text-muted">
+        Local names and services you will see on maps, street signs, and utility sites (not the bureaucracy covered in
+        our{' '}
+        <a href={paperworkGlossaryPath} class="font-semibold text-primary hover:text-primary-light">
+          paperwork glossary
+        </a>
+        ).
+      </p>
+
+      <GlossarySections categories={livingGlossaryCategories} />
+
+      <aside class="mt-14 rounded-lg border border-border bg-surface p-6">
+        <h2 class="font-heading text-lg font-semibold text-text">See also</h2>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li>
+            <a href="/living-in-milan" class="font-semibold text-primary hover:text-primary-light">
+              {livingHub.title}
+            </a>
+           : everyday guides
+          </li>
+          <li>
+            <a href="/living-in-milan/maps" class="font-semibold text-primary hover:text-primary-light">
+              Milan maps
+            </a>
+           : fountains, transport, markets, pharmacies, recycling
+          </li>
+          <li>
+            <a href="/living-in-milan/markets" class="font-semibold text-primary hover:text-primary-light">
+              Weekly street markets
+            </a>
+           : filter by day and municipio
+          </li>
+          <li>
+            <a href="/living-in-milan/draghi-verdi" class="font-semibold text-primary hover:text-primary-light">
+              Draghi Verdi guide
+            </a>
+          </li>
+          <li>
+            <a href={paperworkGlossaryPath} class="font-semibold text-primary hover:text-primary-light">
+              Paperwork glossary
+            </a>
+           : permesso, residenza, TARI, CIE, and admin terms
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

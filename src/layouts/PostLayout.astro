@@ -1,0 +1,104 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTA from '../components/CTA.astro';
+import GuideRelatedLinks from '../components/GuideRelatedLinks.astro';
+import { brand } from '../config/brand';
+
+interface Props {
+  title: string;
+  description: string;
+  date: Date;
+  author?: string;
+  articleSlug?: string;
+}
+
+const { title, description, date, author = 'Team', articleSlug } = Astro.props;
+
+const formattedDate = date.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? brand.url).href;
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  datePublished: date.toISOString(),
+  author: {
+    '@type': 'Person',
+    name: author,
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: brand.name,
+    url: brand.url,
+  },
+  mainEntityOfPage: pageUrl,
+  image: new URL('/og-image.png', Astro.site ?? brand.url).href,
+};
+---
+
+<BaseLayout title={title} description={description} ogType="article" schema={articleSchema}>
+  <Header slot="header" />
+
+  <!-- Post hero -->
+  <section class="bg-primary py-14 sm:py-16 lg:py-20">
+    <div class="mx-auto max-w-article px-4 sm:px-6">
+      <nav aria-label="Breadcrumb" class="mb-4">
+        <ol class="flex items-center gap-1.5 text-sm text-primary-fg/60">
+          <li><a href="/" class="transition-colors hover:text-primary-fg">Home</a></li>
+          <li class="flex items-center gap-1.5">
+            <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            <a href="/guides" class="transition-colors hover:text-primary-fg">Guides</a>
+          </li>
+          <li class="flex items-center gap-1.5">
+            <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+            <span aria-current="page" class="text-primary-fg">{title}</span>
+          </li>
+        </ol>
+      </nav>
+
+      <h1 class="font-heading text-h1 font-bold uppercase text-primary-fg">{title}</h1>
+      <div class="mt-3 flex items-center gap-3 text-sm text-primary-fg/70">
+        <span>{author}</span>
+        <span aria-hidden="true">&bull;</span>
+        <time datetime={date.toISOString()}>{formattedDate}</time>
+      </div>
+    </div>
+  </section>
+
+  <!-- Post content -->
+  <section class="py-section">
+    <div class="mx-auto max-w-article px-4 sm:px-6">
+      <article class="prose-article prose prose-lg max-w-none prose-headings:font-heading prose-headings:uppercase prose-a:text-primary-light hover:prose-a:text-primary">
+        <slot />
+        {articleSlug && <GuideRelatedLinks articleSlug={articleSlug} />}
+      </article>
+
+      <div class="mt-10 border-t border-border pt-6">
+        <a
+          href="/guides"
+          class="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-light"
+        >
+          <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+          </svg>
+          Back to Guides
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+
+  <Footer slot="footer" />
+</BaseLayout>

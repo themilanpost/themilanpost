@@ -1,0 +1,299 @@
+---
+import { MARKET_DAYS } from '../lib/weekly-markets-data';
+
+interface Props {
+  geojson: GeoJSON.FeatureCollection;
+  mapId?: string;
+}
+
+const { geojson, mapId = 'weekly-markets-map' } = Astro.props;
+const listId = `${mapId}-list`;
+---
+
+<div class="weekly-markets-explorer space-y-5" data-explorer-id={mapId}>
+  <div class="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-end sm:justify-between">
+    <div>
+      <p class="text-sm font-semibold text-text" id={`${mapId}-day-label`}>Day</p>
+      <div class="mt-2 flex flex-wrap gap-2" role="group" aria-labelledby={`${mapId}-day-label`}>
+        {
+          MARKET_DAYS.map(({ key, label }) => (
+            <button
+              type="button"
+              class="market-day-btn rounded-sm border border-border bg-surface px-3 py-1.5 text-sm font-semibold text-text transition-colors hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              data-day={key}
+            >
+              {label}
+            </button>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="w-full sm:w-auto sm:min-w-[12rem]">
+      <label for={`${mapId}-municipio`} class="text-sm font-semibold text-text">
+        Municipio
+      </label>
+      <select
+        id={`${mapId}-municipio`}
+        class="mt-2 w-full rounded-sm border border-border bg-background px-3 py-2 text-sm text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+      >
+        <option value="">All municipi</option>
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((n) => (
+          <option value={String(n)}>{`Municipio ${n}`}</option>
+        ))}
+      </select>
+    </div>
+  </div>
+
+  <p class="text-sm text-text-muted">
+    <strong id={`${mapId}-count`}>-</strong>
+    <span id={`${mapId}-count-label`}> markets</span>
+    <span id={`${mapId}-filter-hint`} class="ml-1" />
+  </p>
+
+  <div class="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,320px)_1fr]">
+    <div
+      id={listId}
+      class="max-h-[min(70vh,560px)] overflow-y-auto rounded-lg border border-border bg-surface"
+      role="list"
+      aria-label="Markets matching filters"
+    ></div>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <div
+      id={mapId}
+      class="geojson-map relative z-0 h-[min(70vh,560px)] w-full overflow-hidden rounded-lg border border-border bg-surface lg:min-h-[420px]"
+      role="region"
+      aria-label="Weekly markets map filtered by day and municipio"
+    ></div>
+  </div>
+</div>
+
+<script
+  is:inline
+  define:vars={{ geojson, mapId, listId, marketDays: MARKET_DAYS }}
+>
+  (function initWeeklyMarketsExplorer() {
+    const mapEl = document.getElementById(mapId);
+    const listEl = document.getElementById(listId);
+    const countEl = document.getElementById(`${mapId}-count`);
+    const countLabelEl = document.getElementById(`${mapId}-count-label`);
+    const filterHintEl = document.getElementById(`${mapId}-filter-hint`);
+    const municipioSelect = document.getElementById(`${mapId}-municipio`);
+    const dayButtons = document.querySelectorAll(`[data-explorer-id="${mapId}"] .market-day-btn`);
+
+    if (!mapEl || !listEl || mapEl.dataset.mapInit === 'true') return;
+
+    const DAY_BY_JS = Object.fromEntries(marketDays.map((d) => [d.jsDay, d.key]));
+    const POLYGON_COLOR = '#fb8500';
+    const POLYGON_BORDER = '#e85d04';
+
+    let map;
+    let layerGroup;
+    let layerById = new Map();
+    let selectedId = null;
+    let activeDay = DAY_BY_JS[new Date().getDay()] || 'LUNEDI';
+    let activeMunicipio = '';
+
+    function openOnDay(props, dayKey) {
+      const flag = props[dayKey];
+      return flag === 'x' || flag === 'X';
+    }
+
+    function municipioOf(props) {
+      return props.ZD != null && props.ZD !== '' ? String(props.ZD) : '';
+    }
+
+    function displayName(props) {
+      const name = props.MERCATO ?? props['nome MSS'];
+      if (typeof name === 'string' && name.trim()) {
+        return name.replace(/_/g, ' ').replace(/\b\w/g, (char) => char.toUpperCase());
+      }
+      return 'Market';
+    }
+
+    function gmapsLink(lat, lng) {
+      if (lat == null || lng == null) return '';
+      return `<a href="https://www.google.com/maps/search/?api=1&query=${lat},${lng}" target="_blank" rel="noopener noreferrer" class="text-primary font-semibold">Open in Google Maps</a>`;
+    }
+
+    function popupHtml(feature, layer) {
+      const p = feature.properties || {};
+      const center = layer?.getBounds?.().getCenter?.();
+      const lat = center?.lat;
+      const lng = center?.lng;
+      const stalls =
+        p.POSTEGGI_A != null || p.POSTEGGI_B != null
+          ? `<br>Stalls: ${p.POSTEGGI_A ?? 0} food / ${p.POSTEGGI_B ?? 0} other`
+          : '';
+      return `<strong>${displayName(p)}</strong>${p.orari ? `<br>${p.orari}` : ''}${stalls}${p.ZD ? `<br>Municipio ${p.ZD}` : ''}<br>${gmapsLink(lat, lng)}`;
+    }
+
+    function featureId(feature) {
+      const p = feature.properties || {};
+      return String(p.ID ?? p.MERCATO ?? '');
+    }
+
+    function filteredFeatures() {
+      return (geojson.features || []).filter((feature, index) => {
+        const p = feature.properties || {};
+        if (!openOnDay(p, activeDay)) return false;
+        if (activeMunicipio && municipioOf(p) !== activeMunicipio) return false;
+        return true;
+      });
+    }
+
+    function setActiveDayButton() {
+      dayButtons.forEach((btn) => {
+        const isActive = btn.dataset.day === activeDay;
+        btn.classList.toggle('border-primary', isActive);
+        btn.classList.toggle('bg-primary/10', isActive);
+        btn.classList.toggle('text-primary', isActive);
+        btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+    }
+
+    function renderList(features) {
+      listEl.innerHTML = '';
+      if (features.length === 0) {
+        listEl.innerHTML =
+          '<p class="p-4 text-sm text-text-muted">No markets match this day and municipio. Try another day or clear the municipio filter.</p>';
+        return;
+      }
+
+      features.forEach((feature) => {
+        const p = feature.properties || {};
+        const id = featureId(feature);
+        const item = document.createElement('button');
+        item.type = 'button';
+        item.role = 'listitem';
+        item.dataset.featureId = id;
+        item.className =
+          'market-list-item block w-full border-b border-border px-4 py-3 text-left text-sm transition-colors hover:bg-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary';
+        item.innerHTML = `<strong class="text-text">${displayName(p)}</strong>${p.orari ? `<br><span class="text-text-muted">${p.orari}</span>` : ''}${p.ZD ? `<br><span class="text-xs text-text-muted">Municipio ${p.ZD}</span>` : ''}`;
+        item.addEventListener('click', () => focusFeature(id));
+        listEl.appendChild(item);
+      });
+    }
+
+    function updateCount(features) {
+      countEl.textContent = String(features.length);
+      countLabelEl.textContent = features.length === 1 ? ' market' : ' markets';
+      const dayLabel = marketDays.find((d) => d.key === activeDay)?.label || activeDay;
+      filterHintEl.textContent = activeMunicipio
+        ? ` on ${dayLabel} in Municipio ${activeMunicipio}`
+        : ` on ${dayLabel}`;
+    }
+
+    function focusFeature(id) {
+      selectedId = id;
+      listEl.querySelectorAll('.market-list-item').forEach((el) => {
+        el.classList.toggle('bg-primary/10', el.dataset.featureId === id);
+      });
+      const layer = layerById.get(id);
+      if (layer && map) {
+        map.fitBounds(layer.getBounds(), { padding: [24, 24], maxZoom: 16 });
+        layer.openPopup();
+      }
+    }
+
+    function renderMap(features) {
+      layerById = new Map();
+      if (layerGroup) {
+        layerGroup.clearLayers();
+      }
+
+      const collection = {
+        type: 'FeatureCollection',
+        features,
+      };
+
+      const geoLayer = L.geoJSON(collection, {
+        style() {
+          return {
+            color: POLYGON_BORDER,
+            weight: 2,
+            fillColor: POLYGON_COLOR,
+            fillOpacity: 0.35,
+          };
+        },
+        onEachFeature(feature, layer) {
+          const id = featureId(feature);
+          layerById.set(id, layer);
+          layer.bindPopup(popupHtml(feature, layer));
+          layer.on('click', () => focusFeature(id));
+        },
+      });
+
+      layerGroup.addLayer(geoLayer);
+
+      if (features.length > 0) {
+        map.fitBounds(layerGroup.getBounds(), { padding: [24, 24] });
+      } else {
+        map.setView([45.4642, 9.19], 12);
+      }
+    }
+
+    function refresh() {
+      const features = filteredFeatures();
+      setActiveDayButton();
+      updateCount(features);
+      renderList(features);
+      renderMap(features);
+    }
+
+    function render() {
+      if (typeof L === 'undefined') return;
+      mapEl.dataset.mapInit = 'true';
+
+      map = L.map(mapEl, { scrollWheelZoom: true }).setView([45.4642, 9.19], 12);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution:
+          '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> | <a href="https://dati.comune.milano.it/dataset/ds291-economia-mercati-settimanali-scoperti">Comune di Milano DS291</a> (CC BY)',
+      }).addTo(map);
+
+      layerGroup = L.layerGroup().addTo(map);
+
+      dayButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          activeDay = btn.dataset.day;
+          selectedId = null;
+          refresh();
+        });
+      });
+
+      municipioSelect?.addEventListener('change', () => {
+        activeMunicipio = municipioSelect.value;
+        selectedId = null;
+        refresh();
+      });
+
+      refresh();
+    }
+
+    if (typeof L !== 'undefined') {
+      render();
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    script.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
+    script.crossOrigin = '';
+    script.onload = render;
+    document.head.appendChild(script);
+  })();
+</script>
+
+<style is:global>
+  .weekly-markets-explorer .leaflet-control-attribution {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+</style>

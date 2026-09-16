@@ -1,0 +1,103 @@
+---
+import type { MilanMapResource } from '../config/milan-maps';
+
+interface Props {
+  map: MilanMapResource;
+  guideHref?: string;
+}
+
+const { map, guideHref } = Astro.props;
+const panelId = map.id;
+const isOutboundLink = map.href?.startsWith('http');
+---
+
+<article
+  id={panelId}
+  class="scroll-mt-24 rounded-md border border-border bg-background p-5 shadow-sm sm:p-6"
+  aria-labelledby={`${panelId}-title`}
+>
+  <div class="flex flex-wrap items-start justify-between gap-3">
+    <div>
+      <p class="text-topper font-bold uppercase tracking-widest text-primary">{map.category}</p>
+      <h3 id={`${panelId}-title`} class="mt-1 font-heading text-h3 font-semibold text-text">
+        {map.title}
+      </h3>
+    </div>
+    <span
+      class:list={[
+        'shrink-0 rounded-sm px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide',
+        map.kind === 'embedded'
+          ? 'bg-primary/10 text-primary'
+          : map.kind === 'google-collection'
+            ? 'bg-emerald-500/10 text-emerald-700'
+            : 'bg-surface text-text-muted ring-1 ring-border',
+      ]}
+    >
+      {map.kind === 'embedded'
+        ? 'On this site'
+        : map.kind === 'google-collection'
+          ? 'Google Maps'
+          : 'External map'}
+    </span>
+  </div>
+
+  <p class="mt-3 text-sm leading-relaxed text-text-muted">{map.description}</p>
+  <p class="mt-2 text-xs text-text-muted">
+    Source: <span class="font-medium text-text">{map.source}</span>
+  </p>
+
+  {
+    Astro.slots.has('default') && (
+      <div class="mt-5">
+        <slot />
+      </div>
+    )
+  }
+
+  <div class="mt-5 flex flex-wrap gap-3">
+    {
+      map.href && (
+        <a
+          href={map.href}
+          target={isOutboundLink ? '_blank' : undefined}
+          rel={isOutboundLink ? 'noopener noreferrer' : undefined}
+          class="inline-flex items-center gap-1 rounded-sm border border-primary bg-primary px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+        >
+          {isOutboundLink ? (
+            <>
+              Open map
+              <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
+              </svg>
+            </>
+          ) : (
+            <>
+              Open guide
+              <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </>
+          )}
+        </a>
+      )
+    }
+    {
+      guideHref && (
+        <a
+          href={guideHref}
+          class="inline-flex items-center gap-1 rounded-sm border border-border bg-surface px-3 py-2 text-sm font-semibold text-text transition-colors hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+        >
+          Full guide
+          <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      )
+    }
+  </div>
+</article>

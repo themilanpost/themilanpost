@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { livingHub } from '../config/living-hubs';
+import { livingGlossaryPath } from '../config/living-glossary';
+
+const { title, intro, topics, comingSoon } = livingHub;
+---
+
+<BaseLayout
+  title={title}
+  description="Living in Milan: maps, weekly markets, drinking fountains, celebrity places, and a glossary — practical city-life guides for newcomers."
+>
+  <Header slot="header" />
+
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-site px-4 sm:px-6">
+      <p class="text-topper font-bold uppercase tracking-widest text-primary">Living in Milan</p>
+      <h1 class="mt-3 font-heading text-h1 font-semibold text-text">Living in Milan: everyday essentials</h1>
+      <p class="mt-4 max-w-2xl text-lead leading-relaxed text-text-muted">{intro}</p>
+
+      <a
+        href={livingGlossaryPath}
+        class="mt-8 flex flex-col gap-2 rounded-lg border border-border bg-surface p-5 transition-colors hover:border-primary/40 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <div>
+          <p class="text-topper text-xs font-bold uppercase tracking-widest text-primary">Reference</p>
+          <h2 class="mt-1 font-heading text-h3 font-semibold text-text">Living in Milan glossary</h2>
+          <p class="mt-1 max-w-xl text-sm text-text-muted">
+            Draghi verdi, Area C, GiroMilano, AMSA, and other everyday Milan terms (not the bureaucracy covered under
+            Paperwork).
+          </p>
+        </div>
+        <span class="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-primary">
+          Browse glossary
+          <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </span>
+      </a>
+
+      <div
+        class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        role="list"
+        aria-label="Living in Milan guides"
+      >
+        {
+          topics.map((topic) => (
+            <div role="listitem" class="min-h-[220px]">
+              <a
+                href={topic.href}
+                class="group flex h-full flex-col rounded-md border border-border bg-background p-5 shadow-sm transition-[border-color,box-shadow] hover:border-primary hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              >
+                <div class="flex items-start justify-between gap-3">
+                  <p class="text-topper font-bold uppercase tracking-widest text-primary">{topic.label}</p>
+                  <span class="shrink-0 rounded-sm bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">
+                    Guide ready
+                  </span>
+                </div>
+                <h2 class="mt-3 font-heading text-h3 font-semibold text-text transition-colors group-hover:text-primary">
+                  {topic.title}
+                </h2>
+                <p class="mt-2 flex-1 text-sm leading-relaxed text-text-muted">{topic.description}</p>
+                <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                  Open guide
+                  <svg class="size-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          ))
+        }
+
+        {
+          comingSoon.map((item) => (
+            <article
+              role="listitem"
+              class="flex min-h-[220px] flex-col rounded-md border border-dashed border-border bg-surface p-5"
+              aria-label={`${item.title}: coming soon`}
+            >
+              <div class="flex items-start justify-between gap-3">
+                <p class="text-topper font-bold uppercase tracking-widest text-primary">{item.label}</p>
+                <span class="shrink-0 rounded-sm bg-border px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-text-muted">
+                  Coming soon
+                </span>
+              </div>
+              <h2 class="mt-3 font-heading text-h3 font-semibold text-text">{item.title}</h2>
+              <p class="mt-2 flex-1 text-sm leading-relaxed text-text-muted">{item.description}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

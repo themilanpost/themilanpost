@@ -1,0 +1,87 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import GlossarySections from '../../components/GlossarySections.astro';
+import { paperworkGlossaryCategories } from '../../config/paperwork-glossary';
+import { livingGlossaryPath } from '../../config/living-glossary';
+import { paperworkHub } from '../../config/guide-hubs';
+
+const pageTitle = 'Italian paperwork glossary';
+const description =
+  'Italian admin and bureaucracy terms used in our Milan paperwork guides, plain-English explanations for newcomers.';
+---
+
+<BaseLayout title={pageTitle} description={description}>
+  <Header slot="header" />
+
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-site px-4 sm:px-6">
+      <nav aria-label="Breadcrumb" class="mb-4 text-sm text-text-muted">
+        <ol class="flex flex-wrap items-center gap-1.5">
+          <li><a href="/" class="transition-colors hover:text-primary">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li>
+            <a href="/paperwork" class="transition-colors hover:text-primary">{paperworkHub.title}</a>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page" class="text-text">Glossary</li>
+        </ol>
+      </nav>
+
+      <p class="text-topper font-bold uppercase tracking-widest text-primary">Paperwork</p>
+      <h1 class="mt-3 max-w-3xl font-heading text-h1 font-semibold text-text">{pageTitle}</h1>
+      <p class="mt-4 max-w-2xl text-lead leading-relaxed text-text-muted">
+        Italian words and acronyms on forms, post office counters, and comune portals, permesso, residenza, TARI,
+        CIE, and related admin. For everyday Milan terms (transport, fountains, waste), see the{' '}
+        <a href={livingGlossaryPath} class="font-semibold text-primary hover:text-primary-light">
+          Living in Milan glossary
+        </a>
+        .
+      </p>
+
+      <GlossarySections categories={paperworkGlossaryCategories} />
+
+      <aside class="mt-14 rounded-lg border border-border bg-surface p-6">
+        <h2 class="font-heading text-lg font-semibold text-text">See also</h2>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li>
+            <a href="/paperwork" class="font-semibold text-primary hover:text-primary-light">
+              {paperworkHub.title}
+            </a>
+           : step-by-step guides
+          </li>
+          <li>
+            <a href={livingGlossaryPath} class="font-semibold text-primary hover:text-primary-light">
+              Living in Milan glossary
+            </a>
+           : transport, water, waste, local services
+          </li>
+          <li>
+            <a
+              href="/blog/moving-to-milan-complete-guide-students-job-seekers-professionals"
+              class="font-semibold text-primary hover:text-primary-light"
+            >
+              First steps when moving to Milan
+            </a>
+          </li>
+          <li>
+            <a
+              href="/blog/permesso-di-soggiorno-milan-newcomers"
+              class="font-semibold text-primary hover:text-primary-light"
+            >
+              Permesso di soggiorno guide
+            </a>
+          </li>
+          <li>
+            <a href="/blog/tari-waste-tax-milan-newcomers" class="font-semibold text-primary hover:text-primary-light">
+              TARI waste tax guide
+            </a>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

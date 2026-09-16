@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import GuideTopicCard from '../../components/GuideTopicCard.astro';
+import { paperworkHub } from '../../config/guide-hubs';
+import { paperworkGlossaryPath } from '../../config/paperwork-glossary';
+
+const { title, intro, topics } = paperworkHub;
+
+const publishedTopics = topics.filter((t) => t.status === 'published');
+const comingSoonTopics = topics.filter((t) => t.status === 'coming-soon');
+---
+
+<BaseLayout
+  title={title}
+  description={`${intro} Practical paperwork guides for expats in Milan.`}
+>
+  <Header slot="header" />
+
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-site px-4 sm:px-6">
+      <p class="text-topper font-bold uppercase tracking-widest text-primary">Paperwork</p>
+      <h1 class="mt-3 max-w-3xl font-heading text-h1 font-semibold text-text">{title}</h1>
+      <p class="mt-4 max-w-2xl text-lead leading-relaxed text-text-muted">{intro}</p>
+
+      <a
+        href={paperworkGlossaryPath}
+        class="mt-8 flex flex-col gap-2 rounded-lg border border-border bg-surface p-5 transition-colors hover:border-primary/40 sm:flex-row sm:items-center sm:justify-between"
+      >
+        <div>
+          <p class="text-topper text-xs font-bold uppercase tracking-widest text-primary">Reference</p>
+          <h2 class="mt-1 font-heading text-h3 font-semibold text-text">Italian paperwork glossary</h2>
+          <p class="mt-1 max-w-xl text-sm text-text-muted">
+            Codice Fiscale, permesso di soggiorno, residenza, TARI, and other terms, translation plus plain-English notes.
+          </p>
+        </div>
+        <span class="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-primary">
+          Browse glossary
+          <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </span>
+      </a>
+
+      <div
+        class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        role="list"
+        aria-label="Published paperwork guides"
+      >
+        {publishedTopics.map((topic) => (
+          <div role="listitem" class="min-h-[220px]">
+            <GuideTopicCard topic={topic} />
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-14 border-t border-border pt-12">
+        <p class="text-topper font-bold uppercase tracking-widest text-primary">Roadmap</p>
+        <h2 class="mt-2 font-heading text-h2 font-semibold text-text">Coming soon</h2>
+        <p class="mt-3 max-w-2xl text-sm leading-relaxed text-text-muted">
+          Next guides in the pipeline: shaped by recurring newcomer questions (admin order, travel with ricevuta,
+          healthcare enrollment, digital identity). Each will follow the same Milan-first, official-source standard as
+          published guides.
+        </p>
+
+        <div
+          class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          role="list"
+          aria-label="Paperwork guides coming soon"
+        >
+          {comingSoonTopics.map((topic) => (
+            <div role="listitem" class="min-h-[220px]">
+              <GuideTopicCard topic={topic} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <p class="mt-10 text-sm text-text-muted">
+        More guides are added over time. Browse all articles on the{' '}
+        <a href="/guides#all-guides" class="font-semibold text-primary hover:text-primary-light">
+          guides page
+        </a>
+        .
+      </p>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

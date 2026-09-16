@@ -1,0 +1,254 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import CelebrityPlacesMap from '../../components/CelebrityPlacesMap.astro';
+import { livingHub } from '../../config/living-hubs';
+
+const pageTitle = 'Stars in Milan: celebrity stories and places';
+const description =
+  'Verified celebrity stories about Milan — Dua Lipa’s Verso, Callas at La Scala, Versace dinners — with sources and a map.';
+---
+
+<BaseLayout title={pageTitle} description={description}>
+  <Header slot="header" />
+
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-site px-4 sm:px-6">
+      <nav aria-label="Breadcrumb" class="mb-4 text-sm text-text-muted">
+        <ol class="flex flex-wrap items-center gap-1.5">
+          <li><a href="/" class="transition-colors hover:text-primary">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li>
+            <a href="/living-in-milan" class="transition-colors hover:text-primary">{livingHub.title}</a>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page" class="text-text">Stars in Milan</li>
+        </ol>
+      </nav>
+
+      <p class="text-topper font-bold uppercase tracking-widest text-primary">Living in Milan</p>
+      <h1 class="mt-3 max-w-3xl font-heading text-h1 font-semibold text-text">{pageTitle}</h1>
+      <p class="mt-4 max-w-2xl text-lead leading-relaxed text-text-muted">
+        Verified celebrity stories about Milan, with sources and a map of places you can open in Google Maps.
+      </p>
+
+      <div class="mt-8">
+        <h2 id="places-map" class="font-heading text-h3 font-semibold text-text">Map of places mentioned</h2>
+        <p class="mt-2 text-sm text-text-muted">Tap a pin or place card to open the location in Google Maps.</p>
+        <div class="mt-4">
+          <CelebrityPlacesMap />
+        </div>
+      </div>
+
+      <div class="prose prose-lg mt-10 max-w-none prose-headings:font-heading prose-a:text-primary-light">
+        <p>
+          When a global pop star names a <strong>neighbourhood bookstore</strong> in Porta Ticinese as one of her
+          favourites in Italy, Milan notices. In late August 2026, <strong>Dua Lipa</strong> recorded an “Ultimate
+          Italian Guide” for <strong>Vogue Italia</strong> (September cover). Her Milan shortlist is specific and easy
+          to visit — which is why it travelled so fast.
+        </p>
+
+        <h2>Dua Lipa’s Milan: Verso, Paradiso, La Scala</h2>
+        <p>
+          Primary coverage:
+          <a href="https://www.vogue.it/article/italia-dua-lipa-guida-suoi-posti-preferiti">Vogue Italia’s written guide</a>.
+          Further press round-ups and the La Scala clip are listed in the sources table below.
+        </p>
+
+        <h3>Libreria Verso — “cozy” among the chains</h3>
+        <p>
+          <strong>Where:</strong>
+          <a href="https://www.libreriaverso.com/">Libreria Verso</a>, Corso di Porta Ticinese 40 — independent bookshop
+          with a bar, events, and a children’s room.
+        </p>
+        <p>
+          Vogue notes she experiences Verso as <strong>“cozy”</strong> (accogliente). Italian press also quotes the
+          contrast with big chains: there are many of them, but <strong>Verso is special</strong>.
+        </p>
+
+        <h3>Bar Paradiso — Milan aperitivo pick</h3>
+        <p>
+          <strong>Where:</strong> Via Gerolamo Tiraboschi (Porta Romana) — wine bar known for natural / artisan labels and
+          small plates (
+          <a href="https://www.gamberorosso.it/rubriche/dove-bere-a-milano-le-migliori-enoteche-con-cucina-scelte-dal-gambero-rosso/">Gambero Rosso</a>).
+        </p>
+        <p>
+          She pairs Palermo’s Dal Barone with <strong>Bar Paradiso</strong> for aperitivo up north: a small contemporary
+          enoteca, not a palace hotel.
+        </p>
+
+        <h3>Teatro alla Scala — favourite theatre (she hadn’t been yet)</h3>
+        <p>
+          She names <strong>La Scala</strong>, then admits she hadn’t attended and was <strong>“dying to go”</strong>,
+          eyeing <em>La Traviata</em> in September 2026. La Scala’s social reply (OperaWire): hope to see her there. The
+          same theatre already owns some of Milan’s wildest star lore — see Callas below.
+        </p>
+
+        <h2>Maria Callas: shoes in the air, vegetables on the stage</h2>
+        <p>
+          Between 1951 and 1960, <strong>Maria Callas</strong> built her myth at La Scala. She lived in Milan at
+          <strong>Via Buonarroti 38</strong> (near Santa Maria delle Grazie) with Meneghini (
+          <a href="https://www.yesmilano.it/en/articles/pink-milano-maria-callas">YesMilano overview</a>).
+        </p>
+        <p>
+          The viral night: <strong>28 May 1955</strong>, Visconti’s <em>La Traviata</em>. During <em>Sempre libera</em>,
+          Violetta/Callas <strong>kicked off her shoes</strong> — scandalous enough that loggionisti compared it to a
+          circus. Opening-night hostility was real: whistles, Tebaldi vs Callas factions, and (in later tellings) flowers
+          mixed with <strong>vegetables</strong> while short-sighted Callas smiled at the wrong bouquets (
+          <a href="https://www.ansa.it/sito/notizie/cultura/musica/2025/05/26/la-traviata-di-callas-e-visconti-compie-70-anni_e4ca02c6-2403-40e0-a86d-27d469bcdfb6.html">ANSA 70th anniversary</a>,
+          <a href="https://www.milanocittastato.it/evergreen/28-maggio-il-giorno-che-milano-oso-fischiare-la-divina/">Milano Città Stato</a>).
+          The production became legend — and a hard act to follow at La Scala for decades.
+        </p>
+
+        <h2>Via Gesù 12: Elton’s risotto and Gaga’s 40,000 roses</h2>
+        <p>
+          <strong>Where:</strong> Palazzo Versace, <strong>Via Gesù 12</strong> — Gianni’s home-studio, still the house
+          HQ in the fashion district.
+        </p>
+        <p>
+          <strong>Elton John &amp; David Furnish</strong> told
+          <a href="https://www.the-independent.com/life-style/elton-john-italy-risotto-gianni-versace-b2647571.html">Ruthie’s Table / The Independent</a>
+          about 1990s dinners at Gianni’s Milan apartment: white-glove butlers, antique porcelain cleared
+          <em>whoosh</em> between courses, and a risotto Elton called <strong>“nectar.”</strong> They later
+          <strong>sent their cook to Italy</strong> to learn how to make it.
+        </p>
+        <p>
+          <strong>Lady Gaga</strong>, arriving for the Born This Way Ball (Oct 2012), dined with
+          <strong>Donatella</strong> at the same address. She tweeted about walking into Gianni’s apartment
+          <strong>covered in 40,000 roses</strong> (
+          <a href="https://www.capitalfm.com/artists/lady-gaga/news/donatella-versace-milan/">Capital coverage</a>).
+        </p>
+
+        <h2>Madonna + Donatella: scoring dancers at Assago</h2>
+        <p>
+          On the <strong>Celebration Tour</strong> at the <strong>Forum di Assago</strong>, Madonna pulled
+          <strong>Donatella Versace</strong> onstage. Together they watched dancers in crystal micro-looks and held up
+          score cards to <em>Vogue</em> (
+          <a href="https://www.iodonna.it/video-iodonna/spettacoli-video/madonna-concerto-milano-assago-show-ballerini-donatella-versace/">iO Donna</a>,
+          <a href="https://www.vanityfair.it/article/madonna-concerto-milano-scaletta">Vanity Fair Italia</a>). Armani and
+          Gabbana were in the house. Fashion capital meets pop ritual.
+        </p>
+
+        <h2>Justin Theroux &amp; Stanley Tucci: martinis between takes</h2>
+        <p>
+          While filming <em>The Devil Wears Prada 2</em>, the cast stayed (and shot lobby scenes) at
+          <strong>Palazzo Parigi</strong>. Theroux told
+          <a href="https://www.cntraveler.com/story/unpacking-with-justin-theroux">Condé Nast Traveler</a> they posted up
+          with martinis; <strong>Stanley Tucci</strong> would set his drink down, walk a shot, and return. CNT’s
+          <a href="https://www.cntraveler.com/story/where-was-the-devil-wears-prada-2-filmed-manhattan-milan-and-beyond">locations piece</a>
+          backs the vibe.
+        </p>
+        <p>
+          Same production: <strong>Lady Gaga</strong>’s cameo was planned for the Duomo, then moved to the
+          <strong>Accademia di Brera</strong> area so word would not leak (
+          <a href="https://en.wikipedia.org/wiki/The_Devil_Wears_Prada_2">production reporting summarised on Wikipedia</a>).
+        </p>
+
+        <h2>Charlie Chaplin’s Milan curtain call (1972)</h2>
+        <p>
+          In February 1972 Milan threw an official homage: gala at the <strong>Castello Sforzesco</strong>,
+          <em>Modern Times</em>, then <strong>Charlie Chaplin</strong> and Oona in a central box at
+          <strong>La Scala</strong> after a ballet (
+          <a href="https://www.charliechaplinarchive.org/en/collection/cerca/omaggio-a-chaplin-milano-24-25-febbraio-1972-ecci00013769">Charlie Chaplin Archive</a>).
+        </p>
+
+        <h2>The Beatles, June 1965: one Alfa Spider for four</h2>
+        <p>
+          Publifoto / Gallerie d’Italia archives and anniversary reporting (
+          <a href="https://www.ilgiorno.it/milano/cultura/beatles-vigorelli-storia-concerto-mv3g7s74">Il Giorno</a>,
+          <a href="https://gallerieditalia.com/en/milan/exhibitions-and-initiatives/exhibitions/2025/06/25/exhibition-tutti-pazzi-per-i-beatles--il-concerto-del-1965-a-milano/">Gallerie d’Italia</a>):
+        </p>
+        <ol>
+          <li><strong>Milano Centrale</strong> — late 23 June, ~2,000 fans.</li>
+          <li>
+            <strong>Alfa Romeo 2600 Spider</strong> — five cars planned; the crowd forced
+            <strong>all four Beatles into one</strong>.
+          </li>
+          <li>
+            <strong>Grand Hotel Duomo</strong> (Via San Raffaele) — press conference and terrace photos with cathedral
+            spires.
+          </li>
+          <li><strong>Velodromo Vigorelli</strong> — two concerts on 24 June, their only Italian tour.</li>
+        </ol>
+
+        <h2>Stefano Gabbana: scooter, no bodyguards</h2>
+        <p>
+          In an
+          <a href="https://www.elle.com/uk/fashion/news/a3191/dolce-and-gabbana-interview-lorraine-candy-september-2010/">ELLE UK interview</a>:
+          he rides Milan <strong>alone on a scooter</strong>, no bodyguards — “I am a fashion designer, not a
+          celebrity… I don’t think I am famous.” No single pin; the city is the punchline.
+        </p>
+
+        <h2>How we checked this</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Anecdote</th>
+              <th>Status</th>
+              <th>Main sources</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dua Lipa → Verso, Paradiso, La Scala</td>
+              <td>Confirmed</td>
+              <td>Vogue Italia; Messaggero; OperaWire</td>
+            </tr>
+            <tr>
+              <td>Callas <em>Traviata</em> shoes / opening-night storm</td>
+              <td>Confirmed (documented legend)</td>
+              <td>ANSA; Milano Città Stato</td>
+            </tr>
+            <tr>
+              <td>Elton risotto at Gianni’s</td>
+              <td>Confirmed</td>
+              <td>Independent / Ruthie’s Table</td>
+            </tr>
+            <tr>
+              <td>Gaga + 40,000 roses at Via Gesù</td>
+              <td>Confirmed (tweet + press)</td>
+              <td>Capital; contemporary reports</td>
+            </tr>
+            <tr>
+              <td>Madonna + Donatella scoring dancers</td>
+              <td>Confirmed</td>
+              <td>iO Donna; Vanity Fair Italia</td>
+            </tr>
+            <tr>
+              <td>Theroux / Tucci Palazzo Parigi</td>
+              <td>Confirmed</td>
+              <td>Condé Nast Traveler</td>
+            </tr>
+            <tr>
+              <td>Gaga cameo → Brera</td>
+              <td>Reported in production coverage</td>
+              <td>CNT / Prada 2 location reporting</td>
+            </tr>
+            <tr>
+              <td>Chaplin 1972 Castello + La Scala</td>
+              <td>Confirmed (archive)</td>
+              <td>Charlie Chaplin Archive</td>
+            </tr>
+            <tr>
+              <td>Beatles Alfa + Vigorelli</td>
+              <td>Confirmed (archive)</td>
+              <td>Publifoto / Gallerie d’Italia</td>
+            </tr>
+            <tr>
+              <td>Gabbana scooter quote</td>
+              <td>Confirmed (2010)</td>
+              <td>ELLE UK</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          For everyday Milan life — markets, maps, paperwork — start from
+          <a href="/living-in-milan">Living in Milan</a> and <a href="/guides">Guides</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

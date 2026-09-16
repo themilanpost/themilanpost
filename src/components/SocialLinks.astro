@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+import { socialLinks } from '../config/social-links';
+
+interface Props {
+  /** Optional heading: omit when parent provides one */
+  showHeading?: boolean;
+}
+
+const { showHeading = true } = Astro.props;
+---
+
+<div>
+  {showHeading ? <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-text">Our socials</p> : null}
+  <ul class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+    {
+      socialLinks.map(({ label, href, faviconDomain }) => (
+        <li>
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-text-muted transition-colors hover:text-primary"
+          >
+            <Image
+              src={`https://www.google.com/s2/favicons?domain=${faviconDomain}&sz=64`}
+              alt=""
+              width={16}
+              height={16}
+              loading="lazy"
+            />
+            {label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>

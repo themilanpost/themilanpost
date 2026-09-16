@@ -1,0 +1,374 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import {
+  FONTANELLE_DATASET_PAGE,
+  CASE_DELL_ACQUA_DATASET_PAGE,
+  MM_VEDOVELLE_PAGE,
+  MM_HOME_SEARCH,
+  COMUNE_CASE_DELL_ACQUA_PAGE,
+  fetchFontanelleGeoJson,
+} from '../../lib/fontanelle-data';
+import { livingHub } from '../../config/living-hubs';
+
+const pageTitle = 'Draghi Verdi: Milan drinking fountains map';
+const description =
+  'Guide to Milan vedovelle (draghi verdi): free public drinking water, MM app, Google Maps tips, and links to our interactive map.';
+
+let mapData: Awaited<ReturnType<typeof fetchFontanelleGeoJson>> | null = null;
+
+try {
+  mapData = await fetchFontanelleGeoJson();
+} catch {
+  mapData = null;
+}
+
+const datasetDate = mapData?.datasetModified
+  ? new Date(mapData.datasetModified).toLocaleDateString('en-GB', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    })
+  : null;
+---
+
+<BaseLayout title={pageTitle} description={description}>
+  <Header slot="header" />
+
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-site px-4 sm:px-6">
+      <nav aria-label="Breadcrumb" class="mb-4 text-sm text-text-muted">
+        <ol class="flex flex-wrap items-center gap-1.5">
+          <li><a href="/" class="transition-colors hover:text-primary">Home</a></li>
+          <li aria-hidden="true">/</li>
+          <li>
+            <a href="/living-in-milan" class="transition-colors hover:text-primary">{livingHub.title}</a>
+          </li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page" class="text-text">Draghi Verdi</li>
+        </ol>
+      </nav>
+
+      <p class="text-topper font-bold uppercase tracking-widest text-primary">Living in Milan</p>
+      <h1 class="mt-3 max-w-3xl font-heading text-h1 font-semibold text-text">{pageTitle}</h1>
+      <p class="mt-4 max-w-2xl text-lead leading-relaxed text-text-muted">
+        Scope: <strong>Comune di Milano</strong>: free public drinking water for residents and visitors. Verified
+        against MM and Comune sources.
+      </p>
+
+      <div class="prose prose-lg mt-10 max-w-none prose-headings:font-heading prose-a:text-primary-light">
+        <h2>What they are</h2>
+        <p>
+          <strong>Vedovelle</strong> ("little widows"): for the continuous trickle of water. <strong>Draghi verdi</strong>
+          ("green dragons"): for the dragon-shaped brass spout and green cast-iron body. Metropolitana Milanese (MM)
+          maintains them as part of the public water network
+          (<a href={MM_VEDOVELLE_PAGE}>MM: Vedovelle</a>).
+        </p>
+        <p>
+          Installed from <strong>1890</strong>, the standard fountain is cast iron, about <strong>1.55 m</strong> tall
+          (Comune) with Milan's coat of arms and a pinecone finial (<em>pignone</em>). The dragon spout echoes the
+          Visconti symbol on the Duomo gargoyles. A semi-circular trough at the base was originally for watering animals.
+          The water is the same potable supply as household taps (MM).
+        </p>
+
+        <h2>How many, and where</h2>
+        <p>
+          Counts differ by source and date: all are official but updated on different schedules:
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Count</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href={FONTANELLE_DATASET_PAGE}>DS502 open data</a>
+                {datasetDate ? ` (${datasetDate})` : ''}
+              </td>
+              <td>{mapData ? mapData.featureCount : '-'}</td>
+              <td>Weekly GeoJSON: basis for the map below</td>
+            </tr>
+            <tr>
+              <td><a href={MM_VEDOVELLE_PAGE}>MM: Vedovelle</a></td>
+              <td>666</td>
+              <td>MM prose page (in operation)</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://dati.comune.milano.it/web/portale-del-dato/w/fontanelle-di-milano">
+                  Comune story map
+                </a>
+              </td>
+              <td>674</td>
+              <td>Published February 2025</td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Fountains are spread across all <strong>nine municipi</strong>; Municipio 8 has the most (Comune story map).
+          Two stand out from the standard green cast-iron design: the <strong>bronze fountain in Piazza della Scala</strong>
+          (first installed in 1931), and the artistic bronze dragons in <strong>City Life park</strong> by Serena
+          Vestrucci (Comune story map).
+        </p>
+
+        <h2>Maps</h2>
+        <p>
+          The interactive fountain map lives on our{' '}
+          <a href="/living-in-milan/maps#draghi-verdi"><strong>Milan maps</strong></a> page: inside the Maps section
+          with other official city maps (transport, Area C, pharmacies, recycling).
+        </p>
+        <p>
+          <a
+            href="/living-in-milan/maps#draghi-verdi"
+            class="inline-flex items-center gap-1 rounded-sm border border-primary bg-primary px-4 py-2 text-sm font-semibold !text-primary-fg no-underline transition-colors hover:bg-primary-light hover:!text-primary-fg"
+          >
+            Open draghi verdi map
+            <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </p>
+
+        <h2>Find the nearest fountain</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Tool</th>
+              <th>Best for</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <a href="/living-in-milan/maps#draghi-verdi"><strong>Milan maps</strong>: embedded DS502 map</a>
+              </td>
+              <td>Browse all vedovelle; jump to Google Maps from any pin</td>
+            </tr>
+            <tr>
+              <td>
+                <a href={MM_HOME_SEARCH}>latuaacqua.it: address search</a>
+              </td>
+              <td>Nearest vedovella and Case dell'acqua to a street address (MM official)</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.latuaacqua.it/wps/portal/latuaacqua/it/home/le-tue-esigenze/strumenti/app-mm-la-tua-acqua/">
+                  App MM La Tua Acqua
+                </a>
+              </td>
+              <td>Geolocation on phone: vedovelle and Case dell'acqua (iOS / Android, MM)</td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://dati.comune.milano.it/web/portale-del-dato/w/fontanelle-di-milano">
+                  Comune Portale del Dato story map
+                </a>
+              </td>
+              <td>City-wide overview, municipio breakdown, City Life artistic fountains</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Google Maps: what works (and what does not)</h2>
+        <p>
+          There is <strong>no official Google Maps layer</strong> from Comune di Milano or MM for vedovelle. Google Maps
+          also has <strong>no built-in "drinking water" map filter</strong> in Italy, unlike cycling or transit layers
+          (Google Maps help docs). A few individual fountains may appear as user-added pins, but coverage is incomplete
+          and not maintained by the city.
+        </p>
+        <p>
+          <strong>Practical ways to use Google Maps anyway:</strong>
+        </p>
+        <ul>
+          <li>
+            <strong>Navigate to coordinates</strong>: from a pin on this map (popup link), or paste
+            <code>latitude,longitude</code> into Google Maps search. Google supports coordinate search directly.
+          </li>
+          <li>
+            <strong>My Maps (DIY layer)</strong>: Comune publishes a downloadable CSV on the
+            <a href="https://dati.comune.milano.it/web/portale-del-dato/w/fontanelle-di-milano">story map page</a>;
+            DS502 GeoJSON is updated weekly. Import into
+            <a href="https://www.google.com/maps/d/">Google My Maps</a> to overlay all fountains on Google's base map.
+            This is unofficial but works; data freshness depends on your import, not Google.
+          </li>
+          <li>
+            <strong>Do not rely on</strong> generic searches like "drinking water near me", results mix restaurants,
+            shops, and unrelated POIs.
+          </li>
+        </ul>
+        <p>
+          Third-party apps (e.g. community maps built on OpenStreetMap) may list fountains, but for Milan the
+          authoritative locations are MM and DS502: not crowd-sourced copies.
+        </p>
+
+        <h2>Case dell'acqua (different from vedovelle)</h2>
+        <p>
+          Separate from street fountains: refrigerated <strong>Case dell'acqua</strong> stations dispense still and
+          sparkling tap water. The Comune lists <strong>52</strong> locations in open data (DS625); MM communications
+          sometimes cite ~54 as the network grows
+          (<a href={COMUNE_CASE_DELL_ACQUA_PAGE}>Comune: Case dell'acqua</a>).
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Vedovelle</th>
+              <th>Case dell'acqua</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Water</td>
+              <td>Still, ambient temperature</td>
+              <td>Still + sparkling, refrigerated (Comune)</td>
+            </tr>
+            <tr>
+              <td>Access</td>
+              <td>Walk up: no card</td>
+              <td>
+                Free with <strong>Carta Regionale/Nazionale dei Servizi</strong> or <strong>tessera sanitaria</strong>{' '}
+                (Comune)
+              </td>
+            </tr>
+            <tr>
+              <td>Find them</td>
+              <td>
+                <a href="/living-in-milan/maps#draghi-verdi">DS502 / map above</a>
+              </td>
+              <td>
+                <a href={MM_HOME_SEARCH}>latuaacqua.it</a> address search or MM app;{' '}
+                <a href="/living-in-milan/maps#case-dell-acqua">DS625 map</a> or{' '}
+                <a href={CASE_DELL_ACQUA_DATASET_PAGE}>open data</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Why there is no on/off tap</h2>
+        <p>
+          MM explains that continuous flow is intentional, not waste
+          (<a href={MM_VEDOVELLE_PAGE}>MM: Vedovelle FAQ table</a>):
+        </p>
+        <ul>
+          <li>
+            All fountains together use about <strong>10 L/s</strong> vs ~<strong>7,500 L/s</strong> for the whole
+            aqueduct: a tiny fraction.
+          </li>
+          <li>
+            Flow keeps water moving at "dead-end" pipe branches (<em>teste morte</em>), venting air pockets and limiting
+            bacterial growth around the spout.
+          </li>
+          <li>
+            Run-off enters the sewer network and is treated at Milan's plants; MM states treated water is reused (e.g.
+            agricultural irrigation south of the city).
+          </li>
+        </ul>
+
+        <h2>Practical tips</h2>
+        <ul>
+          <li>Water is <strong>drinking quality</strong>: same aqueduct as home taps (MM).</li>
+          <li>Bring a bottle; the stream is thin, cup your hand or use a narrow-neck bottle.</li>
+          <li>Flow runs <strong>24/7</strong>: useful in summer heat when shops are closed.</li>
+          <li>
+            For chilled still/sparkling water and larger fills, find a <strong>Case dell'acqua</strong> (tessera
+            sanitaria required).
+          </li>
+          <li>
+            Vedovelle are for drinking in Milan: they are <strong>not</strong> a travel document or substitute for
+            carrying water on long trips outside the city.
+          </li>
+        </ul>
+
+        <h2>Quick checklist</h2>
+        <ul>
+          <li>✅ Reusable bottle (narrow neck helps)</li>
+          <li>✅ Use <a href="/living-in-milan/maps#draghi-verdi">our map</a>, MM app, or latuaacqua.it for nearest fountain</li>
+          <li>✅ Tap a map pin → <strong>Open in Google Maps</strong> for walking directions</li>
+          <li>✅ Tessera sanitaria if you want Case dell'acqua (still/sparkling)</li>
+          <li>✅ Expect continuous flow: no tap to turn off</li>
+        </ul>
+
+        <h2>Official links</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Resource</th>
+              <th>URL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MM: Vedovelle (history, FAQ, count)</td>
+              <td><a href={MM_VEDOVELLE_PAGE}>latuaacqua.it: Vedovelle</a></td>
+            </tr>
+            <tr>
+              <td>MM: find by address (vedovelle + Case dell'acqua)</td>
+              <td><a href={MM_HOME_SEARCH}>latuaacqua.it: address search</a></td>
+            </tr>
+            <tr>
+              <td>MM mobile app</td>
+              <td>
+                <a href="https://www.latuaacqua.it/wps/portal/latuaacqua/it/home/le-tue-esigenze/strumenti/app-mm-la-tua-acqua/">
+                  App MM La Tua Acqua
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Comune: Case dell'acqua</td>
+              <td><a href={COMUNE_CASE_DELL_ACQUA_PAGE}>comune.milano.it: Case dell'acqua</a></td>
+            </tr>
+            <tr>
+              <td>Comune: story map &amp; stats</td>
+              <td>
+                <a href="https://dati.comune.milano.it/web/portale-del-dato/w/fontanelle-di-milano">
+                  Portale del Dato: fontanelle di Milano
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Open data: vedovelle (DS502, weekly)</td>
+              <td><a href={FONTANELLE_DATASET_PAGE}>dati.comune.milano.it: DS502</a></td>
+            </tr>
+            <tr>
+              <td>Open data: Case dell'acqua (DS625)</td>
+              <td><a href={CASE_DELL_ACQUA_DATASET_PAGE}>dati.comune.milano.it: DS625</a></td>
+            </tr>
+            <tr>
+              <td>Google My Maps (create your own layer)</td>
+              <td><a href="https://www.google.com/maps/d/">google.com/maps/d</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Sources</h2>
+        <ul>
+          <li><a href={MM_VEDOVELLE_PAGE}>Metropolitana Milanese: Vedovelle</a></li>
+          <li>
+            <a href="https://www.latuaacqua.it/wps/portal/latuaacqua/it/home/le-tue-esigenze/strumenti/app-mm-la-tua-acqua/">
+              Metropolitana Milanese: App MM La Tua Acqua
+            </a>
+          </li>
+          <li><a href={COMUNE_CASE_DELL_ACQUA_PAGE}>Comune di Milano: Case dell'acqua</a></li>
+          <li><a href={FONTANELLE_DATASET_PAGE}>Comune di Milano: DS502 Vedovelle</a></li>
+          <li><a href={CASE_DELL_ACQUA_DATASET_PAGE}>Comune di Milano: DS625 Case dell'acqua</a></li>
+          <li>
+            <a href="https://dati.comune.milano.it/web/portale-del-dato/w/fontanelle-di-milano">
+              Comune di Milano: Portale del Dato, fontanelle di Milano
+            </a>
+          </li>
+          <li>
+            <a href="https://support.google.com/maps/answer/3092439?hl=en">Google: Map layers help</a> (no drinking-water
+            layer)
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

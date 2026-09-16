@@ -17,10 +17,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
       - run: npm ci
+      # Public Formspree form id (also in local starter `.env`). Required at build time for Astro.
       - run: npm run build
+        env:
+          PUBLIC_FORMSPREE_FORM_ID: xwlkndra
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

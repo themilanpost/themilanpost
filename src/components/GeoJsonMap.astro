@@ -1,0 +1,260 @@
+---
+interface Props {
+  mapId: string;
+  ariaLabel: string;
+  attributionHtml: string;
+  geojson: GeoJSON.FeatureCollection;
+  lineGeojson?: GeoJSON.FeatureCollection;
+  popupType: string;
+  geometryMode?: 'points' | 'lines' | 'polygons';
+  pointColor: string;
+  pointBorder: string;
+}
+
+const {
+  mapId,
+  ariaLabel,
+  attributionHtml,
+  geojson,
+  lineGeojson,
+  popupType,
+  geometryMode = 'points',
+  pointColor,
+  pointBorder,
+} = Astro.props;
+---
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""
+/>
+<div
+  id={mapId}
+  class="geojson-map relative z-0 h-[min(70vh,560px)] w-full overflow-hidden rounded-lg border border-border bg-surface"
+  role="region"
+  aria-label={ariaLabel}
+></div>
+
+<script
+  is:inline
+  define:vars={{
+    mapId,
+    geojson,
+    lineGeojson,
+    popupType,
+    geometryMode,
+    pointColor,
+    pointBorder,
+    attributionHtml,
+  }}
+>
+  (function initGeoJsonMap() {
+    const mapEl = document.getElementById(mapId);
+    if (!mapEl || mapEl.dataset.mapInit === 'true') return;
+
+    const METRO_LINE_COLORS = {
+      '1': '#EE1D23',
+      '2': '#008751',
+      '3': '#FFDA00',
+      '4': '#009EE0',
+      '5': '#9B218E',
+    };
+
+    const WEEKDAYS = [
+      ['LUNEDI', 'Mon'],
+      ['MARTEDI', 'Tue'],
+      ['MERCOLEDI', 'Wed'],
+      ['GIOVEDI', 'Thu'],
+      ['VENERDI', 'Fri'],
+      ['SABATO', 'Sat'],
+      ['DOMENICA', 'Sun'],
+    ];
+
+    function gmapsLink(lat, lng) {
+      if (lat == null || lng == null) return '';
+      return `<br><a href="https://www.google.com/maps/search/?api=1&query=${lat},${lng}" target="_blank" rel="noopener noreferrer">Open in Google Maps</a>`;
+    }
+
+    function coordsFromFeature(feature) {
+      const p = feature.properties || {};
+      const c = feature.geometry?.coordinates;
+      const lat = c?.[1] ?? p.LAT_Y_4326 ?? p.LAT_WGS84;
+      const lng = c?.[0] ?? p.LONG_X_4326 ?? p.LONG_WGS84;
+      return { lat, lng };
+    }
+
+    function popupCoords(feature, layer) {
+      if (layer?.getBounds) {
+        const center = layer.getBounds().getCenter();
+        return { lat: center.lat, lng: center.lng };
+      }
+      return coordsFromFeature(feature);
+    }
+
+    function marketDays(p) {
+      const days = WEEKDAYS.filter(([key]) => p[key]).map(([, label]) => label);
+      return days.length ? days.join(', ') : p.giorno ?? '-';
+    }
+
+    function popupHtml(feature, layer) {
+      const p = feature.properties || {};
+      const { lat, lng } = popupCoords(feature, layer);
+
+      switch (popupType) {
+        case 'fontanelle': {
+          const nil = p.NIL ? String(p.NIL).replace(/_/g, ' ') : '';
+          return `<strong>Vedovella</strong>${nil ? `<br>${nil}` : ''}<br>Municipio ${p.MUNICIPIO ?? '-'}${p.CAP ? `<br>CAP ${p.CAP}` : ''}${gmapsLink(lat, lng)}`;
+        }
+        case 'case-acqua': {
+          const nil = p.NIL ? String(p.NIL).replace(/_/g, ' ') : '';
+          return `<strong>Case dell'acqua</strong>${nil ? `<br>${nil}` : ''}<br>Municipio ${p.MUNICIPIO ?? '-'}${gmapsLink(lat, lng)}`;
+        }
+        case 'farmacia':
+          return `<strong>${p.DESCRIZIONE_FARMACIA ?? 'Farmacia'}</strong><br>${p.INDIRIZZO ?? ''}${p.CAP ? `<br>CAP ${p.CAP}` : ''}${gmapsLink(lat, lng)}`;
+        case 'ricicleria':
+          return `<strong>${p.Ricicleria ?? 'Ricicleria'}</strong><br>${p.Indirizzo ?? ''}${gmapsLink(lat, lng)}`;
+        case 'varco-c':
+          return `<strong>Area C: ${p.label ?? 'Varco'}</strong>${gmapsLink(lat, lng)}`;
+        case 'varco-b':
+          return `<strong>Area B: ${p.nome ?? 'Varco'}</strong>${p.stato ? `<br>${p.stato}` : ''}${gmapsLink(lat, lng)}`;
+        case 'metro-stop':
+          return `<strong>${p.nome ?? 'Fermata'}</strong>${p.linee ? `<br>Linea M${p.linee}` : ''}${gmapsLink(lat, lng)}`;
+        case 'bikemi':
+          return `<strong>${p.nome ?? 'BikeMi station'}</strong><br>${p.indirizzo ?? ''}${p.civico ? ` ${p.civico}` : ''}${p.stalli ? `<br>${p.stalli} stalls` : ''}${p.tipo ? `<br>${p.tipo}` : ''}${gmapsLink(lat, lng)}`;
+        case 'cpia':
+          return `<strong>${p['Nome-associazione'] ?? 'Italian school'}</strong><br>${p.indirizzo ?? ''}${p.tipo ? `<br>${p.tipo}` : ''}${p["Modalita'"] ? `<br>${p["Modalita'"]}` : ''}${gmapsLink(lat, lng)}`;
+        case 'weekly-market':
+          return `<strong>${p.MERCATO ?? p['nome MSS'] ?? 'Market'}</strong><br>Days: ${marketDays(p)}${p.orari ? `<br>${p.orari}` : ''}${gmapsLink(lat, lng)}`;
+        case 'eco-island': {
+          const nil = p.NIL ? String(p.NIL).replace(/_/g, ' ') : '';
+          return `<strong>Eco-island</strong><br>${p.nome_via ?? ''}${p.civico ? ` ${p.civico}` : ''}${nil ? `<br>${nil}` : ''}${gmapsLink(lat, lng)}`;
+        }
+        case 'ztl-area':
+          return `<strong>${p.nome ?? 'Zone'}</strong>${p.tipo ? `<br>${p.tipo}` : ''}${p.ordinanza ? `<br>Ord. ${p.ordinanza}` : ''}${gmapsLink(lat, lng)}`;
+        case 'cycle-path':
+          return `<strong>${p.anagrafica ?? 'Cycle route'}</strong>${p.tipologia ? `<br>${p.tipologia}` : ''}${p.lunghezza ? `<br>${p.lunghezza} m` : ''}${gmapsLink(lat, lng)}`;
+        case 'rail-station':
+          return `<strong>${p.Stazione ?? 'Station'}</strong>${p.Linee ? `<br>${p.Linee}` : ''}${p.Ubicazione ? `<br>${p.Ubicazione}` : ''}${gmapsLink(lat, lng)}`;
+        case 'covered-market': {
+          const nil = p.NIL ? String(p.NIL).replace(/_/g, ' ') : '';
+          return `<strong>${p.MCC ?? 'Mercato coperto'}</strong>${nil ? `<br>${nil}` : ''}${p.attivo ? `<br>Active: ${p.attivo}` : ''}${gmapsLink(lat, lng)}`;
+        }
+        case 'library':
+          return `<strong>${p['Biblioteche - Sede'] ?? 'Library'}</strong><br>${p.Indirizzo ?? ''}${p.Orari ? `<br><span style="font-size:12px">${p.Orari}</span>` : ''}${gmapsLink(lat, lng)}`;
+        case 'open-wifi': {
+          const nil = p.NIL ? String(p.NIL).replace(/_/g, ' ') : '';
+          return `<strong>${p.AP ?? 'Open WiFi'}</strong><br>${p.indirizzo ?? ''}${nil ? `<br>${nil}` : ''}${gmapsLink(lat, lng)}`;
+        }
+        case 'musei-card':
+          return `<strong>${p['nome museo'] ?? 'Museum'}</strong><br>${p.indirizzo ?? ''}${p['tipologia inclusione nella Milano Musei Card'] ? `<br>${p['tipologia inclusione nella Milano Musei Card']}` : ''}${gmapsLink(lat, lng)}`;
+        default:
+          return `<strong>Location</strong>${gmapsLink(lat, lng)}`;
+      }
+    }
+
+    function render() {
+      if (typeof L === 'undefined') return;
+      mapEl.dataset.mapInit = 'true';
+
+      const map = L.map(mapEl, { scrollWheelZoom: true }).setView([45.4642, 9.19], 12);
+
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: attributionHtml,
+      }).addTo(map);
+
+      if (lineGeojson?.features?.length) {
+        L.geoJSON(lineGeojson, {
+          style(feature) {
+            const line = String(feature.properties?.linea ?? '');
+            return {
+              color: METRO_LINE_COLORS[line] || '#495057',
+              weight: 4,
+              opacity: 0.85,
+            };
+          },
+          onEachFeature(feature, layer) {
+            const p = feature.properties || {};
+            layer.bindPopup(`<strong>Linea M${p.linea}</strong><br>${p.nome ?? ''}`);
+          },
+        }).addTo(map);
+      }
+
+      if (geometryMode === 'lines') {
+        L.geoJSON(geojson, {
+          style() {
+            return {
+              color: pointColor,
+              weight: 3,
+              opacity: 0.75,
+            };
+          },
+          onEachFeature(feature, layer) {
+            layer.bindPopup(popupHtml(feature, layer));
+          },
+        }).addTo(map);
+      } else if (geometryMode === 'polygons') {
+        L.geoJSON(geojson, {
+          style() {
+            return {
+              color: pointBorder,
+              weight: 2,
+              fillColor: pointColor,
+              fillOpacity: 0.35,
+            };
+          },
+          onEachFeature(feature, layer) {
+            layer.bindPopup(popupHtml(feature, layer));
+          },
+        }).addTo(map);
+      } else {
+        L.geoJSON(geojson, {
+          pointToLayer(feature, latlng) {
+            if (popupType === 'metro-stop') {
+              const line = String(feature.properties?.linee ?? '');
+              const color = METRO_LINE_COLORS[line] || pointColor;
+              return L.circleMarker(latlng, {
+                radius: 7,
+                fillColor: color,
+                color: '#212529',
+                weight: 2,
+                fillOpacity: 0.95,
+              });
+            }
+            return L.circleMarker(latlng, {
+              radius: popupType === 'ricicleria' ? 8 : 6,
+              fillColor: pointColor,
+              color: pointBorder,
+              weight: 1,
+              fillOpacity: 0.9,
+            });
+          },
+          onEachFeature(feature, layer) {
+            layer.bindPopup(popupHtml(feature, layer));
+          },
+        }).addTo(map);
+      }
+    }
+
+    if (typeof L !== 'undefined') {
+      render();
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    script.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
+    script.crossOrigin = '';
+    script.onload = render;
+    document.head.appendChild(script);
+  })();
+</script>
+
+<style is:global>
+  .geojson-map .leaflet-control-attribution {
+    font-size: 10px;
+    line-height: 1.3;
+  }
+</style>

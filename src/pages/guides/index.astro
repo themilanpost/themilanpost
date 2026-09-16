@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import HubGuideCard from '../../components/HubGuideCard.astro';
+import { getCollection } from 'astro:content';
+import { guidesHub } from '../../config/guides-hub';
+
+const { title, intro, sections } = guidesHub;
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<BaseLayout title={title} description={`${intro} Practical guides for expats in Milan.`}>
+  <Header slot="header" />
+
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-site px-4 sm:px-6">
+      <p class="text-topper font-bold uppercase tracking-widest text-primary">The Milan Post</p>
+      <h1 class="mt-3 max-w-3xl font-heading text-h1 font-semibold text-text">{title}</h1>
+      <p class="mt-4 max-w-2xl text-lead leading-relaxed text-text-muted">{intro}</p>
+
+      <div
+        class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2"
+        role="list"
+        aria-label="Guide hubs"
+      >
+        {
+          sections.map((section) => (
+            <div role="listitem">
+              <HubGuideCard
+                label={section.label}
+                title={section.title}
+                description={section.description}
+                href={section.href}
+              />
+            </div>
+          ))
+        }
+      </div>
+
+      <div id="all-guides" class="mt-14 scroll-mt-24">
+        <h2 class="font-heading text-h2 font-semibold text-text">All guide articles</h2>
+        <p class="mt-2 max-w-2xl text-sm text-text-muted">
+          Long-form guides published as articles: moving to Milan, permesso, CIE, TARI, and more.
+        </p>
+
+        {
+          posts.length === 0 ? (
+            <p class="mt-8 text-text-muted">No articles yet. Check back soon.</p>
+          ) : (
+            <div
+              class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+              role="list"
+              aria-label="Published guide articles"
+            >
+              {
+                posts.map((post) => {
+                  const formattedDate = post.data.date.toLocaleDateString('en-GB', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  });
+                  return (
+                    <div role="listitem" class="min-h-[220px]">
+                      <a
+                        href={`/blog/${post.id}`}
+                        class="group flex h-full flex-col rounded-md border border-border bg-background p-5 shadow-sm transition-[border-color,box-shadow] hover:border-primary hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                      >
+                        <div class="flex items-start justify-between gap-3">
+                          <p class="text-topper font-bold uppercase tracking-widest text-primary">
+                            {post.data.tags[0] ?? 'Guide'}
+                          </p>
+                          <span class="shrink-0 rounded-sm bg-primary/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">
+                            Article
+                          </span>
+                        </div>
+                        <h3 class="mt-3 font-heading text-h3 font-semibold text-text transition-colors group-hover:text-primary">
+                          {post.data.title}
+                        </h3>
+                        <p class="mt-2 flex-1 text-sm leading-relaxed text-text-muted">{post.data.description}</p>
+                        <p class="mt-3 text-xs text-text-muted">{formattedDate}</p>
+                        <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                          Read guide
+                          <svg class="size-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+                  );
+                })
+              }
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

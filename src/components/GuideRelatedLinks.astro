@@ -1,0 +1,52 @@
+---
+import { relatedGuidesFor, type GuideLink } from '../config/guide-related-links';
+
+interface Props {
+  articleSlug: string;
+}
+
+const { articleSlug } = Astro.props;
+const links: GuideLink[] = relatedGuidesFor(articleSlug);
+
+if (links.length === 0) return;
+---
+
+<aside
+  class="not-prose mt-12 rounded-lg border border-border bg-surface p-6"
+  aria-label="Related guides"
+>
+  <h2 class="font-heading text-lg font-semibold uppercase tracking-wide text-text">
+    Related guides
+  </h2>
+  <ul class="mt-4 space-y-2">
+    {
+      links.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="inline-flex flex-wrap items-baseline gap-x-2 font-semibold text-primary transition-colors hover:text-primary-light"
+          >
+            <span>{link.title}</span>
+            {link.hub && (
+              <span class="text-xs font-normal uppercase tracking-wide text-text-muted">
+                {link.hub}
+              </span>
+            )}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <p class="mt-4 text-sm text-text-muted">
+    Browse all paperwork topics on the{' '}
+    <a href="/paperwork" class="font-semibold text-primary hover:text-primary-light">
+      Paperwork in Milan hub
+    </a>
+    .
+    Italian admin terms:{' '}
+    <a href="/paperwork/glossary" class="font-semibold text-primary hover:text-primary-light">
+      paperwork glossary
+    </a>
+    .
+  </p>
+</aside>

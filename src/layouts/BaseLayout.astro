@@ -1,0 +1,364 @@
+---
+/**
+ * Base layout: wraps every page.
+ *
+ * Astro 6 features used:
+ *  • <Font />        : built-in font optimizer from astro.config.mjs fonts array
+ *  • <ClientRouter />: client-side navigation with CSS transition animations
+ */
+import { Font } from 'astro:assets';
+import { ClientRouter } from 'astro:transitions';
+import '../styles/global.css';
+import { brand } from '../config/brand';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  /** Open Graph type; use `article` for guide posts. */
+  ogType?: 'website' | 'article';
+  /** When true, emit robots noindex,nofollow. */
+  noindex?: boolean;
+  schema?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const {
+  title = brand.name,
+  description = brand.description,
+  image = '/og-image.png',
+  ogType = 'website',
+  noindex = false,
+  schema,
+} = Astro.props;
+
+const pageTitle =
+  title === brand.name || title.endsWith(brand.name) ? title : `${title} | ${brand.name}`;
+const siteOrigin = Astro.site ?? brand.url;
+const canonicalURL = new URL(Astro.url.pathname, siteOrigin);
+const ogImageURL = new URL(image, siteOrigin).href;
+const schemaBlocks = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
+
+/** localStorage key for optional third-party embeds (Luma, Google Maps). */
+const EMBED_CONSENT_KEY = 'milanpost_optional_embeds';
+---
+
+<html lang={brand.locale.split('_')[0]} class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="canonical" href={canonicalURL} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <!-- Open Graph -->
+    <meta property="og:type"        content={ogType} />
+    <meta property="og:url"         content={canonicalURL} />
+    <meta property="og:title"       content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image"       content={ogImageURL} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name"   content={brand.name} />
+    <meta property="og:locale"      content={brand.locale} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card"        content="summary_large_image" />
+    <meta name="twitter:title"       content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image"       content={ogImageURL} />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Fonts -->
+    <Font cssVariable="--font-display" preload />
+    <Font cssVariable="--font-body"    preload />
+
+    <!-- JSON-LD Structured Data -->
+    {schemaBlocks.map((block) => (
+      <script type="application/ld+json" set:html={JSON.stringify(block)} />
+    ))}
+
+    <!-- FOUC prevention for dark mode -->
+    <script is:inline>
+      (function(){
+        var t = localStorage.getItem('theme');
+        if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark-mode');
+        }
+      })();
+    </script>
+
+    <slot name="head" />
+    <ClientRouter />
+  </head>
+
+  <body class="bg-background text-text font-body antialiased">
+    <a
+      class="sr-only focus:not-sr-only focus:absolute focus:z-[99999] focus:bg-primary focus:text-primary-fg focus:px-4 focus:py-2 focus:rounded-md"
+      href="#main"
+    >
+      Skip to main content
+    </a>
+
+    <slot name="header" />
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <slot name="footer" />
+
+    <!-- Optional embeds consent (Luma / Google Maps). Hidden until JS checks localStorage. -->
+    <div
+      id="embed-consent-banner"
+      class="fixed inset-x-0 bottom-0 z-[100] hidden border-t border-border bg-background/95 p-4 shadow-[0_-8px_30px_rgba(15,23,42,0.12)] backdrop-blur-sm"
+      role="dialog"
+      aria-labelledby="embed-consent-title"
+      aria-describedby="embed-consent-desc"
+      hidden
+    >
+      <div class="mx-auto flex max-w-site flex-col gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
+        <div class="min-w-0">
+          <p id="embed-consent-title" class="font-heading text-base font-semibold text-text">
+            Optional embeds
+          </p>
+          <p id="embed-consent-desc" class="mt-1 text-sm leading-relaxed text-text-muted">
+            We can load optional third-party content on this site: Luma calendar, Google Maps,
+            Instagram, and TikTok. Those providers may set their own cookies. Essential features work
+            either way. See our{' '}
+            <a href="/privacy" class="font-semibold text-primary hover:text-primary-light">Privacy policy</a>.
+          </p>
+        </div>
+        <div class="flex shrink-0 flex-wrap items-center gap-2">
+          <button
+            type="button"
+            id="embed-consent-refuse"
+            class="inline-flex min-h-[44px] items-center justify-center rounded-md border border-border bg-background px-4 py-2 text-sm font-semibold text-text hover:border-primary hover:text-primary"
+          >
+            Not now
+          </button>
+          <button
+            type="button"
+            id="embed-consent-accept"
+            class="inline-flex min-h-[44px] items-center justify-center rounded-md bg-accent px-4 py-2 text-sm font-bold text-accent-fg transition-opacity hover:opacity-90"
+          >
+            Accept embeds
+          </button>
+          <button
+            type="button"
+            id="embed-consent-close"
+            class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md text-text-muted hover:bg-surface hover:text-text"
+            aria-label="Close and keep embeds off"
+          >
+            ×
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script is:inline define:vars={{ EMBED_CONSENT_KEY }}>
+      (() => {
+        const KEY = EMBED_CONSENT_KEY;
+        const ACCEPTED = 'accepted';
+        const REFUSED = 'refused';
+
+        const getConsent = () => {
+          try {
+            return localStorage.getItem(KEY);
+          } catch {
+            return null;
+          }
+        };
+
+        const setConsent = (value) => {
+          try {
+            localStorage.setItem(KEY, value);
+          } catch {
+            /* ignore quota / private mode */
+          }
+          document.documentElement.dataset.embedConsent = value;
+        };
+
+        const banner = document.getElementById('embed-consent-banner');
+
+        const showBanner = () => {
+          if (!(banner instanceof HTMLElement)) return;
+          banner.hidden = false;
+          banner.classList.remove('hidden');
+        };
+
+        const hideBanner = () => {
+          if (!(banner instanceof HTMLElement)) return;
+          banner.hidden = true;
+          banner.classList.add('hidden');
+        };
+
+        const iframeClassFor = (root) =>
+          root.dataset.embedClass || 'block h-[400px] w-full border-0 sm:h-[450px]';
+
+        const mountIframe = (root) => {
+          if (!(root instanceof HTMLElement) || root.dataset.loaded === 'true') return;
+          const src = root.dataset.embedSrc;
+          const title = root.dataset.embedTitle || 'Embedded content';
+          if (!src) return;
+          const iframe = document.createElement('iframe');
+          iframe.src = src;
+          iframe.title = title;
+          iframe.className = iframeClassFor(root);
+          iframe.loading = 'lazy';
+          iframe.allowFullscreen = true;
+          if (root.dataset.embedReferrer === 'no-referrer-when-downgrade') {
+            iframe.referrerPolicy = 'no-referrer-when-downgrade';
+          }
+          root.dataset.loaded = 'true';
+          root.replaceChildren(iframe);
+        };
+
+        const ensureScript = (id, src, onload) => {
+          const existing = document.getElementById(id);
+          if (existing) {
+            if (typeof onload === 'function') onload();
+            return;
+          }
+          const script = document.createElement('script');
+          script.id = id;
+          script.async = true;
+          script.src = src;
+          if (typeof onload === 'function') script.onload = onload;
+          document.body.appendChild(script);
+        };
+
+        const activateSocialEmbeds = () => {
+          document.querySelectorAll('[data-social-embeds]').forEach((root) => {
+            if (!(root instanceof HTMLElement)) return;
+            const placeholder = root.querySelector('[data-social-embeds-placeholder]');
+            const mount = root.querySelector('[data-social-embeds-mount]');
+            if (placeholder instanceof HTMLElement) {
+              placeholder.hidden = true;
+              placeholder.classList.add('hidden');
+            }
+            if (mount instanceof HTMLElement) {
+              mount.hidden = false;
+              mount.removeAttribute('hidden');
+              mount.classList.remove('hidden');
+              mount.setAttribute('aria-hidden', 'false');
+            }
+            root.dataset.socialLoaded = 'true';
+          });
+
+          ensureScript('instagram-embed-script', 'https://www.instagram.com/embed.js', () => {
+            if (window.instgrm && window.instgrm.Embeds && typeof window.instgrm.Embeds.process === 'function') {
+              window.instgrm.Embeds.process();
+            }
+            document.dispatchEvent(new CustomEvent('milanpost:social-embeds-ready'));
+          });
+
+          const oldTiktok = document.getElementById('tiktok-embed-script');
+          if (oldTiktok) oldTiktok.remove();
+          ensureScript('tiktok-embed-script', 'https://www.tiktok.com/embed.js', () => {
+            document.dispatchEvent(new CustomEvent('milanpost:social-embeds-ready'));
+          });
+        };
+
+        const bindEmbeds = () => {
+          const accepted = getConsent() === ACCEPTED;
+          document.documentElement.dataset.embedConsent = getConsent() || '';
+
+          document.querySelectorAll('[data-click-embed]').forEach((root) => {
+            if (!(root instanceof HTMLElement)) return;
+
+            if (accepted) {
+              mountIframe(root);
+              return;
+            }
+
+            if (root.dataset.bound === 'true') return;
+            root.dataset.bound = 'true';
+            const btn = root.querySelector('[data-click-embed-load]');
+            if (!(btn instanceof HTMLButtonElement)) return;
+            btn.addEventListener('click', () => mountIframe(root));
+          });
+
+          if (accepted) {
+            activateSocialEmbeds();
+          } else {
+            document.querySelectorAll('[data-social-embeds-load]').forEach((btn) => {
+              if (!(btn instanceof HTMLButtonElement) || btn.dataset.bound === 'true') return;
+              btn.dataset.bound = 'true';
+              btn.addEventListener('click', () => activateSocialEmbeds());
+            });
+          }
+        };
+
+        const onChoice = (value) => {
+          setConsent(value);
+          hideBanner();
+          if (value === ACCEPTED) {
+            document.querySelectorAll('[data-click-embed]').forEach((root) => {
+              if (root instanceof HTMLElement) {
+                root.dataset.bound = 'true';
+                mountIframe(root);
+              }
+            });
+            activateSocialEmbeds();
+          }
+        };
+
+        const initBanner = () => {
+          const current = getConsent();
+          if (current === ACCEPTED || current === REFUSED) {
+            hideBanner();
+          } else {
+            showBanner();
+          }
+
+          const accept = document.getElementById('embed-consent-accept');
+          const refuse = document.getElementById('embed-consent-refuse');
+          const close = document.getElementById('embed-consent-close');
+          if (accept instanceof HTMLButtonElement) accept.onclick = () => onChoice(ACCEPTED);
+          if (refuse instanceof HTMLButtonElement) refuse.onclick = () => onChoice(REFUSED);
+          if (close instanceof HTMLButtonElement) close.onclick = () => onChoice(REFUSED);
+
+          document.querySelectorAll('[data-embed-consent-reset]').forEach((el) => {
+            if (!(el instanceof HTMLElement)) return;
+            el.onclick = (event) => {
+              event.preventDefault();
+              try {
+                localStorage.removeItem(KEY);
+              } catch {
+                /* ignore */
+              }
+              document.documentElement.dataset.embedConsent = '';
+              document.querySelectorAll('[data-click-embed]').forEach((root) => {
+                if (root instanceof HTMLElement) {
+                  delete root.dataset.loaded;
+                  delete root.dataset.bound;
+                }
+              });
+              document.querySelectorAll('[data-social-embeds]').forEach((root) => {
+                if (root instanceof HTMLElement) delete root.dataset.socialLoaded;
+              });
+              showBanner();
+              // Soft reload so placeholders return if iframes were mounted
+              window.location.reload();
+            };
+          });
+        };
+
+        const boot = () => {
+          initBanner();
+          bindEmbeds();
+        };
+
+        document.addEventListener('astro:page-load', boot);
+        boot();
+      })();
+    </script>
+  </body>
+</html>
