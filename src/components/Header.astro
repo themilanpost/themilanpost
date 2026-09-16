@@ -27,15 +27,30 @@ const summaryClass = (active: boolean) =>
 
 const menuPanelClass =
   'absolute right-0 top-full z-50 mt-1 min-w-[12rem] rounded-md border border-border bg-background py-1 shadow-md';
+
+const mobileLinkClass = (href: string) =>
+  [
+    'block rounded-md px-3 py-3 text-base font-medium transition-colors',
+    isLinkActive(href, currentPath)
+      ? 'bg-primary/10 text-primary'
+      : 'text-text-muted hover:bg-surface hover:text-text',
+  ].join(' ');
 ---
 
 <header class="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-sm">
-  <div class="mx-auto flex max-w-site items-center justify-between px-4 py-3 sm:px-6">
-    <a href="/" class="inline-flex items-center transition-opacity hover:opacity-85">
-      <Image src={logo} alt={`${brand.name} logo`} width={300} height={69} loading="eager" />
+  <div class="relative mx-auto flex max-w-site items-center justify-between gap-3 px-4 py-3 sm:px-6">
+    <a href="/" class="inline-flex min-w-0 shrink items-center transition-opacity hover:opacity-85">
+      <Image
+        src={logo}
+        alt={`${brand.name} logo`}
+        width={300}
+        height={69}
+        loading="eager"
+        class="h-8 w-auto max-w-[min(12.5rem,52vw)] sm:h-9 sm:max-w-[14rem]"
+      />
     </a>
 
-    <!-- Desktop: native <details> — no JS (survives View Transitions / broken HMR) -->
+    <!-- Desktop: native <details> — no JS -->
     <nav class="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
       <a
         href="/new-in-milan"
@@ -105,75 +120,62 @@ const menuPanelClass =
       </details>
     </nav>
 
-    <button
-      id="menu-toggle"
-      type="button"
-      aria-expanded="false"
-      aria-controls="mobile-menu"
-      class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md text-text-muted hover:bg-surface lg:hidden"
-    >
-      <span class="sr-only">Toggle menu</span>
-      <svg id="menu-icon-open" class="size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-      <svg id="menu-icon-close" class="hidden size-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
-  </div>
-
-  <div id="mobile-menu" class="hidden border-t border-border bg-background px-4 pb-6 pt-2 lg:hidden">
-    <nav class="flex flex-col gap-1" aria-label="Mobile navigation">
-      <a
-        href="/new-in-milan"
-        class:list={[
-          'rounded-md px-3 py-3 text-base font-medium transition-colors',
-          isLinkActive('/new-in-milan', currentPath)
-            ? 'bg-primary/10 text-primary'
-            : 'text-text-muted hover:bg-surface hover:text-text',
-        ]}
+    <!-- Mobile: native <details> — survives View Transitions (no JS) -->
+    <details class="group mobile-nav lg:hidden">
+      <summary
+        class="nav-summary inline-flex min-h-[44px] min-w-[44px] cursor-pointer list-none items-center justify-center rounded-md text-text-muted hover:bg-surface"
+        aria-label="Toggle menu"
       >
-        New in Milan
-      </a>
+        <svg
+          class="size-6 group-open:hidden"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg
+          class="hidden size-6 group-open:block"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </summary>
 
-      <div>
-        <p class="px-3 pt-2 text-xs font-bold uppercase tracking-widest text-text-muted">Guides</p>
-        {
-          guidesNavItems.map(({ label, href }) => (
-            <a
-              href={href}
-              class:list={[
-                'block rounded-md px-3 py-3 text-base font-medium transition-colors',
-                isLinkActive(href, currentPath)
-                  ? 'bg-primary/10 text-primary'
-                  : 'text-text-muted hover:bg-surface hover:text-text',
-              ]}
-            >
-              {label}
-            </a>
-          ))
-        }
-      </div>
+      <div
+        class="absolute inset-x-0 top-full z-50 border-b border-t border-border bg-background px-4 pb-6 pt-2 shadow-md"
+      >
+        <nav class="mx-auto flex max-w-site flex-col gap-1" aria-label="Mobile navigation">
+          <a href="/new-in-milan" class={mobileLinkClass('/new-in-milan')}>New in Milan</a>
 
-      <div>
-        <p class="px-3 pt-2 text-xs font-bold uppercase tracking-widest text-text-muted">About</p>
-        {
-          aboutNavItems.map(({ label, href }) => (
-            <a
-              href={href}
-              class:list={[
-                'block rounded-md px-3 py-3 text-base font-medium transition-colors',
-                isLinkActive(href, currentPath)
-                  ? 'bg-primary/10 text-primary'
-                  : 'text-text-muted hover:bg-surface hover:text-text',
-              ]}
-            >
-              {label}
-            </a>
-          ))
-        }
+          <div>
+            <p class="px-3 pt-2 text-xs font-bold uppercase tracking-widest text-text-muted">Guides</p>
+            {
+              guidesNavItems.map(({ label, href }) => (
+                <a href={href} class={mobileLinkClass(href)}>
+                  {label}
+                </a>
+              ))
+            }
+          </div>
+
+          <div>
+            <p class="px-3 pt-2 text-xs font-bold uppercase tracking-widest text-text-muted">About</p>
+            {
+              aboutNavItems.map(({ label, href }) => (
+                <a href={href} class={mobileLinkClass(href)}>
+                  {label}
+                </a>
+              ))
+            }
+          </div>
+        </nav>
       </div>
-    </nav>
+    </details>
   </div>
 </header>
 
@@ -185,38 +187,3 @@ const menuPanelClass =
     content: '';
   }
 </style>
-
-<!-- Mobile drawer only — desktop dropdowns are native <details> -->
-<script is:inline data-astro-rerun>
-  (() => {
-    const btn = document.getElementById('menu-toggle');
-    const menu = document.getElementById('mobile-menu');
-    const iconOpen = document.getElementById('menu-icon-open');
-    const iconClose = document.getElementById('menu-icon-close');
-    if (!(btn instanceof HTMLButtonElement) || !(menu instanceof HTMLElement)) return;
-    if (!(iconOpen instanceof HTMLElement) || !(iconClose instanceof HTMLElement)) return;
-
-    const isDesktop = () => window.matchMedia('(min-width: 1024px)').matches;
-
-    const setOpen = (nextOpen) => {
-      if (isDesktop()) nextOpen = false;
-      btn.setAttribute('aria-expanded', String(nextOpen));
-      menu.classList.toggle('hidden', !nextOpen);
-      iconOpen.classList.toggle('hidden', nextOpen);
-      iconClose.classList.toggle('hidden', !nextOpen);
-    };
-
-    btn.onclick = () => {
-      if (isDesktop()) return;
-      setOpen(btn.getAttribute('aria-expanded') !== 'true');
-    };
-
-    menu.onclick = (event) => {
-      const target = event.target;
-      if (target instanceof Element && target.closest('a[href]')) setOpen(false);
-    };
-
-    window.addEventListener('resize', () => setOpen(false), { passive: true });
-    setOpen(false);
-  })();
-</script>
