@@ -1,8 +1,9 @@
 ---
 /**
- * Early-2000s style visitor counter.
- * Counts via Netlify Function + Blobs in production; shows a static demo in `astro dev`.
+ * Early-2000s visitor counter.
+ * Counts via Cloudflare Worker + KV (PUBLIC_HIT_COUNTER_URL). Falls back to 000042 if unset/offline.
  */
+const hitCounterUrl = (import.meta.env.PUBLIC_HIT_COUNTER_URL ?? '').replace(/\/$/, '');
 ---
 
 <div class="retro-hit-counter" aria-live="polite">
@@ -10,7 +11,12 @@
   <div class="retro-hit-counter__bezel">
     <div class="retro-hit-counter__screen">
       <span class="retro-hit-counter__label">you are visitor</span>
-      <span class="retro-hit-counter__digits" id="retro-hit-digits" data-fallback="000042">000042</span>
+      <span
+        class="retro-hit-counter__digits"
+        id="retro-hit-digits"
+        data-fallback="000042"
+        data-endpoint={hitCounterUrl}
+      >000042</span>
     </div>
   </div>
   <p class="retro-hit-counter__fine">no cookies · number go up</p>
@@ -87,7 +93,6 @@
 <script is:inline data-astro-rerun>
   (() => {
     const SESSION_KEY = 'tmp-hit-counted';
-    const ENDPOINT = '/.netlify/functions/hit-counter';
 
     const updateDigits = (display) => {
       const el = document.getElementById('retro-hit-digits');
@@ -95,11 +100,18 @@
     };
 
     const syncCounter = async () => {
+      const el = document.getElementById('retro-hit-digits');
+      const endpoint = el?.dataset?.endpoint?.trim() || '';
+      if (!endpoint) {
+        if (el?.dataset?.fallback) updateDigits(el.dataset.fallback);
+        return;
+      }
+
       const alreadyCounted = sessionStorage.getItem(SESSION_KEY) === '1';
       const action = alreadyCounted ? 'get' : 'hit';
 
       try {
-        const res = await fetch(`${ENDPOINT}?action=${action}`, {
+        const res = await fetch(`${endpoint}?action=${action}`, {
           method: 'GET',
           headers: { Accept: 'application/json' },
         });
@@ -112,8 +124,7 @@
           if (action === 'hit') sessionStorage.setItem(SESSION_KEY, '1');
         }
       } catch {
-        const el = document.getElementById('retro-hit-digits');
-        if (el && el.dataset.fallback) updateDigits(el.dataset.fallback);
+        if (el?.dataset?.fallback) updateDigits(el.dataset.fallback);
       }
     };
 

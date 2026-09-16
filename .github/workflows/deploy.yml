@@ -24,6 +24,8 @@ jobs:
       - run: npm run build
         env:
           PUBLIC_FORMSPREE_FORM_ID: xwlkndra
+          # Set repo variable PUBLIC_HIT_COUNTER_URL to your workers.dev URL (Settings → Secrets and variables → Actions → Variables)
+          PUBLIC_HIT_COUNTER_URL: ${{ vars.PUBLIC_HIT_COUNTER_URL }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
