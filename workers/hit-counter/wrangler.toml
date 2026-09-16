@@ -2,8 +2,6 @@ name = "themilanpost-hit-counter"
 main = "src/index.js"
 compatibility_date = "2025-09-01"
 
-# Create namespace once, then paste the id:
-#   npx wrangler kv namespace create themilanpost-hits
 [[kv_namespaces]]
 binding = "HITS"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "15511187da82476589003c5b40151d48"
