@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T20:32:30.187Z",
+  "updatedAt": "2026-10-17T21:49:45.360Z",
   "live": true,
   "range": {
     "from": "2026-10-17",
@@ -16,10 +16,10 @@
       "id": "dice",
       "label": "DICE",
       "url": "https://dice.fm/browse/milano-5d68e89f7f285e094f60b00e",
-      "updatedAt": "2026-10-17T20:32:30.187Z"
+      "updatedAt": "2026-10-17T21:49:45.360Z"
     }
   ],
-  "count": 132,
+  "count": 129,
   "events": [
     {
       "id": "dice-6ac3b2b0a0185100015a33c5",
@@ -100,20 +100,6 @@
       "source": "eventbrite"
     },
     {
-      "id": "dice-6aba62a770a5f10001c66017",
-      "title": "One Wine Night",
-      "titleIt": "One Wine Night",
-      "start": "2026-10-17T20:30:00+02:00",
-      "end": "2026-10-18T00:30:00+02:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Dazio Levante - Arco della Pace",
-      "free": false,
-      "priceFrom": 30,
-      "url": "https://dice.fm/event/undefined",
-      "source": "dice"
-    },
-    {
       "id": "dice-6aa1375f67b4460001d814cf",
       "title": "DUB x SNRS",
       "titleIt": "DUB x SNRS",
@@ -128,19 +114,6 @@
       "source": "dice"
     },
     {
-      "id": "dice-6acc925721d6680001ec0afc",
-      "title": "Waddafuzz / Lies + Logan Laugelli Drammatico trio ",
-      "titleIt": "Waddafuzz / Lies + Logan Laugelli Drammatico trio ",
-      "start": "2026-10-17T21:00:00+02:00",
-      "end": "2026-10-18T01:00:00+02:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Bachelite cLab",
-      "free": true,
-      "url": "https://dice.fm/event/undefined",
-      "source": "dice"
-    },
-    {
       "id": "dice-693963b57a1ad400017b3e13",
       "title": "Le Cannibale - JASSS, Valentina Magaletti",
       "titleIt": "Le Cannibale - JASSS, Valentina Magaletti",
@@ -151,20 +124,6 @@
       "venue": "VOCE Triennale",
       "free": false,
       "priceFrom": 24,
-      "url": "https://dice.fm/event/undefined",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6aa7d33b58a5de00019bfda3",
-      "title": "An evening with Sacramento",
-      "titleIt": "An evening with Sacramento",
-      "start": "2026-10-17T21:30:00+02:00",
-      "end": "2026-10-18T01:30:00+02:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "BIKO",
-      "free": false,
-      "priceFrom": 11,
       "url": "https://dice.fm/event/undefined",
       "source": "dice"
     },
@@ -192,19 +151,6 @@
       "venue": "Circolo Magnolia (Indoor)",
       "free": false,
       "priceFrom": 7.99,
-      "url": "https://dice.fm/event/undefined",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6aac0150177354000120193d",
-      "title": "KARAOKE NIGHT - Circolo Agorà",
-      "titleIt": "KARAOKE NIGHT - Circolo Agorà",
-      "start": "2026-10-17T22:00:00+02:00",
-      "end": "2026-10-17T23:45:00+02:00",
-      "category": "music",
-      "zone": "Cusano Milanino",
-      "venue": "Circolo Agorà",
-      "free": true,
       "url": "https://dice.fm/event/undefined",
       "source": "dice"
     },
@@ -274,7 +220,7 @@
       "zone": "Milano",
       "venue": "Alcatraz Milano",
       "free": false,
-      "priceFrom": 15,
+      "priceFrom": 16.42,
       "url": "https://dice.fm/event/undefined",
       "source": "dice"
     },
@@ -303,20 +249,6 @@
       "venue": "NAMA (indoor) ",
       "free": false,
       "priceFrom": 10,
-      "url": "https://dice.fm/event/undefined",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6ac4ed8ac9dbda000110f711",
-      "title": "PANORAMA CITY X DIAZ ",
-      "titleIt": "PANORAMA CITY X DIAZ ",
-      "start": "2026-10-17T23:45:00+02:00",
-      "end": "2026-10-18T04:45:00+02:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Spazio Diaz",
-      "free": false,
-      "priceFrom": 11.5,
       "url": "https://dice.fm/event/undefined",
       "source": "dice"
     },
@@ -425,20 +357,6 @@
       "zone": "Milano",
       "venue": "MOGO",
       "free": true,
-      "url": "https://dice.fm/event/undefined",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6a1e7628d2fad700016f70f6",
-      "title": "ANCIENT BARDS e MOONLIGHT HAZE",
-      "titleIt": "ANCIENT BARDS e MOONLIGHT HAZE",
-      "start": "2026-10-18T19:30:00+02:00",
-      "end": "2026-10-18T23:30:00+02:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Legend Club",
-      "free": false,
-      "priceFrom": 23,
       "url": "https://dice.fm/event/undefined",
       "source": "dice"
     },
@@ -1182,6 +1100,20 @@
       "source": "eventbrite"
     },
     {
+      "id": "dice-69d8dfd31501600001176684",
+      "title": "Temples | Bliss 2026 Tour live a Magnolia",
+      "titleIt": "Temples | Bliss 2026 Tour live a Magnolia",
+      "start": "2026-10-21T20:00:00+02:00",
+      "end": "2026-10-21T23:30:00+02:00",
+      "category": "music",
+      "zone": "Segrate",
+      "venue": "Circolo Magnolia (Indoor)",
+      "free": false,
+      "priceFrom": 28.59,
+      "url": "https://dice.fm/event/undefined",
+      "source": "dice"
+    },
+    {
       "id": "dice-6acf8ffcd199db0001692668",
       "title": "Manifesto della cucina del futuro",
       "titleIt": "Manifesto della cucina del futuro",
@@ -1245,6 +1177,20 @@
       "zone": "Milano",
       "venue": "Club Giovanile Milano",
       "free": true,
+      "url": "https://dice.fm/event/undefined",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6ac35f3c7005ba00011ec82b",
+      "title": "SPAGHETTI UNPLUGGED - 22 OTTOBRE MILANO",
+      "titleIt": "SPAGHETTI UNPLUGGED - 22 OTTOBRE MILANO",
+      "start": "2026-10-22T18:00:00+02:00",
+      "end": "2026-10-23T02:00:00+02:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "APOLLO CLUB MILANO ",
+      "free": false,
+      "priceFrom": 5,
       "url": "https://dice.fm/event/undefined",
       "source": "dice"
     },
@@ -1661,6 +1607,20 @@
       "zone": "Rho",
       "venue": "MAST",
       "free": true,
+      "url": "https://dice.fm/event/undefined",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6a3a885a46eac70001c5c533",
+      "title": "Don Letts + Vitowar DJset",
+      "titleIt": "Don Letts + Vitowar DJset",
+      "start": "2026-10-23T21:00:00+02:00",
+      "end": "2026-10-24T01:00:00+02:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "ARCI Bellezza",
+      "free": false,
+      "priceFrom": 14.95,
       "url": "https://dice.fm/event/undefined",
       "source": "dice"
     },
