@@ -23,6 +23,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Need tip history so we can rebase onto origin/main before commit.
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -66,6 +69,27 @@ jobs:
       # today/agenda shards must rebuild even when full dumps are unchanged (calendar day moves).
       - name: Write slim Tracker shards
         run: npm run write:shards
+
+      # Feeds can take minutes; main may move (manual push, deploy). Rebase tip first so
+      # git-auto-commit push is not a non-fast-forward reject. (Action itself does not rebase.)
+      - name: Rebase onto origin/main before commit
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          stashed=0
+          if git stash push -u -m 'milan-pulse-refresh' -- public/data/milan-pulse/; then
+            stashed=1
+          fi
+          git rebase origin/main
+          if [ "$stashed" = 1 ]; then
+            if ! git stash pop; then
+              echo "Stash pop conflict — keeping refreshed milan-pulse JSON"
+              git checkout --theirs -- public/data/milan-pulse/ || true
+              git add -- public/data/milan-pulse/
+              git reset HEAD -- public/data/milan-pulse/ || true
+              git stash drop || true
+            fi
+          fi
 
       - name: Commit updated data files
         id: commit
