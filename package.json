@@ -41,7 +41,7 @@
     "fetch:milan-pulse": "npm run fetch:strikes && npm run fetch:eventbrite && npm run fetch:dice && npm run fetch:mobility && npm run write:shards"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.1",
+    "@astrojs/sitemap": "^3.7.4",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.1",
     "astro": "^6.0.4",
