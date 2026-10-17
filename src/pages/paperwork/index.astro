@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import GuideTopicCard from '../../components/GuideTopicCard.astro';
 import { paperworkHub } from '../../config/guide-hubs';
 import { paperworkGlossaryPath } from '../../config/paperwork-glossary';
+import { brand } from '../../config/brand';
 
 const { title, intro, topics } = paperworkHub;
 
@@ -14,7 +15,12 @@ const comingSoonTopics = topics.filter((t) => t.status === 'coming-soon');
 
 <BaseLayout
   title={title}
-  description={`${intro} Practical paperwork guides for expats in Milan.`}
+  description={`${intro} Practical paperwork guides for living in Milan.`}
+  alternates={[
+    { hreflang: 'en', href: `${brand.url}/paperwork/` },
+    { hreflang: 'it', href: `${brand.url}/it/paperwork/` },
+    { hreflang: 'x-default', href: `${brand.url}/paperwork/` },
+  ]}
 >
   <Header slot="header" />
 

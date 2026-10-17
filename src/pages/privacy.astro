@@ -10,6 +10,11 @@ const lastUpdated = '10 September 2026';
 <BaseLayout
   title="Privacy & copyright"
   description={`Privacy policy and copyright terms for ${brand.name}: personal data, reuse of guides, and brand assets.`}
+  alternates={[
+    { hreflang: 'en', href: `${brand.url}/privacy/` },
+    { hreflang: 'it', href: `${brand.url}/it/privacy/` },
+    { hreflang: 'x-default', href: `${brand.url}/privacy/` },
+  ]}
 >
   <Header slot="header" />
 

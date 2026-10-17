@@ -1,0 +1,148 @@
+---
+/**
+ * Italian homepage — Italian-only links (Google: language of chrome matches page language).
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import Hero from '../../components/Hero.astro';
+import { getCollection } from 'astro:content';
+import { brand } from '../../config/brand';
+import { homeAlternates } from '../../i18n/alternates';
+import { blogPath } from '../../i18n/paths';
+
+const featuredGuideIds = [
+  'moving-to-milan-complete-guide-students-job-seekers-professionals',
+  'permesso-di-soggiorno-milan-newcomers',
+  'cie-digital-id-for-expats-in-italy',
+] as const;
+
+const blogById = new Map(
+  (await getCollection('blogIt', ({ data }) => !data.draft)).map((post) => [post.id, post]),
+);
+
+const featuredGuides = featuredGuideIds
+  .map((id) => blogById.get(id))
+  .filter((post): post is NonNullable<typeof post> => Boolean(post));
+---
+
+<BaseLayout
+  title={brand.it.seoTitle}
+  description={brand.it.description}
+  lang="it"
+  ogLocale={brand.it.locale}
+  alternates={[...homeAlternates]}
+  schema={[
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: brand.name,
+      description: brand.it.description,
+      url: brand.url,
+      logo: new URL('/the-milan-post-logo.png', brand.url).href,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: brand.name,
+      description: brand.it.description,
+      url: `${brand.url}/it/`,
+      inLanguage: 'it',
+      publisher: { '@type': 'Organization', name: brand.name, url: brand.url },
+    },
+  ]}
+>
+  <Header slot="header" />
+
+  <Hero
+    heading="Guide pratiche per vivere a Milano."
+    description="Documenti, casa, sanità, mezzi e vita di tutti i giorni. Per chi si trasferisce a Milano — e per chi ci vive già."
+    ctaLabel="Vai alle guide"
+    ctaHref="/it/guides/"
+  />
+
+  <section class="border-b border-border bg-surface py-10 sm:py-12">
+    <div class="mx-auto max-w-site px-4 sm:px-6">
+      <h2 class="font-heading text-h3 font-semibold text-text">A chi servono queste pagine</h2>
+      <p class="mt-3 max-w-3xl text-base leading-relaxed text-text-muted sm:text-lg">
+        A studenti, lavoratori, chi si trasferisce in città e chi deve sbrigare pratiche a Milano.
+        Non è una guida turistica: qui trovi l’ordine delle pratiche, con link alle fonti ufficiali
+        (Comune, Questura, Poste, Agenzia delle Entrate). Tutto il percorso in italiano: home, hub e
+        guide lunghe.
+      </p>
+    </div>
+  </section>
+
+  <section class="border-y border-border bg-background py-12 sm:py-14 md:py-16">
+    <div class="mx-auto max-w-site px-4 sm:px-6">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="text-topper font-bold uppercase tracking-widest text-primary">Da dove partire</p>
+          <h2 class="mt-2 font-heading text-h2 font-semibold text-text">Tre guide da aprire subito</h2>
+          <p class="mt-2 max-w-2xl text-text-muted">
+            Parti dalla situazione che ti assomiglia. I testi completi sono in italiano.
+          </p>
+        </div>
+        <a
+          href="/it/guides/"
+          class="inline-flex shrink-0 items-center gap-1 text-sm font-semibold text-primary hover:text-primary-light"
+        >
+          Tutte le guide
+          <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      {
+        featuredGuides.length > 0 && (
+          <ol class="mt-8 divide-y divide-border border-y border-border" aria-label="Guide in evidenza">
+            {featuredGuides.map((post, index) => (
+              <li>
+                <a
+                  href={blogPath(post.id, 'it')}
+                  class="group grid grid-cols-[auto_1fr_auto] items-baseline gap-x-4 gap-y-1 py-5 transition-colors sm:gap-x-6 sm:py-6"
+                >
+                  <span class="font-heading text-h3 font-semibold tabular-nums text-primary/70 group-hover:text-primary">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <span class="min-w-0">
+                    <span class="block font-heading text-h3 font-semibold text-text group-hover:text-primary">
+                      {post.data.title}
+                    </span>
+                    <span class="mt-1 block text-sm leading-relaxed text-text-muted sm:text-base">
+                      {post.data.description}
+                    </span>
+                  </span>
+                  <span class="hidden items-center gap-1 self-center text-sm font-semibold text-primary sm:inline-flex">
+                    Apri
+                    <svg
+                      class="size-4 transition-transform group-hover:translate-x-0.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        )
+      }
+
+      <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-text-muted">
+        <a href="/it/paperwork/" class="font-semibold text-primary hover:text-primary-light">
+          Documenti e pratiche
+        </a>
+        <a href="/it/living-in-milan/" class="font-semibold text-primary hover:text-primary-light">
+          Vivere a Milano
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

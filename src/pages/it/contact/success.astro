@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import { brand } from '../../../config/brand';
+---
+
+<BaseLayout
+  title={`Messaggio inviato | ${brand.name}`}
+  description="Grazie. Abbiamo ricevuto il tuo messaggio."
+  lang="it"
+  ogLocale={brand.it.locale}
+  noindex
+>
+  <Header slot="header" />
+
+  <section class="py-16 sm:py-20">
+    <div class="mx-auto max-w-site px-4 text-center sm:px-6">
+      <p class="text-topper font-bold uppercase tracking-widest text-primary">Contatti</p>
+      <h1 class="mt-3 font-heading text-h1 font-semibold text-text">Messaggio inviato</h1>
+      <p class="mx-auto mt-4 max-w-xl text-lead text-text-muted">
+        Grazie. Abbiamo ricevuto il tuo messaggio e ti risponderemo appena possibile.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <a
+          href="/it/"
+          class="inline-flex min-h-[44px] items-center justify-center rounded-md bg-accent px-6 py-3 text-base font-bold text-accent-fg transition-opacity hover:opacity-90"
+        >
+          Torna alla home
+        </a>
+        <a
+          href="/it/guides/"
+          class="inline-flex min-h-[44px] items-center justify-center rounded-md border border-primary px-6 py-3 text-base font-bold text-primary transition-colors hover:bg-primary hover:text-primary-fg"
+        >
+          Vai alle guide
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

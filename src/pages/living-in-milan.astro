@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { livingHub } from '../config/living-hubs';
 import { livingGlossaryPath } from '../config/living-glossary';
+import { brand } from '../config/brand';
 
 const { title, intro, topics, comingSoon } = livingHub;
 ---
@@ -11,6 +12,11 @@ const { title, intro, topics, comingSoon } = livingHub;
 <BaseLayout
   title={title}
   description="Living in Milan: maps, weekly markets, drinking fountains, celebrity places, and a glossary — practical city-life guides for newcomers."
+  alternates={[
+    { hreflang: 'en', href: `${brand.url}/living-in-milan/` },
+    { hreflang: 'it', href: `${brand.url}/it/living-in-milan/` },
+    { hreflang: 'x-default', href: `${brand.url}/living-in-milan/` },
+  ]}
 >
   <Header slot="header" />
 

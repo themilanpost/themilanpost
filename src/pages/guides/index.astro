@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import HubGuideCard from '../../components/HubGuideCard.astro';
 import { getCollection } from 'astro:content';
 import { guidesHub } from '../../config/guides-hub';
+import { brand } from '../../config/brand';
 
 const { title, intro, sections } = guidesHub;
 
@@ -13,7 +14,15 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
 );
 ---
 
-<BaseLayout title={title} description={`${intro} Practical guides for expats in Milan.`}>
+<BaseLayout
+  title={title}
+  description={`${intro} Practical guides for living in Milan.`}
+  alternates={[
+    { hreflang: 'en', href: `${brand.url}/guides/` },
+    { hreflang: 'it', href: `${brand.url}/it/guides/` },
+    { hreflang: 'x-default', href: `${brand.url}/guides/` },
+  ]}
+>
   <Header slot="header" />
 
   <section class="py-12 sm:py-16">

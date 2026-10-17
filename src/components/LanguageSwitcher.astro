@@ -1,0 +1,39 @@
+---
+/**
+ * Visible EN ↔ IT links (Google: let users switch; do not auto-redirect by IP/Accept-Language).
+ * @see https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites
+ */
+import { getAlternateLocalePath, getLangFromUrl } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const enHref = getAlternateLocalePath(Astro.url.pathname, 'en');
+const itHref = getAlternateLocalePath(Astro.url.pathname, 'it');
+---
+
+<nav class="inline-flex items-center gap-1 text-sm font-semibold" aria-label={lang === 'it' ? 'Lingua' : 'Language'}>
+  <a
+    href={enHref}
+    hreflang="en"
+    lang="en"
+    aria-current={lang === 'en' ? 'true' : undefined}
+    class:list={[
+      'rounded-md px-2 py-1.5 transition-colors',
+      lang === 'en' ? 'bg-primary/10 text-primary' : 'text-text-muted hover:text-text',
+    ]}
+  >
+    EN
+  </a>
+  <span class="text-border" aria-hidden="true">|</span>
+  <a
+    href={itHref}
+    hreflang="it"
+    lang="it"
+    aria-current={lang === 'it' ? 'true' : undefined}
+    class:list={[
+      'rounded-md px-2 py-1.5 transition-colors',
+      lang === 'it' ? 'bg-primary/10 text-primary' : 'text-text-muted hover:text-text',
+    ]}
+  >
+    IT
+  </a>
+</nav>

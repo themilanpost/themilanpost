@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import GuideTopicCard from '../../../components/GuideTopicCard.astro';
+import { brand } from '../../../config/brand';
+import type { GuideTopic } from '../../../config/guide-hubs';
+
+const title = 'Documenti e pratiche a Milano';
+const intro =
+  'Pratiche amministrative a Milano: codice fiscale, documenti di soggiorno dove servono, residenza, CIE, TARI e iscrizioni locali. Ogni scheda apre la guida completa in italiano, quando è pronta.';
+
+const topics: GuideTopic[] = [
+  {
+    id: 'moving-first-steps',
+    label: 'Primi passi',
+    title: 'Trasferirsi a Milano: ordine delle pratiche',
+    description:
+      'Sequenza tipica per chi si trasferisce: visto e permesso dove servono, codice fiscale, sanità, casa e residenza.',
+    status: 'published',
+    articleSlug: 'moving-to-milan-complete-guide-students-job-seekers-professionals',
+  },
+  {
+    id: 'permesso-soggiorno',
+    label: 'Permesso di Soggiorno',
+    title: 'Permesso di soggiorno: basi',
+    description:
+      'Scadenza di 8 giorni, kit Poste MOD. 209, codici 31/16/17, documenti, stato pratica e rinnovo.',
+    status: 'published',
+    articleSlug: 'permesso-di-soggiorno-milan-newcomers',
+  },
+  {
+    id: 'carta-identita',
+    label: "Carta d'Identità",
+    title: 'CIE (carta d’identità elettronica)',
+    description: 'Come richiederla a Milano, documenti, tempi di consegna e uso online.',
+    status: 'published',
+    articleSlug: 'cie-digital-id-for-expats-in-italy',
+  },
+  {
+    id: 'tari',
+    label: 'TARI',
+    title: 'Tassa sui rifiuti (TARI)',
+    description:
+      'Dichiarazione entro 90 giorni, chi paga in affitto, scadenze 2026 e cessazione quando lasci casa.',
+    status: 'published',
+    articleSlug: 'tari-waste-tax-milan-newcomers',
+  },
+  {
+    id: 'codice-fiscale',
+    label: 'Codice Fiscale',
+    title: 'Ottenere il codice fiscale',
+    description: 'Richiesta in Agenzia delle Entrate (AA4/8) e, in alcuni percorsi, assegnazione in Questura.',
+    status: 'coming-soon',
+  },
+  {
+    id: 'residenza',
+    label: 'Residenza',
+    title: 'Registrare l’indirizzo',
+    description: 'Iscrizione anagrafica a Milano: percorsi e documenti secondo la tua situazione.',
+    status: 'coming-soon',
+  },
+];
+
+const publishedTopics = topics.filter((t) => t.status === 'published');
+const comingSoonTopics = topics.filter((t) => t.status === 'coming-soon');
+
+const alternates = [
+  { hreflang: 'en', href: `${brand.url}/paperwork/` },
+  { hreflang: 'it', href: `${brand.url}/it/paperwork/` },
+  { hreflang: 'x-default', href: `${brand.url}/paperwork/` },
+];
+---
+
+<BaseLayout
+  title={`${title} | ${brand.name}`}
+  description={`${intro} Guide pratiche per vivere a Milano.`}
+  lang="it"
+  ogLocale={brand.it.locale}
+  alternates={alternates}
+>
+  <Header slot="header" />
+
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-site px-4 sm:px-6">
+      <p class="text-topper font-bold uppercase tracking-widest text-primary">Pratiche</p>
+      <h1 class="mt-3 max-w-3xl font-heading text-h1 font-semibold text-text">{title}</h1>
+      <p class="mt-4 max-w-2xl text-lead leading-relaxed text-text-muted">{intro}</p>
+
+      <div
+        class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        role="list"
+        aria-label="Guide pratiche pubblicate"
+      >
+        {
+          publishedTopics.map((topic) => (
+            <div role="listitem" class="min-h-[220px]">
+              <GuideTopicCard topic={topic} lang="it" />
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="mt-14 border-t border-border pt-12">
+        <p class="text-topper font-bold uppercase tracking-widest text-primary">In programma</p>
+        <h2 class="mt-2 font-heading text-h2 font-semibold text-text">Prossimamente</h2>
+        <p class="mt-3 max-w-2xl text-sm leading-relaxed text-text-muted">
+          Prossime guide in italiano, sempre con fonti ufficiali e focus Milano.
+        </p>
+        <div
+          class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          role="list"
+          aria-label="Guide in arrivo"
+        >
+          {
+            comingSoonTopics.map((topic) => (
+              <div role="listitem" class="min-h-[220px]">
+                <GuideTopicCard topic={topic} lang="it" />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <p class="mt-10 text-sm text-text-muted">
+        Tutte le guide sono elencate sulla{' '}
+        <a href="/it/guides/#all-guides" class="font-semibold text-primary hover:text-primary-light">
+          pagina Guide
+        </a>
+        .
+      </p>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

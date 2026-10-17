@@ -4,7 +4,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import CTA from '../components/CTA.astro';
 import GuideRelatedLinks from '../components/GuideRelatedLinks.astro';
+import GuideFaq from '../components/GuideFaq.astro';
 import { brand } from '../config/brand';
+import { faqPageMainEntity, getGuideFaqs } from '../config/guide-faqs';
+import type { Lang } from '../i18n/ui';
 
 interface Props {
   title: string;
@@ -12,22 +15,35 @@ interface Props {
   date: Date;
   author?: string;
   articleSlug?: string;
+  lang?: Lang;
+  alternates?: { hreflang: string; href: string }[];
 }
 
-const { title, description, date, author = 'Team', articleSlug } = Astro.props;
+const {
+  title,
+  description,
+  date,
+  author = 'Team',
+  articleSlug,
+  lang = 'en',
+  alternates = [],
+} = Astro.props;
 
-const formattedDate = date.toLocaleDateString('en-US', {
+const formattedDate = date.toLocaleDateString(lang === 'it' ? 'it-IT' : 'en-US', {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
 });
 
 const pageUrl = new URL(Astro.url.pathname, Astro.site ?? brand.url).href;
+const faqBlock = getGuideFaqs(articleSlug);
+
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: title,
   description,
+  inLanguage: lang,
   datePublished: date.toISOString(),
   author: {
     '@type': 'Person',
@@ -41,22 +57,67 @@ const articleSchema = {
   mainEntityOfPage: pageUrl,
   image: new URL('/og-image.png', Astro.site ?? brand.url).href,
 };
+
+const guidesHref = lang === 'it' ? `${brand.url}/it/guides/` : `${brand.url}/guides/`;
+const guidesLabel = lang === 'it' ? 'Guide' : 'Guides';
+const homeLabel = lang === 'it' ? 'Home' : 'Home';
+const backLabel = lang === 'it' ? 'Torna alle guide' : 'Back to Guides';
+const backHref = lang === 'it' ? '/it/guides/' : '/guides/';
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: homeLabel, item: lang === 'it' ? `${brand.url}/it/` : `${brand.url}/` },
+    { '@type': 'ListItem', position: 2, name: guidesLabel, item: guidesHref },
+    { '@type': 'ListItem', position: 3, name: title, item: pageUrl },
+  ],
+};
+
+const faqSchema = faqBlock
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'it',
+      mainEntity: faqPageMainEntity(faqBlock.items),
+    }
+  : null;
+
+// Italian FAQ block only on Italian pages (keeps EN guides English-primary)
+const showFaq = Boolean(faqBlock && lang === 'it');
+
+const schemaBlocks = [
+  articleSchema,
+  breadcrumbSchema,
+  ...(showFaq && faqSchema ? [faqSchema] : []),
+];
 ---
 
-<BaseLayout title={title} description={description} ogType="article" schema={articleSchema}>
+<BaseLayout
+  title={title}
+  description={description}
+  ogType="article"
+  lang={lang}
+  ogLocale={lang === 'it' ? brand.it.locale : brand.locale}
+  alternates={alternates}
+  schema={schemaBlocks}
+>
   <Header slot="header" />
 
-  <!-- Post hero -->
   <section class="bg-primary py-14 sm:py-16 lg:py-20">
     <div class="mx-auto max-w-article px-4 sm:px-6">
       <nav aria-label="Breadcrumb" class="mb-4">
         <ol class="flex items-center gap-1.5 text-sm text-primary-fg/60">
-          <li><a href="/" class="transition-colors hover:text-primary-fg">Home</a></li>
+          <li>
+            <a href={lang === 'it' ? '/it/' : '/'} class="transition-colors hover:text-primary-fg">
+              {homeLabel}
+            </a>
+          </li>
           <li class="flex items-center gap-1.5">
             <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
-            <a href="/guides" class="transition-colors hover:text-primary-fg">Guides</a>
+            <a href={backHref} class="transition-colors hover:text-primary-fg">{guidesLabel}</a>
           </li>
           <li class="flex items-center gap-1.5">
             <svg class="size-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -76,23 +137,27 @@ const articleSchema = {
     </div>
   </section>
 
-  <!-- Post content -->
   <section class="py-section">
     <div class="mx-auto max-w-article px-4 sm:px-6">
-      <article class="prose-article prose prose-lg max-w-none prose-headings:font-heading prose-headings:uppercase prose-a:text-primary-light hover:prose-a:text-primary">
+      <article
+        class="prose-article prose prose-lg max-w-none prose-headings:font-heading prose-headings:uppercase prose-a:text-primary-light hover:prose-a:text-primary"
+        lang={lang}
+      >
         <slot />
-        {articleSlug && <GuideRelatedLinks articleSlug={articleSlug} />}
+        {articleSlug && <GuideRelatedLinks articleSlug={articleSlug} lang={lang} />}
       </article>
+
+      {showFaq && faqBlock && <GuideFaq faq={faqBlock} />}
 
       <div class="mt-10 border-t border-border pt-6">
         <a
-          href="/guides"
+          href={backHref}
           class="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary-light"
         >
           <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
           </svg>
-          Back to Guides
+          {backLabel}
         </a>
       </div>
     </div>

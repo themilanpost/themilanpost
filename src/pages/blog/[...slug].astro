@@ -1,6 +1,8 @@
 ---
 import { getCollection, render } from 'astro:content';
 import PostLayout from '../../layouts/PostLayout.astro';
+import { brand } from '../../config/brand';
+import { italianContentPaths } from '../../i18n/utils';
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -12,6 +14,14 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { Content } = await render(post);
+const hasIt = italianContentPaths.has(`/blog/${post.id}`);
+const alternates = hasIt
+  ? [
+      { hreflang: 'en', href: `${brand.url}/blog/${post.id}/` },
+      { hreflang: 'it', href: `${brand.url}/it/blog/${post.id}/` },
+      { hreflang: 'x-default', href: `${brand.url}/blog/${post.id}/` },
+    ]
+  : [];
 ---
 
 <PostLayout
@@ -20,6 +30,8 @@ const { Content } = await render(post);
   date={post.data.date}
   author={post.data.author}
   articleSlug={post.id}
+  lang="en"
+  alternates={alternates}
 >
   <Content />
 </PostLayout>

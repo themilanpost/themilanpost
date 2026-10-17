@@ -12,6 +12,11 @@ const successUrl = new URL('/contact/success', Astro.site ?? brand.url).href;
 <BaseLayout
   title="Contact"
   description={`Email ${brand.name} with questions, corrections, or collaboration ideas. We read every message.`}
+  alternates={[
+    { hreflang: 'en', href: `${brand.url}/contact/` },
+    { hreflang: 'it', href: `${brand.url}/it/contact/` },
+    { hreflang: 'x-default', href: `${brand.url}/contact/` },
+  ]}
 >
   <Header slot="header" />
 

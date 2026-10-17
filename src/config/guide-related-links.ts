@@ -18,7 +18,7 @@ export const guideRelatedLinks: Record<string, GuideLink[]> = {
       hub: 'Paperwork',
     },
     {
-      title: 'Carta d\'Identità Elettronica (CIE)',
+      title: "Carta d'Identità Elettronica (CIE)",
       href: '/blog/cie-digital-id-for-expats-in-italy',
       hub: 'Paperwork',
     },
@@ -27,11 +27,6 @@ export const guideRelatedLinks: Record<string, GuideLink[]> = {
       href: '/blog/tari-waste-tax-milan-newcomers',
       hub: 'Paperwork',
     },
-    {
-      title: 'Weekly street markets',
-      href: '/living-in-milan/markets',
-      hub: 'Living in Milan',
-    },
   ],
   'permesso-di-soggiorno-milan-newcomers': [
     {
@@ -39,7 +34,7 @@ export const guideRelatedLinks: Record<string, GuideLink[]> = {
       href: '/blog/moving-to-milan-complete-guide-students-job-seekers-professionals',
     },
     {
-      title: 'Carta d\'Identità Elettronica (CIE)',
+      title: "Carta d'Identità Elettronica (CIE)",
       href: '/blog/cie-digital-id-for-expats-in-italy',
       hub: 'Paperwork',
     },
@@ -71,7 +66,7 @@ export const guideRelatedLinks: Record<string, GuideLink[]> = {
       href: '/blog/moving-to-milan-complete-guide-students-job-seekers-professionals',
     },
     {
-      title: 'Carta d\'Identità Elettronica (CIE)',
+      title: "Carta d'Identità Elettronica (CIE)",
       href: '/blog/cie-digital-id-for-expats-in-italy',
       hub: 'Paperwork',
     },
@@ -83,6 +78,76 @@ export const guideRelatedLinks: Record<string, GuideLink[]> = {
   ],
 };
 
-export function relatedGuidesFor(slug: string): GuideLink[] {
+/** Italian titles + /it/ paths (no English living pages from Italian guides). */
+export const guideRelatedLinksIt: Record<string, GuideLink[]> = {
+  'moving-to-milan-complete-guide-students-job-seekers-professionals': [
+    {
+      title: 'Permesso di soggiorno a Milano',
+      href: '/it/blog/permesso-di-soggiorno-milan-newcomers/',
+      hub: 'Pratiche',
+    },
+    {
+      title: 'CIE a Milano',
+      href: '/it/blog/cie-digital-id-for-expats-in-italy/',
+      hub: 'Pratiche',
+    },
+    {
+      title: 'TARI a Milano',
+      href: '/it/blog/tari-waste-tax-milan-newcomers/',
+      hub: 'Pratiche',
+    },
+  ],
+  'permesso-di-soggiorno-milan-newcomers': [
+    {
+      title: 'Primi passi a Milano',
+      href: '/it/blog/moving-to-milan-complete-guide-students-job-seekers-professionals/',
+    },
+    {
+      title: 'CIE a Milano',
+      href: '/it/blog/cie-digital-id-for-expats-in-italy/',
+      hub: 'Pratiche',
+    },
+    {
+      title: 'TARI a Milano',
+      href: '/it/blog/tari-waste-tax-milan-newcomers/',
+      hub: 'Pratiche',
+    },
+  ],
+  'cie-digital-id-for-expats-in-italy': [
+    {
+      title: 'Primi passi a Milano',
+      href: '/it/blog/moving-to-milan-complete-guide-students-job-seekers-professionals/',
+    },
+    {
+      title: 'Permesso di soggiorno a Milano',
+      href: '/it/blog/permesso-di-soggiorno-milan-newcomers/',
+      hub: 'Pratiche',
+    },
+    {
+      title: 'TARI a Milano',
+      href: '/it/blog/tari-waste-tax-milan-newcomers/',
+      hub: 'Pratiche',
+    },
+  ],
+  'tari-waste-tax-milan-newcomers': [
+    {
+      title: 'Primi passi a Milano',
+      href: '/it/blog/moving-to-milan-complete-guide-students-job-seekers-professionals/',
+    },
+    {
+      title: 'CIE a Milano',
+      href: '/it/blog/cie-digital-id-for-expats-in-italy/',
+      hub: 'Pratiche',
+    },
+    {
+      title: 'Permesso di soggiorno a Milano',
+      href: '/it/blog/permesso-di-soggiorno-milan-newcomers/',
+      hub: 'Pratiche',
+    },
+  ],
+};
+
+export function relatedGuidesFor(slug: string, lang: 'en' | 'it' = 'en'): GuideLink[] {
+  if (lang === 'it') return guideRelatedLinksIt[slug] ?? [];
   return guideRelatedLinks[slug] ?? [];
 }

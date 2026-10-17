@@ -16,10 +16,24 @@ export const brand = {
   // ── Site Identity ──────────────────────────────────────────────────────────
   name: 'The Milan Post',
   tagline: 'Practical guides for building your life in Milan.',
+  /** Homepage / default SERP title — keep brand at the end for BaseLayout suffix rules. */
+  seoTitle: 'Practical guides for living in Milan | The Milan Post',
   description:
-    'Clear, useful guides for expats building everyday life in Milan: paperwork, housing, healthcare, transport, and daily essentials.',
+    'Clear guides for students, workers, and internationals living in Milan: permesso, CIE, TARI, housing, markets, and first-month paperwork. Milan-first, officially sourced.',
   url: 'https://www.themilanpost.it',
   locale: 'en_US',
+  /**
+   * Italian SEO + chrome (localised, not word-for-word EN).
+   * Google: title/meta in the page language; people-first copy; unique descriptions.
+   * Style: short clauses, active voice (Crusca / plain Italian); concrete Milan admin terms.
+   */
+  it: {
+    tagline: 'Guide chiare per sistemarti a Milano.',
+    seoTitle: 'Guide pratiche per vivere a Milano | The Milan Post',
+    description:
+      'Permesso, CIE, TARI, casa e primi passi a Milano: guide pratiche per chi vive o si trasferisce in città. Spiegate passo passo, con fonti ufficiali.',
+    locale: 'it_IT',
+  },
 
   // ── Fonts ──────────────────────────────────────────────────────────────────
   // To swap fonts: change the `name` values here AND update astro.config.mjs

@@ -20,19 +20,31 @@ interface Props {
   /** When true, emit robots noindex,nofollow. */
   noindex?: boolean;
   schema?: Record<string, unknown> | Record<string, unknown>[];
+  /** BCP 47 language for <html lang>. */
+  lang?: string;
+  /** Open Graph locale, e.g. en_US / it_IT. */
+  ogLocale?: string;
+  /**
+   * Alternate language URLs for hreflang (Google: separate URLs + reciprocal alternates).
+   * Include self, the other locale(s), and optionally x-default.
+   */
+  alternates?: { hreflang: string; href: string }[];
 }
 
 const {
-  title = brand.name,
+  title = brand.seoTitle,
   description = brand.description,
   image = '/og-image.png',
   ogType = 'website',
   noindex = false,
   schema,
+  lang = 'en',
+  ogLocale = brand.locale,
+  alternates = [],
 } = Astro.props;
 
 const pageTitle =
-  title === brand.name || title.endsWith(brand.name) ? title : `${title} | ${brand.name}`;
+  title === brand.name || title.includes(brand.name) ? title : `${title} | ${brand.name}`;
 const siteOrigin = Astro.site ?? brand.url;
 const canonicalURL = new URL(Astro.url.pathname, siteOrigin);
 const ogImageURL = new URL(image, siteOrigin).href;
@@ -42,7 +54,7 @@ const schemaBlocks = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
 const EMBED_CONSENT_KEY = 'milanpost_optional_embeds';
 ---
 
-<html lang={brand.locale.split('_')[0]} class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -52,6 +64,9 @@ const EMBED_CONSENT_KEY = 'milanpost_optional_embeds';
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {alternates.map(({ hreflang, href }) => (
+      <link rel="alternate" hreflang={hreflang} href={href} />
+    ))}
 
     <!-- Open Graph -->
     <meta property="og:type"        content={ogType} />
@@ -62,7 +77,7 @@ const EMBED_CONSENT_KEY = 'milanpost_optional_embeds';
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:site_name"   content={brand.name} />
-    <meta property="og:locale"      content={brand.locale} />
+    <meta property="og:locale"      content={ogLocale} />
 
     <!-- Twitter Card -->
     <meta name="twitter:card"        content="summary_large_image" />

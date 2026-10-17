@@ -6,6 +6,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
 import { brand } from '../config/brand';
+import { homeAlternates } from '../i18n/alternates';
 import {
   communityJoinFormId,
   communityJoinUrl,
@@ -44,8 +45,11 @@ const instagramCanonicalUrls = instagramEmbedUrls
 ---
 
 <BaseLayout
-  title={brand.name}
+  title={brand.seoTitle}
   description={brand.description}
+  lang="en"
+  ogLocale={brand.locale}
+  alternates={homeAlternates}
   schema={[
     {
       '@context': 'https://schema.org',

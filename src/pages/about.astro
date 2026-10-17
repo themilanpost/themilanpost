@@ -20,6 +20,11 @@ const team = [
 <BaseLayout
   title="About"
   description={`${brand.name} publishes practical Milan guides for newcomers. New in Milan is the community behind the meetups — started in 2022.`}
+  alternates={[
+    { hreflang: 'en', href: `${brand.url}/about/` },
+    { hreflang: 'it', href: `${brand.url}/it/about/` },
+    { hreflang: 'x-default', href: `${brand.url}/about/` },
+  ]}
 >
   <Header slot="header" />
 

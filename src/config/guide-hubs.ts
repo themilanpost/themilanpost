@@ -217,9 +217,9 @@ export const paperworkHub: GuideHub = {
   ],
 };
 
-export function topicHref(topic: GuideTopic): string | undefined {
+export function topicHref(topic: GuideTopic, lang: 'en' | 'it' = 'en'): string | undefined {
   if (topic.status === 'published' && topic.articleSlug) {
-    return `/blog/${topic.articleSlug}`;
+    return lang === 'it' ? `/it/blog/${topic.articleSlug}/` : `/blog/${topic.articleSlug}/`;
   }
   return undefined;
 }

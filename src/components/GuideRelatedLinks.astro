@@ -1,22 +1,30 @@
 ---
 import { relatedGuidesFor, type GuideLink } from '../config/guide-related-links';
+import type { Lang } from '../i18n/ui';
 
 interface Props {
   articleSlug: string;
+  lang?: Lang;
 }
 
-const { articleSlug } = Astro.props;
-const links: GuideLink[] = relatedGuidesFor(articleSlug);
+const { articleSlug, lang = 'en' } = Astro.props;
+const links: GuideLink[] = relatedGuidesFor(articleSlug, lang);
 
 if (links.length === 0) return;
+
+const heading = lang === 'it' ? 'Guide collegate' : 'Related guides';
+const hubHref = lang === 'it' ? '/it/paperwork/' : '/paperwork/';
+const hubLabel = lang === 'it' ? 'hub Documenti e pratiche' : 'Paperwork in Milan hub';
+const footerLead =
+  lang === 'it' ? 'Vedi tutti i temi sul' : 'Browse all paperwork topics on the';
 ---
 
 <aside
   class="not-prose mt-12 rounded-lg border border-border bg-surface p-6"
-  aria-label="Related guides"
+  aria-label={heading}
 >
   <h2 class="font-heading text-lg font-semibold uppercase tracking-wide text-text">
-    Related guides
+    {heading}
   </h2>
   <ul class="mt-4 space-y-2">
     {
@@ -38,14 +46,9 @@ if (links.length === 0) return;
     }
   </ul>
   <p class="mt-4 text-sm text-text-muted">
-    Browse all paperwork topics on the{' '}
-    <a href="/paperwork" class="font-semibold text-primary hover:text-primary-light">
-      Paperwork in Milan hub
-    </a>
-    .
-    Italian admin terms:{' '}
-    <a href="/paperwork/glossary" class="font-semibold text-primary hover:text-primary-light">
-      paperwork glossary
+    {footerLead}{' '}
+    <a href={hubHref} class="font-semibold text-primary hover:text-primary-light">
+      {hubLabel}
     </a>
     .
   </p>

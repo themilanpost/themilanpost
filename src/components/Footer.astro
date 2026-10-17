@@ -1,29 +1,60 @@
 ---
 import { brand } from '../config/brand';
+import { getLangFromUrl } from '../i18n/utils';
+import { localePath } from '../i18n/paths';
 import RetroHitCounter from './RetroHitCounter.astro';
 
 const year = new Date().getFullYear();
+const lang = getLangFromUrl(Astro.url);
+const homeHref = localePath('/', lang);
+const tagline = lang === 'it' ? brand.it.tagline : brand.tagline;
+const privacyHref = localePath('/privacy', lang);
 
 /** Top-level pages only: detail pages live inside each hub. */
-const navCols = [
-  {
-    title: 'Explore',
-    links: [
-      { label: 'New in Milan', href: '/new-in-milan' },
-      { label: 'Guides', href: '/guides' },
-      { label: 'Paperwork', href: '/paperwork' },
-      { label: 'Living in Milan', href: '/living-in-milan' },
-    ],
-  },
-  {
-    title: 'About',
-    links: [
-      { label: 'About', href: '/about' },
-      { label: 'Contact', href: '/contact' },
-      { label: 'Privacy & copyright', href: '/privacy' },
-    ],
-  },
-];
+const navCols =
+  lang === 'it'
+    ? [
+        {
+          title: 'Esplora',
+          links: [
+            { label: 'Guide', href: '/it/guides/' },
+            { label: 'Documenti e pratiche', href: '/it/paperwork/' },
+            { label: 'Vivere a Milano', href: '/it/living-in-milan/' },
+          ],
+        },
+        {
+          title: 'Il sito',
+          links: [
+            { label: 'Chi siamo', href: '/it/about/' },
+            { label: 'Contatti', href: '/it/contact/' },
+            { label: 'Privacy e copyright', href: '/it/privacy/' },
+          ],
+        },
+      ]
+    : [
+        {
+          title: 'Explore',
+          links: [
+            { label: 'New in Milan', href: '/new-in-milan' },
+            { label: 'Guides', href: '/guides' },
+            { label: 'Paperwork', href: '/paperwork' },
+            { label: 'Living in Milan', href: '/living-in-milan' },
+          ],
+        },
+        {
+          title: 'About',
+          links: [
+            { label: 'About', href: '/about' },
+            { label: 'Contact', href: '/contact' },
+            { label: 'Privacy & copyright', href: '/privacy' },
+          ],
+        },
+      ];
+
+const rightsLabel = lang === 'it' ? 'Tutti i diritti riservati' : 'All rights reserved';
+const embedLabel = lang === 'it' ? 'Impostazioni embed' : 'Embed settings';
+const madeWith = lang === 'it' ? 'Fatto con' : 'Made with';
+const byLabel = lang === 'it' ? 'da' : 'by';
 ---
 
 <footer class="border-t border-border bg-surface text-text-muted" transition:persist>
@@ -31,11 +62,11 @@ const navCols = [
     <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
 
       <div class="sm:col-span-2 lg:col-span-1">
-        <a href="/" class="font-heading text-lg font-bold uppercase tracking-wide text-primary">
+        <a href={homeHref} class="font-heading text-lg font-bold uppercase tracking-wide text-primary">
           {brand.name}
         </a>
         <p class="mt-3 max-w-xs text-sm leading-relaxed text-text">
-          {brand.tagline}
+          {tagline}
         </p>
       </div>
 
@@ -61,15 +92,15 @@ const navCols = [
       <div class="flex w-full flex-col items-center justify-between gap-3 text-center text-sm sm:flex-row sm:text-left">
         <p>
           &copy; {year} {brand.name}.{' '}
-          <a href="/privacy#copyright" class="font-medium text-text transition-colors hover:text-primary">
-            All rights reserved
+          <a href={`${privacyHref}#copyright`} class="font-medium text-text transition-colors hover:text-primary">
+            {rightsLabel}
           </a>.
         </p>
         <p class="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 sm:justify-end">
-          <a href="/privacy" class="font-medium text-text transition-colors hover:text-primary">
+          <a href={privacyHref} class="font-medium text-text transition-colors hover:text-primary">
             Privacy
           </a>
-          <a href="/privacy#copyright" class="font-medium text-text transition-colors hover:text-primary">
+          <a href={`${privacyHref}#copyright`} class="font-medium text-text transition-colors hover:text-primary">
             Copyright
           </a>
           <button
@@ -77,11 +108,11 @@ const navCols = [
             data-embed-consent-reset
             class="font-medium text-text transition-colors hover:text-primary"
           >
-            Embed settings
+            {embedLabel}
           </button>
           <span>
-            Made with <span aria-hidden="true">❤️</span><span class="sr-only">love</span> by
-            <a href="/" class="font-medium text-text transition-colors hover:text-primary">
+            {madeWith} <span aria-hidden="true">❤️</span><span class="sr-only">{lang === 'it' ? 'amore' : 'love'}</span> {byLabel}
+            <a href={homeHref} class="font-medium text-text transition-colors hover:text-primary">
               {brand.name}
             </a>
           </span>

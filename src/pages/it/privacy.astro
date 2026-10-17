@@ -1,0 +1,209 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { brand } from '../../config/brand';
+
+const lastUpdated = '10 settembre 2026';
+
+const alternates = [
+  { hreflang: 'en', href: `${brand.url}/privacy/` },
+  { hreflang: 'it', href: `${brand.url}/it/privacy/` },
+  { hreflang: 'x-default', href: `${brand.url}/privacy/` },
+];
+---
+
+<BaseLayout
+  title={`Privacy e copyright | ${brand.name}`}
+  description={`Informativa privacy e termini di copyright di ${brand.name}: dati personali, riuso delle guide e asset del brand.`}
+  lang="it"
+  ogLocale={brand.it.locale}
+  alternates={alternates}
+>
+  <Header slot="header" />
+
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <p class="text-topper font-bold uppercase tracking-widest text-primary">Legale</p>
+      <h1 class="mt-3 font-heading text-h1 font-semibold text-text">Privacy e copyright</h1>
+      <p class="mt-4 text-sm text-text-muted">Ultimo aggiornamento: {lastUpdated}</p>
+      <p class="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm font-semibold">
+        <a href="#privacy" class="text-primary hover:text-primary-light">Privacy</a>
+        <a href="#copyright" class="text-primary hover:text-primary-light">Copyright e riuso</a>
+      </p>
+      <p class="mt-6 text-lead leading-relaxed text-text-muted">
+        Questa pagina spiega come {brand.name} (“noi”) tratta i dati personali e come si può usare
+        il nostro contenuto. È redatta per trasparenza rispetto al GDPR e alla legge italiana sul
+        diritto d’autore (L. 633/1941). Non è una consulenza legale.
+      </p>
+
+      <div class="prose-privacy mt-10 space-y-8 text-text-muted leading-relaxed">
+        <section id="privacy">
+          <h2 class="font-heading text-h3 font-semibold text-text">1. Titolare</h2>
+          <p class="mt-3">
+            Il titolare del trattamento è {brand.name}, che gestisce il sito su{' '}
+            <a href={brand.url} class="font-semibold text-primary hover:text-primary-light">{brand.url}</a>.
+          </p>
+          <p class="mt-3">
+            Per richieste privacy (accesso, cancellazione, domande) usa il{' '}
+            <a href="/it/contact/" class="font-semibold text-primary hover:text-primary-light">modulo contatti</a>
+            {' '}e indica “privacy” nel messaggio. Non pubblichiamo un indirizzo email pubblico, per
+            ridurre lo spam.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading text-h3 font-semibold text-text">2. Cosa trattiamo e perché</h2>
+          <ul class="mt-3 list-disc space-y-2 pl-5">
+            <li>
+              <strong class="text-text">Modulo contatti:</strong> nome, email e messaggio, per
+              risponderti. Base giuridica: misure precontrattuali su tua richiesta / legittimo
+              interesse a rispondere (GDPR art. 6(1)(b) o (f)).
+            </li>
+            <li>
+              <strong class="text-text">Versione inglese del sito:</strong> la community New in Milan
+              (solo in inglese) usa un modulo Tally per l’adesione. Se lo usi lì, valgono le regole
+              indicate in quella pagina e nella privacy di Tally.
+            </li>
+            <li>
+              <strong class="text-text">Log di hosting:</strong> log tecnici del host statico (GitHub
+              Pages) che possono includere IP e user agent, per sicurezza e consegna. Base:
+              legittimo interesse a gestire un sito sicuro (art. 6(1)(f)).
+            </li>
+            <li>
+              <strong class="text-text">Preferenza tema:</strong> modalità chiara/scura in{' '}
+              <code class="text-sm text-text">localStorage</code> del browser. Preferenza tecnica
+              per il servizio richiesto.
+            </li>
+          </ul>
+          <p class="mt-3">
+            <strong class="text-text">Non</strong> usiamo analytics di sito (es. Google Analytics) e
+            non vendiamo dati personali.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading text-h3 font-semibold text-text">3. Responsabili e destinatari</h2>
+          <p class="mt-3">Usiamo questi fornitori per le funzioni che richiedi:</p>
+          <ul class="mt-3 list-disc space-y-2 pl-5">
+            <li>
+              <strong class="text-text">Formspree</strong> — consegna del modulo contatti
+              <a href="https://formspree.io/legal/privacy-policy/" class="ml-1 text-primary hover:text-primary-light" target="_blank" rel="noopener noreferrer">(privacy)</a>
+            </li>
+            <li>
+              <strong class="text-text">Tally</strong> — solo sulla versione inglese (adesione community)
+              <a href="https://tally.so/help/privacy-policy" class="ml-1 text-primary hover:text-primary-light" target="_blank" rel="noopener noreferrer">(privacy)</a>
+            </li>
+            <li>
+              <strong class="text-text">GitHub Pages</strong> — hosting del sito
+              <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" class="ml-1 text-primary hover:text-primary-light" target="_blank" rel="noopener noreferrer">(privacy)</a>
+            </li>
+          </ul>
+          <p class="mt-3">
+            Alcuni fornitori possono trattare dati fuori dallo Spazio economico europeo. In quel
+            caso si basano su meccanismi come le Clausole contrattuali tipo o altre garanzie
+            descritte nelle loro informative.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading text-h3 font-semibold text-text">4. Cookie e tecnologie simili</h2>
+          <p class="mt-3">
+            Secondo le regole italiane (linee guida cookie del Garante e art. 122 del Codice
+            Privacy), i cookie <strong class="text-text">tecnici</strong> strettamente necessari a
+            un servizio che hai richiesto non richiedono un banner di consenso. Il tracciamento
+            non tecnico richiede consenso preventivo.
+          </p>
+          <p class="mt-3">Alla prima visita puntiamo a usare solo ciò che serve a mostrare il sito:</p>
+          <ul class="mt-3 list-disc space-y-2 pl-5">
+            <li>Preferenza tema in local storage (tecnica).</li>
+            <li>
+              <strong class="text-text">Banner embed opzionali:</strong> una volta per browser
+              chiediamo se consentire embed Luma, Google Maps, Instagram e TikTok. La scelta resta
+              in local storage (<code class="text-sm text-text">milanpost_optional_embeds</code>).
+              <strong class="text-text">Accetta</strong> li carica automaticamente nelle visite
+              successive. <strong class="text-text">Non ora</strong> (o ×) li tiene spenti finché
+              non ne carichi uno manualmente o cambi le impostazioni dal footer
+              <em>Impostazioni embed</em>.
+            </li>
+            <li>Nessuno script social parte al primo paint prima di quella scelta o di un click esplicito su Carica.</li>
+          </ul>
+          <p class="mt-3">
+            Le pagine mappa che usano tile OpenStreetMap richiedono le immagini della mappa che
+            hai aperto. Vedi la
+            <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" class="text-primary hover:text-primary-light" target="_blank" rel="noopener noreferrer">privacy OSM Foundation</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading text-h3 font-semibold text-text">5. Conservazione</h2>
+          <ul class="mt-3 list-disc space-y-2 pl-5">
+            <li>Messaggi di contatto: per il tempo necessario a gestirli, poi cancellati o archiviati solo se obbligatorio per legge.</li>
+            <li>Risposte Tally (solo se usi il modulo sulla versione inglese): secondo le impostazioni del workspace.</li>
+            <li>Log di hosting: secondo le pratiche del host.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-heading text-h3 font-semibold text-text">6. I tuoi diritti</h2>
+          <p class="mt-3">
+            Puoi chiedere accesso, rettifica, cancellazione, limitazione, portabilità e opposizione
+            dove applicabile ai sensi del GDPR, e revocare il consenso se il trattamento si basa sul
+            consenso. Usa il{' '}
+            <a href="/it/contact/" class="font-semibold text-primary hover:text-primary-light">modulo contatti</a>.
+          </p>
+          <p class="mt-3">
+            Puoi presentare reclamo al
+            <a href="https://www.garanteprivacy.it" class="font-semibold text-primary hover:text-primary-light" target="_blank" rel="noopener noreferrer"> Garante per la protezione dei dati personali</a>
+            o a un’altra autorità di controllo UE del tuo luogo di residenza o lavoro.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading text-h3 font-semibold text-text">7. Minori</h2>
+          <p class="mt-3">
+            Il sito è rivolto ad adulti che vivono o si trasferiscono a Milano. Non raccogliamo
+            consapevolmente dati di minori a fini di marketing.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-heading text-h3 font-semibold text-text">8. Modifiche</h2>
+          <p class="mt-3">
+            Possiamo aggiornare questa pagina quando cambiano strumenti o pratiche. La data
+            “Ultimo aggiornamento” in alto cambia quando lo facciamo.
+          </p>
+        </section>
+
+        <section id="copyright" class="border-t border-border pt-10">
+          <h2 class="font-heading text-h3 font-semibold text-text">9. Copyright e riuso</h2>
+          <p class="mt-3">
+            Salvo diversa indicazione, tutti i contenuti originali di questo sito — guide, articoli,
+            glossari, testi, grafiche e marchio — sono protetti da copyright. © {new Date().getFullYear()}{' '}
+            {brand.name}. <strong class="text-text">Tutti i diritti riservati.</strong>
+          </p>
+          <p class="mt-3">Puoi:</p>
+          <ul class="mt-3 list-disc space-y-2 pl-5">
+            <li>Leggere e condividere i link alle nostre pagine.</li>
+            <li>Citare brevi estratti con attribuzione chiara e link alla pagina originale.</li>
+          </ul>
+          <p class="mt-3">
+            <strong class="text-text">Non</strong> puoi, senza autorizzazione scritta preventiva:
+          </p>
+          <ul class="mt-3 list-disc space-y-2 pl-5">
+            <li>Copiare, ripubblicare o rispecchiare parti sostanziali delle guide o delle pagine.</li>
+            <li>Fare scraping del sito per costruire dataset, feed o prodotti concorrenti.</li>
+            <li>Usare nome, logo o branding in modo da suggerire endorsement o affiliazione.</li>
+          </ul>
+          <p class="mt-3">
+            Mappe ufficiali, open data ed embed di terzi restano di proprietà dei rispettivi titolari
+            e sono soggetti alle loro licenze. Richieste di autorizzazione:{' '}
+            <a href="/it/contact/" class="font-semibold text-primary hover:text-primary-light">modulo contatti</a>.
+          </p>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

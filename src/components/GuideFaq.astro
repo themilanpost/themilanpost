@@ -1,0 +1,51 @@
+---
+/**
+ * Visible Italian FAQ block for English guides (GSC IT queries + FAQPage schema).
+ */
+import type { GuideFaqBlock } from '../config/guide-faqs';
+
+interface Props {
+  faq: GuideFaqBlock;
+}
+
+const { faq } = Astro.props;
+---
+
+<section
+  class="not-prose mt-12 border-t border-border pt-10"
+  lang="it"
+  aria-labelledby="guide-faq-heading"
+>
+  <h2 id="guide-faq-heading" class="font-heading text-h2 font-semibold uppercase text-text">
+    {faq.heading}
+  </h2>
+  <p class="mt-3 text-base leading-relaxed text-text-muted">
+    {faq.intro}
+  </p>
+
+  <div class="mt-8 space-y-3">
+    {
+      faq.items.map((item) => (
+        <details class="group rounded-md border border-border bg-surface open:bg-background">
+          <summary class="cursor-pointer list-none px-4 py-3 font-heading text-base font-semibold text-text marker:content-none [&::-webkit-details-marker]:hidden">
+            <span class="flex items-start justify-between gap-3">
+              <span>{item.question}</span>
+              <svg
+                class="mt-0.5 size-5 shrink-0 text-primary transition-transform group-open:rotate-180"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </summary>
+          <div class="border-t border-border px-4 py-3 text-sm leading-relaxed text-text-muted sm:text-base">
+            <p>{item.answer}</p>
+          </div>
+        </details>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,106 @@
+---
+/**
+ * Italian living hub — Italian-only surface.
+ * Detail tools (markets, maps, …) stay EN until translated; listed as “in arrivo” here
+ * so IT mode never deep-links into English pages.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { brand } from '../../config/brand';
+
+const title = 'Vivere a Milano';
+const intro =
+  'La vita di tutti i giorni: mappe, mercati, fontanelle, trasporti. Le guide pratiche lunghe (permesso, CIE, TARI, primi passi) sono già in italiano nell’hub Guide. Le schede città qui sotto arriveranno in italiano a breve.';
+
+const comingSoon = [
+  {
+    label: 'Mercati',
+    title: 'Mercati rionali settimanali',
+    description: 'Filtra i mercati all’aperto per giorno e municipio, con orari e consigli pratici.',
+  },
+  {
+    label: 'Mappe',
+    title: 'Mappe di Milano',
+    description: 'Fontanelle, metro, farmacie, raccolta differenziata e collezioni Google Maps.',
+  },
+  {
+    label: 'Draghi verdi',
+    title: 'Fontanelle pubbliche',
+    description: 'Cosa sono le vedovelle, come funzionano e dove trovarle.',
+  },
+  {
+    label: 'ATM',
+    title: 'Trasporti e abbonamenti',
+    description: 'Biglietti, abbonamenti, Area C e controlli: con fonti ATM.',
+  },
+];
+
+const alternates = [
+  { hreflang: 'en', href: `${brand.url}/living-in-milan/` },
+  { hreflang: 'it', href: `${brand.url}/it/living-in-milan/` },
+  { hreflang: 'x-default', href: `${brand.url}/living-in-milan/` },
+];
+---
+
+<BaseLayout
+  title={`${title} | ${brand.name}`}
+  description={`${intro}`}
+  lang="it"
+  ogLocale={brand.it.locale}
+  alternates={alternates}
+>
+  <Header slot="header" />
+
+  <section class="py-12 sm:py-16">
+    <div class="mx-auto max-w-site px-4 sm:px-6">
+      <p class="text-topper font-bold uppercase tracking-widest text-primary">Vivere a Milano</p>
+      <h1 class="mt-3 font-heading text-h1 font-semibold text-text">Vivere a Milano: l’essenziale</h1>
+      <p class="mt-4 max-w-2xl text-lead leading-relaxed text-text-muted">{intro}</p>
+
+      <div class="mt-8 rounded-lg border border-border bg-surface p-5">
+        <p class="text-topper text-xs font-bold uppercase tracking-widest text-primary">Già in italiano</p>
+        <h2 class="mt-1 font-heading text-h3 font-semibold text-text">Guide pratiche</h2>
+        <p class="mt-2 max-w-xl text-sm text-text-muted">
+          Permesso, CIE, TARI e primi passi: testi completi in italiano.
+        </p>
+        <a
+          href="/it/guides/"
+          class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-primary hover:text-primary-light"
+        >
+          Vai alle guide
+          <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="mt-14 border-t border-border pt-12">
+        <p class="text-topper font-bold uppercase tracking-widest text-primary">In programma</p>
+        <h2 class="mt-2 font-heading text-h2 font-semibold text-text">Schede città in arrivo</h2>
+        <p class="mt-3 max-w-2xl text-sm text-text-muted">
+          Non le linkiamo in inglese da questa versione: restiamo in italiano finché la traduzione non è pronta.
+        </p>
+        <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2" role="list">
+          {
+            comingSoon.map((item) => (
+              <article
+                class="flex h-full flex-col rounded-md border border-dashed border-border bg-surface p-5"
+                role="listitem"
+              >
+                <p class="text-topper font-bold uppercase tracking-widest text-primary">{item.label}</p>
+                <span class="mt-2 w-fit rounded-sm bg-border px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-text-muted">
+                  In arrivo
+                </span>
+                <h3 class="mt-3 font-heading text-h3 font-semibold text-text">{item.title}</h3>
+                <p class="mt-2 text-sm leading-relaxed text-text-muted">{item.description}</p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>

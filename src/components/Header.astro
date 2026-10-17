@@ -1,16 +1,23 @@
 ---
 import { Image } from 'astro:assets';
 import { brand } from '../config/brand';
-import { guidesNavItems, isGuidesNavActive } from '../config/guides-hub';
+import { guidesNavFor, isGuidesNavActive } from '../config/guides-hub';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { localePath } from '../i18n/paths';
+import LanguageSwitcher from './LanguageSwitcher.astro';
 import logo from '../assets/branding/the-milan-post-logo.png';
 
 const currentPath = Astro.url.pathname;
-
-const guidesActive = isGuidesNavActive(currentPath);
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const homeHref = localePath('/', lang);
+/** NiM is EN-only (international community); omit from Italian chrome. */
+const newInMilanHref = lang === 'en' ? '/new-in-milan' : null;
+const guidesNavItems = guidesNavFor(lang);
 
 const aboutNavItems = [
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
+  { label: t('nav.about'), href: localePath('/about', lang) },
+  { label: t('nav.contact'), href: localePath('/contact', lang) },
 ] as const;
 
 function isLinkActive(href: string, path: string): boolean {
@@ -18,6 +25,7 @@ function isLinkActive(href: string, path: string): boolean {
 }
 
 const aboutActive = aboutNavItems.some(({ href }) => isLinkActive(href, currentPath));
+const guidesActive = isGuidesNavActive(currentPath);
 
 const summaryClass = (active: boolean) =>
   [
@@ -39,7 +47,7 @@ const mobileLinkClass = (href: string) =>
 
 <header class="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-sm">
   <div class="relative mx-auto flex max-w-site items-center justify-between gap-3 px-4 py-3 sm:px-6">
-    <a href="/" class="inline-flex min-w-0 shrink items-center transition-opacity hover:opacity-85">
+    <a href={homeHref} class="inline-flex min-w-0 shrink items-center transition-opacity hover:opacity-85">
       <Image
         src={logo}
         alt={`${brand.name} logo`}
@@ -50,29 +58,36 @@ const mobileLinkClass = (href: string) =>
       />
     </a>
 
+    <div class="flex items-center gap-2 sm:gap-3">
+    <LanguageSwitcher />
+
     <!-- Desktop: native <details> — no JS -->
-    <nav class="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
-      <a
-        href="/new-in-milan"
-        aria-current={isLinkActive('/new-in-milan', currentPath) ? 'page' : undefined}
-        class:list={[
-          'rounded-md px-3 py-2 text-sm font-medium transition-colors',
-          isLinkActive('/new-in-milan', currentPath)
-            ? 'bg-primary/10 text-primary'
-            : 'text-text-muted hover:text-text',
-        ]}
-      >
-        New in Milan
-      </a>
+    <nav class="hidden items-center gap-1 lg:flex" aria-label={lang === 'it' ? 'Navigazione principale' : 'Primary navigation'}>
+      {
+        newInMilanHref && (
+          <a
+            href={newInMilanHref}
+            aria-current={isLinkActive(newInMilanHref, currentPath) ? 'page' : undefined}
+            class:list={[
+              'rounded-md px-3 py-2 text-sm font-medium transition-colors',
+              isLinkActive(newInMilanHref, currentPath)
+                ? 'bg-primary/10 text-primary'
+                : 'text-text-muted hover:text-text',
+            ]}
+          >
+            {t('nav.newInMilan')}
+          </a>
+        )
+      }
 
       <details class="relative" name="desktop-nav">
         <summary class={summaryClass(guidesActive)}>
-          Guides
+          {t('nav.guides')}
           <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </summary>
-        <div class={menuPanelClass} role="menu" aria-label="Guides">
+        <div class={menuPanelClass} role="menu" aria-label={t('nav.guides')}>
           {
             guidesNavItems.map(({ label, href }) => (
               <a
@@ -94,12 +109,12 @@ const mobileLinkClass = (href: string) =>
 
       <details class="relative" name="desktop-nav">
         <summary class={summaryClass(aboutActive)}>
-          About
+          {t('nav.about')}
           <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
           </svg>
         </summary>
-        <div class={menuPanelClass} role="menu" aria-label="About">
+        <div class={menuPanelClass} role="menu" aria-label={t('nav.about')}>
           {
             aboutNavItems.map(({ label, href }) => (
               <a
@@ -124,7 +139,7 @@ const mobileLinkClass = (href: string) =>
     <details class="group mobile-nav lg:hidden">
       <summary
         class="nav-summary inline-flex min-h-[44px] min-w-[44px] cursor-pointer list-none items-center justify-center rounded-md text-text-muted hover:bg-surface"
-        aria-label="Toggle menu"
+        aria-label={t('nav.menu')}
       >
         <svg
           class="size-6 group-open:hidden"
@@ -149,11 +164,17 @@ const mobileLinkClass = (href: string) =>
       <div
         class="absolute inset-x-0 top-full z-50 border-b border-t border-border bg-background px-4 pb-6 pt-2 shadow-md"
       >
-        <nav class="mx-auto flex max-w-site flex-col gap-1" aria-label="Mobile navigation">
-          <a href="/new-in-milan" class={mobileLinkClass('/new-in-milan')}>New in Milan</a>
+        <nav class="mx-auto flex max-w-site flex-col gap-1" aria-label={lang === 'it' ? 'Navigazione mobile' : 'Mobile navigation'}>
+          {
+            newInMilanHref && (
+              <a href={newInMilanHref} class={mobileLinkClass(newInMilanHref)}>
+                {t('nav.newInMilan')}
+              </a>
+            )
+          }
 
           <div>
-            <p class="px-3 pt-2 text-xs font-bold uppercase tracking-widest text-text-muted">Guides</p>
+            <p class="px-3 pt-2 text-xs font-bold uppercase tracking-widest text-text-muted">{t('nav.guides')}</p>
             {
               guidesNavItems.map(({ label, href }) => (
                 <a href={href} class={mobileLinkClass(href)}>
@@ -164,7 +185,7 @@ const mobileLinkClass = (href: string) =>
           </div>
 
           <div>
-            <p class="px-3 pt-2 text-xs font-bold uppercase tracking-widest text-text-muted">About</p>
+            <p class="px-3 pt-2 text-xs font-bold uppercase tracking-widest text-text-muted">{t('nav.about')}</p>
             {
               aboutNavItems.map(({ label, href }) => (
                 <a href={href} class={mobileLinkClass(href)}>
@@ -176,6 +197,7 @@ const mobileLinkClass = (href: string) =>
         </nav>
       </div>
     </details>
+    </div>
   </div>
 </header>
 
