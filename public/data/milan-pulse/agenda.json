@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T22:16:55.523Z",
+  "updatedAt": "2026-10-17T22:32:42.636Z",
   "live": true,
   "range": {
     "from": "2026-10-18",
@@ -16,10 +16,10 @@
       "id": "dice",
       "label": "DICE",
       "url": "https://dice.fm/browse/milano-5d68e89f7f285e094f60b00e",
-      "updatedAt": "2026-10-17T21:49:45.360Z"
+      "updatedAt": "2026-10-17T22:32:42.636Z"
     }
   ],
-  "count": 121,
+  "count": 123,
   "events": [
     {
       "id": "dice-6acce8926ee46600016cad9b",
@@ -467,6 +467,19 @@
       "free": false,
       "priceFrom": 24.99,
       "url": "https://dice.fm/event/699ebb2742acfc00012f038c",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6ac5ff06a5e01300011fc79a",
+      "title": "MIDTERM USA | La rivoluzione MAGA",
+      "titleIt": "MIDTERM USA | La rivoluzione MAGA",
+      "start": "2026-10-19T18:30:00+02:00",
+      "end": "2026-10-19T20:30:00+02:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "Fondazione Giangiacomo Feltrinelli",
+      "free": true,
+      "url": "https://dice.fm/event/6ac5ff06a5e01300011fc79a",
       "source": "dice"
     },
     {
@@ -1390,6 +1403,19 @@
       "free": false,
       "priceFrom": 14.95,
       "url": "https://dice.fm/event/6a3a885a46eac70001c5c533",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6ab90a4209ac980001a3742c",
+      "title": "Hi-Fi Weekends with INDY & DISCOJUICE *Free Entry*",
+      "titleIt": "Hi-Fi Weekends with INDY & DISCOJUICE *Free Entry*",
+      "start": "2026-10-23T22:00:00+02:00",
+      "end": "2026-10-24T03:00:00+02:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "Bluesquare Milano",
+      "free": true,
+      "url": "https://dice.fm/event/6ab90a4209ac980001a3742c",
       "source": "dice"
     },
     {
