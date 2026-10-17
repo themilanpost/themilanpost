@@ -286,7 +286,11 @@ function isSoftBlock(err) {
   return /Eventbrite HTTP (403|405|429)\b/.test(String(err?.message || ''));
 }
 
-if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+const invokedDirectly =
+  Boolean(process.argv[1]) &&
+  path.resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+
+if (invokedDirectly) {
   main().catch((err) => {
     if (isSoftBlock(err)) {
       const existing = readExisting();

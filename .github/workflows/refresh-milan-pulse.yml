@@ -22,9 +22,10 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
+      # schedule / workflow_dispatch need an explicit branch (not detached SHA) for push.
       - uses: actions/checkout@v4
         with:
-          # Need tip history so we can rebase onto origin/main before commit.
+          ref: main
           fetch-depth: 0
 
       - uses: actions/setup-node@v4
@@ -41,6 +42,7 @@ jobs:
           DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
         continue-on-error: true
 
+      # Eventbrite is blocked on Actions IPs (HTTP 405). Soft-fail keeps cache; Option C refreshes locally.
       - name: Fetch Eventbrite events if listings changed
         id: eventbrite
         run: npm run fetch:eventbrite
@@ -70,33 +72,38 @@ jobs:
       - name: Write slim Tracker shards
         run: npm run write:shards
 
-      # Feeds can take minutes; main may move (manual push, deploy). Rebase tip first so
-      # git-auto-commit push is not a non-fast-forward reject. (Action itself does not rebase.)
-      - name: Rebase onto origin/main before commit
+      # Custom commit/push: git-auto-commit-action does not rebase, and on non-push events
+      # detached HEAD races with concurrent pushes to main.
+      - name: Commit and push feed updates
+        id: commit
         run: |
           set -euo pipefail
-          git fetch origin main
-          stashed=0
-          if git stash push -u -m 'milan-pulse-refresh' -- public/data/milan-pulse/; then
-            stashed=1
-          fi
-          git rebase origin/main
-          if [ "$stashed" = 1 ]; then
-            if ! git stash pop; then
-              echo "Stash pop conflict — keeping refreshed milan-pulse JSON"
-              git checkout --theirs -- public/data/milan-pulse/ || true
-              git add -- public/data/milan-pulse/
-              git reset HEAD -- public/data/milan-pulse/ || true
-              git stash drop || true
-            fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          git add -- public/data/milan-pulse/*.json
+          if git diff --cached --quiet; then
+            echo 'No milan-pulse JSON changes to commit.'
+            echo 'changes_detected=false' >> "$GITHUB_OUTPUT"
+            exit 0
           fi
 
-      - name: Commit updated data files
-        id: commit
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: 'chore: refresh Milan Pulse feeds'
-          file_pattern: public/data/milan-pulse/*.json
+          git commit -m 'chore: refresh Milan Pulse feeds'
+          echo 'changes_detected=true' >> "$GITHUB_OUTPUT"
+
+          # Rebase onto latest main and push; retry if another push landed mid-job.
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              echo "Pushed on attempt ${attempt}"
+              exit 0
+            fi
+            echo "Push rejected (attempt ${attempt}); rebase and retry…"
+            sleep 2
+          done
+          echo 'Failed to push after retries'
+          exit 1
 
       - name: Build site
         if: steps.commit.outputs.changes_detected == 'true' || github.event_name == 'workflow_dispatch'
