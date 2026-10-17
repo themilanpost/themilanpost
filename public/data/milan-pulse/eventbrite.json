@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T20:32:29.846Z",
+  "updatedAt": "2026-10-17T22:16:55.523Z",
   "source": "Eventbrite · Milan (music, food, culture)",
   "sourceUrl": "https://www.eventbrite.com/d/italy--milano/events/",
   "live": true,
@@ -21,70 +21,16 @@
     }
   ],
   "range": {
-    "from": "2026-10-17",
-    "to": "2026-12-16"
+    "from": "2026-10-18",
+    "to": "2026-12-17"
   },
-  "fingerprint": "095ffa49e74b7b97",
+  "fingerprint": "52ea5ac3a1006eed",
   "counts": {
-    "music": 40,
-    "food": 53,
-    "culture": 52
+    "music": 42,
+    "food": 55,
+    "culture": 53
   },
   "events": [
-    {
-      "id": "eb-2003011631710",
-      "title": "MIB Milano OPENING WINE WEEK - Aperitivo Cantato Open Wine Party",
-      "titleIt": "MIB Milano OPENING WINE WEEK - Aperitivo Cantato Open Wine Party",
-      "start": "2026-10-17T20:00:00+02:00",
-      "end": "2026-10-18T20:00:00+02:00",
-      "category": "food",
-      "city": "Milano",
-      "zone": "Milano",
-      "venue": "MiB Milano - Restaurant Cafè",
-      "free": false,
-      "priceFrom": null,
-      "priceTo": null,
-      "url": "https://www.eventbrite.it/e/biglietti-mib-milano-opening-wine-week-aperitivo-cantato-open-wine-party-2003011631710",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195182743%2F395321239589%2F1%2Foriginal.20261006-145608?crop=focalpoint&fit=crop&w=422&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=00cf855839bb389d52461f8b1ede5fde",
-      "description": "MIB OPENING WINE WEEK – OPEN WINE PARTY",
-      "source": "eventbrite"
-    },
-    {
-      "id": "eb-2003338098180",
-      "title": "Sabato 17 Ottobre 2026: Aperitivo Social al The BEACH Milano",
-      "titleIt": "Sabato 17 Ottobre 2026: Aperitivo Social al The BEACH Milano",
-      "start": "2026-10-17T20:00:00+02:00",
-      "end": "2026-10-18T20:00:00+02:00",
-      "category": "food",
-      "city": "Milano",
-      "zone": "Milano",
-      "venue": "The Beach Milano",
-      "free": false,
-      "priceFrom": null,
-      "priceTo": null,
-      "url": "https://www.eventbrite.it/e/sabato-17-ottobre-2026-aperitivo-social-al-the-beach-milano-tickets-2003338098180",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195673701%2F441491965028%2F1%2Foriginal.20261013-092947?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=cf68cc71edbad9f3644c9e6354008a58",
-      "description": "Sabato 17 Ottobre 2026: Aperitivo Social al The BEACH Milano",
-      "source": "eventbrite"
-    },
-    {
-      "id": "eb-1999786164250",
-      "title": "Come nasce una mostra Fotografica? - Masterclass di Laura Tota",
-      "titleIt": "Come nasce una mostra Fotografica? - Masterclass di Laura Tota",
-      "start": "2026-10-17T20:00:00+02:00",
-      "end": "2026-10-18T20:00:00+02:00",
-      "category": "culture",
-      "city": "Milano",
-      "zone": "Milano",
-      "venue": "Alveare Culturale Studio ETS",
-      "free": false,
-      "priceFrom": null,
-      "priceTo": null,
-      "url": "https://www.eventbrite.it/e/biglietti-come-nasce-una-mostra-fotografica-masterclass-di-laura-tota-1999786164250",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1192686905%2F2999403054274%2F1%2Foriginal.20260904-150147?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=fb203cee5b30e37a9beed4e0412a820e",
-      "description": "Una Masterclass intensa, pratica e accessibile sulla\ncuratela e sull’allestimento di mostre fotografiche",
-      "source": "eventbrite"
-    },
     {
       "id": "eb-2003143308559",
       "title": "Les Virtuoses",
@@ -153,7 +99,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/biglietti-18-ottobre-milano-tamo-aperitivello-cascinacuccagna-2002896539466",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194983348%2F2996275446205%2F1%2Foriginal.20261003-192415?crop=focalpoint&fit=crop&w=422&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=46a63b8b39203ebe2a4c906d2dd6e2e9",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194983348%2F2996275446205%2F1%2Foriginal.20261003-192415?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=a1c92bef113ca36dc2911bd4f0a4b08e",
       "description": "Prendi le vibes italiane più belle e mettile tutte insieme a MILANO.  Un aperitivello della domenica sera firmato FUORIROTTA!",
       "source": "eventbrite"
     },
@@ -176,6 +122,24 @@
       "source": "eventbrite"
     },
     {
+      "id": "eb-2002067312225",
+      "title": "Lucia Vasini - Recital con Danilo Rossi",
+      "titleIt": "Lucia Vasini - Recital con Danilo Rossi",
+      "start": "2026-10-18T20:00:00+02:00",
+      "end": "2026-10-18T20:00:00+02:00",
+      "category": "culture",
+      "city": "Milano",
+      "zone": "Milano",
+      "venue": "Teatro Menotti",
+      "free": false,
+      "priceFrom": null,
+      "priceTo": null,
+      "url": "https://www.eventbrite.it/e/biglietti-lucia-vasini-recital-con-danilo-rossi-2002067312225",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195200960%2F382507952063%2F1%2Foriginal.20261006-173727?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.498&fp-y=0.417&s=17887582d6d4ea9ee29b1b67e9b73a25",
+      "description": "Lucia Vasini e Danilo Rossi intrecciano parole, ironia e musica dal vivo in un recital intimo, raffinato e sorprendente",
+      "source": "eventbrite"
+    },
+    {
       "id": "eb-1986912298170",
       "title": "Dine Like a Local in Milan - Discover Hidden Culinary Gems",
       "titleIt": "Dine Like a Local in Milan - Discover Hidden Culinary Gems",
@@ -189,7 +153,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/dine-like-a-local-in-milan-discover-hidden-culinary-gems-tickets-1986912298170",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F945707663%2F2572768472981%2F1%2Foriginal.20250127-172621?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.542910447761&s=f6ee40965d7d34b189a0a9e693c8a284",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F945707663%2F2572768472981%2F1%2Foriginal.20250127-172621?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.542910447761&s=4ec3386be679efd4982252c84ba5bd0c",
       "description": "A curated guide to the city's best hidden dining spots. Enjoy a selection of the most cherished local restaurants, known for their tradition",
       "source": "eventbrite"
     },
@@ -225,7 +189,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/the-secrets-of-pasta-and-tiramisu-in-my-family-house-tickets-1985948370035",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1177773605%2F2992453081647%2F1%2Foriginal.20260217-214400?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=fc6dcba03fcd220353be9ea16944c828",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1177773605%2F2992453081647%2F1%2Foriginal.20260217-214400?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=f7a217d96898ffd660dab2b008ce9828",
       "description": "Master fresh pasta and tiramisu in Milan! Join an authentic cooking class to learn Italian culinary secrets. Book your delicious tour today!",
       "source": "eventbrite"
     },
@@ -261,7 +225,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.com/e/wine-list-italia-milano-tickets-1995908745787",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189865749%2F2994351933211%2F1%2Foriginal.20260729-105035?crop=focalpoint&fit=crop&w=422&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.501&fp-y=0.512&s=0a24de1d1fee39cccbef39c7dd817505",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189865749%2F2994351933211%2F1%2Foriginal.20260729-105035?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.501&fp-y=0.512&s=4c4fcaffafc1b9fd125d891a1f43d7ef",
       "description": "Wine List Italia riunisce i sommelier della ristorazione: accesso ai banchi d’assaggio per degustare vini scelti e narrati dai protagonisti.",
       "source": "eventbrite"
     },
@@ -351,7 +315,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/i-dolci-iconici-di-un-quartiere-della-citta-tickets-2003142133043",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195366733%2F2943233149131%2F1%2Foriginal.20261008-135307?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=e576537f96bc7cb19ae67bb626c6562f",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195366733%2F2943233149131%2F1%2Foriginal.20261008-135307?crop=focalpoint&fit=crop&w=422&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=a28ecb6213a2742f2f9e235aeda79e30",
       "description": "Vieni a scoprire i dolci più amati e nascosti del quartiere, un vero viaggio goloso da non perdere!",
       "source": "eventbrite"
     },
@@ -464,24 +428,6 @@
       "source": "eventbrite"
     },
     {
-      "id": "eb-2002067312225",
-      "title": "Lucia Vasini - Recital con Danilo Rossi",
-      "titleIt": "Lucia Vasini - Recital con Danilo Rossi",
-      "start": "2026-10-18T20:00:00+02:00",
-      "end": "2026-10-18T20:00:00+02:00",
-      "category": "culture",
-      "city": "Milano",
-      "zone": "Milano",
-      "venue": "Teatro Menotti",
-      "free": false,
-      "priceFrom": null,
-      "priceTo": null,
-      "url": "https://www.eventbrite.it/e/biglietti-lucia-vasini-recital-con-danilo-rossi-2002067312225",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195200960%2F382507952063%2F1%2Foriginal.20261006-173727?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.498&fp-y=0.417&s=87603ca43aa2b09aed2bb38a25cf401c",
-      "description": "Lucia Vasini e Danilo Rossi intrecciano parole, ironia e musica dal vivo in un recital intimo, raffinato e sorprendente",
-      "source": "eventbrite"
-    },
-    {
       "id": "eb-2002198358187",
       "title": "ESPERIENZA IMMERSIVA VR AL TEATRO FILODRAMMATICI",
       "titleIt": "ESPERIENZA IMMERSIVA VR AL TEATRO FILODRAMMATICI",
@@ -513,7 +459,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/federica-galli-il-fascino-della-stampa-darte-tickets-2003145830101",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195371304%2F2943233149131%2F1%2Foriginal.20261008-144729?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=ab578c16cf32584b0a2f822b6b6fddf5",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195371304%2F2943233149131%2F1%2Foriginal.20261008-144729?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=a76a101e84f0162bc3f3941c29d17e15",
       "description": "Laboratorio di stampa con l'artista Veronica Milazzo",
       "source": "eventbrite"
     },
@@ -531,7 +477,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/biglietti-letiquette-e-i-grandi-terroir-2002494783804",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194794254%2F301737043969%2F1%2Foriginal.20261001-065405?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.507&fp-y=0.496&s=95fe290b492d670c1f9ac56516a6d164",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194794254%2F301737043969%2F1%2Foriginal.20261001-065405?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.507&fp-y=0.496&s=8a8ddcded396fde6c3ef006d85a42dcb",
       "description": "Un occasione per assaggiare una parte rappresentativa del catalogo e della nostra filosofia con l'amichevole partecipazione di Elio Sandri!",
       "source": "eventbrite"
     },
@@ -549,7 +495,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/tecniche-di-illustrazione-con-martina-valle-tickets-1998419962905",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191416746%2F2741877034191%2F1%2Foriginal.20260819-115309?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=c47f75d601a56bee7a48d396bebf3a7f",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1191416746%2F2741877034191%2F1%2Foriginal.20260819-115309?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=00645f9143de1c11e9b1a4975fbc4b80",
       "description": "Sei incontri con Martina Valle per esplorare penna, matite, collage e acquerello, trasformando idee e testi in immagini personali.",
       "source": "eventbrite"
     },
@@ -585,7 +531,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/biglietti-time-and-again-di-alan-maglio-2001585627493",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193838832%2F1307604442873%2F1%2Foriginal.20260918-141359?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=8c81ca9c9149ef67ef1a2b21347ea354",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193838832%2F1307604442873%2F1%2Foriginal.20260918-141359?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=53a199295a88005e36ca5d98a7ae7765",
       "description": "Dalla cronaca agli interni domestici, figure sottratte alle immagini riemergono come presenze tra memoria, assenza e perturbante.",
       "source": "eventbrite"
     },
@@ -657,7 +603,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/cena-cantata-karaokee-tickets-2000149541120",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1182012204%2F2160314561353%2F1%2Foriginal.20260413-082448?crop=focalpoint&fit=crop&w=422&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.097&fp-y=0.593&s=ba5ae44a3c71d1cf60d114a569003914",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1182012204%2F2160314561353%2F1%2Foriginal.20260413-082448?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.097&fp-y=0.593&s=fba01141b87e41206dac626052a04b8a",
       "description": "Sushi, musica e tanta voglia di cantare.",
       "source": "eventbrite"
     },
@@ -711,7 +657,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/palazzo-reale-presentazione-libro-milano-messa-in-opera-tickets-2003247653658",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195527702%2F262361375284%2F1%2Foriginal.20261010-222556?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=f321eb63aaebccd18f0397e3e78d1da4",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195527702%2F262361375284%2F1%2Foriginal.20261010-222556?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=6e5ae6fdeef1e2f660d01c84fe2d7995",
       "description": "Il volume Milano messa in opera edito da Silvana Editoriale si compone di 85 testimonianze e 30 opere di Marina Previtali",
       "source": "eventbrite"
     },
@@ -747,7 +693,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/the-table-milan-supper-club-for-creative-internationals-italians-tickets-2003141112992",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195366075%2F2884303831371%2F1%2Foriginal.20261008-134506?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.495&fp-y=0.407&s=8e4acd098e97001523ec2c947380356c",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195366075%2F2884303831371%2F1%2Foriginal.20261008-134506?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.495&fp-y=0.407&s=a2b153b9dbfbfc2fe1d26710c53391d5",
       "description": "Milan Supper Club | Creative Dinner, Conversation & Connection.",
       "source": "eventbrite"
     },
@@ -837,7 +783,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/biglietti-arte-e-vino-in-vineria-cardenzia-art-and-wine-paint-and-sip-milano-2002863858717",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194965453%2F2536132967101%2F1%2Foriginal.20261003-094006?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.494&fp-y=0.625&s=1af9f476e13fcee3d68fbbd0b247f422",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194965453%2F2536132967101%2F1%2Foriginal.20261003-094006?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.494&fp-y=0.625&s=f620f7a6f80fc5a9dd3b131d3cbc19ee",
       "description": "Dipingi in vineria a Porta Venezia: 2 ore guidate da una pittrice, con due calici di vino e stuzzichini. Nessuna esperienza richiesta.",
       "source": "eventbrite"
     },
@@ -873,7 +819,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/biglietti-collegiate-party-2003199706246",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195440738%2F1504604819593%2F1%2Foriginal.20261009-112705?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=0cad1321b472aa50f828ff3bbae2d10e",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195440738%2F1504604819593%2F1%2Foriginal.20261009-112705?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=bc7b0b33beee1b9a9b9db36246c0dcbb",
       "description": "COLLEGIATE x GATTOMATTO",
       "source": "eventbrite"
     },
@@ -909,8 +855,26 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/biglietti-shout-out-party-twiga-milano-2003005251627",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195176137%2F949868397773%2F1%2Foriginal.20261006-135152?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=27d3556c4f9043dbc2a5908495f3e3ad",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195176137%2F949868397773%2F1%2Foriginal.20261006-135152?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=c1b75dbef40311e19417545dd2e69fd2",
       "description": "SHOUT OUT PARTY  torna in grande stile nel club per antonomasia: il TWIGA.",
+      "source": "eventbrite"
+    },
+    {
+      "id": "eb-2003178604129",
+      "title": "RESONANCE x HML x TALK @ Spazio DIAZ",
+      "titleIt": "RESONANCE x HML x TALK @ Spazio DIAZ",
+      "start": "2026-10-22T20:00:00+02:00",
+      "end": "2026-10-23T20:00:00+02:00",
+      "category": "music",
+      "city": "Milano",
+      "zone": "Milano",
+      "venue": "Spazio Diaz",
+      "free": false,
+      "priceFrom": null,
+      "priceTo": null,
+      "url": "https://www.eventbrite.it/e/resonance-x-hml-x-talk-spazio-diaz-tickets-2003178604129",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195413700%2F2094338962493%2F1%2Foriginal.20261008-230736?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.612&fp-y=0.978&s=01e5e7a029d85dd9f69415af06664198",
+      "description": "Uni sudents private party @ Spazio Diaz",
       "source": "eventbrite"
     },
     {
@@ -981,7 +945,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/milano-wine-week-2026-tickets-2003280301308",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195584693%2F1218477853593%2F1%2Foriginal.20261012-080042?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=1f32d03c6b8e10ad9bb8e5c22ee6ec0b",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195584693%2F1218477853593%2F1%2Foriginal.20261012-080042?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=1eb178b88149de6de8ad132ca997d122",
       "description": "OFFICIAL PARTY @ MIB MILANO",
       "source": "eventbrite"
     },
@@ -1017,7 +981,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/100-metri-tickets-2002064934112",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194098561%2F2047043123003%2F1%2Foriginal.20260922-132809?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=fce27b5979df3cd2a62e4eb0237a33e8",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194098561%2F2047043123003%2F1%2Foriginal.20260922-132809?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=fcf950506066e122b1b01d8746ba08ef",
       "description": "Workshop a cura di studio FM milano",
       "source": "eventbrite"
     },
@@ -1161,7 +1125,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/biglietti-housemaf-at-gattopardo-2003375209180",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195726204%2F1504604819593%2F1%2Foriginal.20261013-203232?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=71aa81803675ab1b8177b2b41236759d",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195726204%2F1504604819593%2F1%2Foriginal.20261013-203232?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=58ca7df5d9fdcc5419e23aa970b45fcf",
       "description": "Get ready to vibe all night long with HOUSEMAF",
       "source": "eventbrite"
     },
@@ -1197,7 +1161,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.com/e/waxkillers-x-scrambler-ducati-food-factory-tickets-2003233212464",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195699516%2F3017232250087%2F1%2Foriginal.20261013-154506?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.502&fp-y=0.021&s=638721e2f6931fc06ae42f9bc945ef3d",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195699516%2F3017232250087%2F1%2Foriginal.20261013-154506?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.502&fp-y=0.021&s=e49e624cb0cee5806a7ad90053d73184",
       "description": "Waxkillers compie gli anni e presenta il nuovo album FANTASCIENZA",
       "source": "eventbrite"
     },
@@ -1215,7 +1179,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.com/e/white-oak-winery-night-enoteca-mww-tickets-2003429309997",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195812494%2F1816993147263%2F1%2Foriginal.20261014-200343?crop=focalpoint&fit=crop&w=422&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=842e1b1ea829addcd55fc7b480c226a8",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195812494%2F1816993147263%2F1%2Foriginal.20261014-200343?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=743e4eff83de101cd14257fa7ad58566",
       "description": "Talk, degustazione, aperitivo & djset nello spazio culturale della Milano Wine Week.",
       "source": "eventbrite"
     },
@@ -1233,7 +1197,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.com/e/restaurant-of-the-week-foodies-new-friends-milan-tickets-1976265406029",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1171943655%2F935412228013%2F1%2Foriginal.20251128-233724?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=90ea8cf703d34f44f94783f0a2fa08c5",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1171943655%2F935412228013%2F1%2Foriginal.20251128-233724?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=fb0e571cb5f2895c9aa6ea79b7903ae3",
       "description": "You sign up. We book. Connect with new friends over dinner while supporting locally owned restaurants.",
       "source": "eventbrite"
     },
@@ -1251,7 +1215,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/dive-d-autunno-con-la-cesira-tickets-2002994807388",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195159538%2F2160262318193%2F1%2Foriginal.20261006-095853?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=ab258602dac4aee399c824a5555733f1",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195159538%2F2160262318193%2F1%2Foriginal.20261006-095853?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=2d2fc09509b94769134983004240c133",
       "description": "Venerdì 23 ottobre preparati a vivere una serata esplosiva all’insegna di cabaret, dinner show, drag queen e tanto divertimento!",
       "source": "eventbrite"
     },
@@ -1269,7 +1233,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/community-guided-tour-rea-art-fair-2026-contemporary-art-in-milan-tickets-2003283867976",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195589444%2F2884303831371%2F1%2Foriginal.20261012-094136?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.515&fp-y=0.52&s=3d83b4872a3487a6cffe1658a8e07f1b",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195589444%2F2884303831371%2F1%2Foriginal.20261012-094136?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.515&fp-y=0.52&s=08b26d1491222b8411462785fd762491",
       "description": "Discover 50 emerging artists on a curator-led tour of Milan's international contemporary art fair with Even Numbers.",
       "source": "eventbrite"
     },
@@ -1328,6 +1292,24 @@
       "source": "eventbrite"
     },
     {
+      "id": "eb-2003398803752",
+      "title": "Slow Food Week - La Terra dei Figli",
+      "titleIt": "Slow Food Week - La Terra dei Figli",
+      "start": "2026-10-24T20:00:00+02:00",
+      "end": "2026-10-24T20:00:00+02:00",
+      "category": "food",
+      "city": "Milano",
+      "zone": "Milano",
+      "venue": "Fabbrica del vapore",
+      "free": false,
+      "priceFrom": null,
+      "priceTo": null,
+      "url": "https://www.eventbrite.com/e/slow-food-week-la-terra-dei-figli-tickets-2003398803752",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195766887%2F2904404659071%2F1%2Foriginal.20261014-102839?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=d82bcbca023dd6005953e8de1405b30b",
+      "description": "Conferenza sui temi della Terra, del suolo e della biodiversità curata da Slow Food Lombardia.",
+      "source": "eventbrite"
+    },
+    {
       "id": "eb-2002065806722",
       "title": "Breaking news",
       "titleIt": "Breaking news",
@@ -1341,7 +1323,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/breaking-news-tickets-2002065806722",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194099775%2F2047043123003%2F1%2Foriginal.20260922-134145?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=8f65c147f40ae82a50a8ad1d4baec411",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194099775%2F2047043123003%2F1%2Foriginal.20260922-134145?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=5cda087680384ce45782de780605cbd7",
       "description": "Workshop a cura di Patrick Thomas",
       "source": "eventbrite"
     },
@@ -1449,7 +1431,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/meatball-family-lab-edizione-halloween-tickets-2001044145907",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193633816%2F3007379699653%2F1%2Foriginal.20260916-084553?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=be2c0dd41089e975c03ecc0364e10977",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193633816%2F3007379699653%2F1%2Foriginal.20260916-084553?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=fcb177a154012017b57f35cf2e1d52c6",
       "description": "Speciale Halloween - Edizione da brivido! Cuciniamo speciali polpette autunnali alla zucca tra profumi di stagione e divertimento mostruoso.",
       "source": "eventbrite"
     },
@@ -1467,7 +1449,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/biglietti-fermento-milano-x-edizione-2003019608569",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195206877%2F2995339554503%2F1%2Foriginal.20261006-182839?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.071&fp-y=0.516&s=b65b50875dc8a12c03ff8e33ef523a8c",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195206877%2F2995339554503%2F1%2Foriginal.20261006-182839?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.071&fp-y=0.516&s=baeaef58da009e8eaf3caccfb9975453",
       "description": "Fermento Milano X edizione è la festa top per gli amanti della birra artigianale, musica e buon cibo!",
       "source": "eventbrite"
     },
@@ -1485,7 +1467,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/lalchimia-della-pinta-special-uk-tickets-2001206758285",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193652294%2F2995761609350%2F1%2Foriginal.20260916-135602?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=5f4023c0859df3b6e7840a2b7a2bd740",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193652294%2F2995761609350%2F1%2Foriginal.20260916-135602?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=a0a3e5481d9bddea214adcacc33657d2",
       "description": "Prima tappa della nuova serie di serate nella cornice del Maga Furla a Milano - La birra come non l'avete mai vista.",
       "source": "eventbrite"
     },
@@ -1503,7 +1485,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.com/e/tessere-cio-che-ci-sostiene-workshop-di-tessitura-su-fotografia-tickets-2003211047167",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195459357%2F2995640076534%2F1%2Foriginal.20261009-160212?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.37&fp-y=0.563&s=e8c56453612f389cedbfb0fb22194ab7",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195459357%2F2995640076534%2F1%2Foriginal.20261009-160212?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.37&fp-y=0.563&s=ae1211945f109fa56006e6867068f77b",
       "description": "Laboratorio di tessitura creativa su fotografia a Milano: impara le basi della tessitura con l’artista tessile Vero de Verdad.",
       "source": "eventbrite"
     },
@@ -1521,7 +1503,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/i-doni-di-isobel-presentazione-del-libro-incontro-con-lautrice-tickets-2002635492668",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194733610%2F2741877034191%2F1%2Foriginal.20260930-154334?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.136&fp-y=0.447&s=57539e2a9e690ddafdacab826e2011ab",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194733610%2F2741877034191%2F1%2Foriginal.20260930-154334?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.136&fp-y=0.447&s=74fe1fe109900aa6263539e0efe8e559",
       "description": "Giorgia Nucci presenta I doni di Isobel: streghe, storia e immaginario tra Scozia, libertà e memoria. Ingresso libero.",
       "source": "eventbrite"
     },
@@ -1611,7 +1593,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/effervescenze-lombarde-quattro-territori-a-confronto-tickets-2002805674687",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194908567%2F3014729747338%2F1%2Foriginal.20261002-141547?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=243a36273f06fb1f23e2159577af0258",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194908567%2F3014729747338%2F1%2Foriginal.20261002-141547?crop=focalpoint&fit=crop&w=422&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=8305d3f224f14f9ddd4d9198c1b04dc5",
       "description": "4 calici e 4 abbinamenti gastronomici, in un’esperienza di degustazione al al Mercato Coperto di Campagna Amica Lima 3.",
       "source": "eventbrite"
     },
@@ -1631,6 +1613,24 @@
       "url": "https://www.eventbrite.com/e/intrecciare-cio-che-portiamo-workshop-di-tessitura-al-telaio-artigianale-tickets-2003212558688",
       "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195464177%2F2995640076534%2F1%2Foriginal.20261009-170157?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.248&fp-y=0.471&s=715387692b8233cb4b9e738d68331e7f",
       "description": "Laboratorio di tessitura per principianti a Milano: costruisci un mini telaio artigianale e tessi il tuo braccialetto d'arte tessile.",
+      "source": "eventbrite"
+    },
+    {
+      "id": "eb-2002700548251",
+      "title": "Creative's Aperitivo Milano – Community for  Internationals & Italians",
+      "titleIt": "Creative's Aperitivo Milano – Community for  Internationals & Italians",
+      "start": "2026-10-28T20:00:00+02:00",
+      "end": "2026-10-28T20:00:00+02:00",
+      "category": "food",
+      "city": "Milano",
+      "zone": "Milano",
+      "venue": "21 House of Stories Navigli",
+      "free": false,
+      "priceFrom": null,
+      "priceTo": null,
+      "url": "https://www.eventbrite.it/e/creatives-aperitivo-milano-community-for-internationals-italians-tickets-2002700548251",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194799324%2F2884303831371%2F1%2Foriginal.20261001-085719?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=bee573f922075dddcc022dc88c6be5d1",
+      "description": "A social aperitivo in Milan for meeting new people, making friends & connecting with our creative community.",
       "source": "eventbrite"
     },
     {
@@ -1665,7 +1665,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/tarots-cocktails-crea-il-tuo-arcano-personale-aperitivo-tickets-2003193112524",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195435258%2F193863489146%2F1%2Foriginal.20261009-092402?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=cf1d0ff5bcae663a9400236d62ae61df",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195435258%2F193863489146%2F1%2Foriginal.20261009-092402?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=f54da4d60d51538b2164e88730c948ee",
       "description": "Un laboratorio creativo con aperitivo ispirato ai tarocchi per creare, tra immagini, parole e collage, la tua personale carta autobiografica",
       "source": "eventbrite"
     },
@@ -1701,7 +1701,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/biglietti-onigiri-wine-lab-milano-2001888185452",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194080524%2F3014925301703%2F1%2Foriginal.20260922-081355?crop=focalpoint&fit=crop&w=422&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=e41f7a5da5c64c95d9fd3b218f06f418",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194080524%2F3014925301703%2F1%2Foriginal.20260922-081355?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=c4b746ccedc8638e766635b717c73f5e",
       "description": "Per chi vuole dominare l’arte dell’onigiri, fare aperitivo al posto giusto e portarsi a casa una nuova skill. Milano: 29 Ottobre | ore 18.",
       "source": "eventbrite"
     },
@@ -1719,7 +1719,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/artour-brera-ottobre-2026-tickets-2001690653629",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193900950%2F306130217414%2F1%2Foriginal.20260919-125039?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=ddb6b5d82fdcb946aa52697e048efacb",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193900950%2F306130217414%2F1%2Foriginal.20260919-125039?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=a13fe0370d537d0300e0b8194fb229e8",
       "description": "Mostra di artisti PitturiAmo presso MADE4ART.",
       "source": "eventbrite"
     },
@@ -1773,7 +1773,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.com/e/astra-halloween-party-tickets-2003412447561",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195786004%2F2845270507441%2F1%2Foriginal.20261014-150608?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.483&fp-y=0.08&s=2e78b887f5412a4dc4e166c4aec36273",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195786004%2F2845270507441%2F1%2Foriginal.20261014-150608?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.483&fp-y=0.08&s=7e24c2498a6f51c435e9a4feedf93aea",
       "description": "On Friday, October 30th, Astra Bocconi is bringing the Halloween House Party vibes to Milan!",
       "source": "eventbrite"
     },
@@ -1809,7 +1809,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/halloween-party-bocconi-night-tickets-2003398389513",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195784163%2F3005397394978%2F1%2Foriginal.20261014-144703?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.494&fp-y=0.506&s=ae4f9e362c4e43cfb41225229fd5f2de",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195784163%2F3005397394978%2F1%2Foriginal.20261014-144703?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.494&fp-y=0.506&s=b56a93c657f55ddca85772b879cb473e",
       "description": "Bocconi Night Halloween: Oct 30, Art Mall, Via Torino 64, Milan. 10pm–3am. €25 entry with 2 drinks. Halloween costume required!",
       "source": "eventbrite"
     },
@@ -1845,7 +1845,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/degustazione-formaggi-e-vini-con-chiara-carolei-incontrarsi-per-cacio-tickets-2003333471341",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195671527%2F282886793457%2F1%2Foriginal.20261013-085057?crop=focalpoint&fit=crop&w=422&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.146&fp-y=0.513&s=8e9bb8a3daacf721cddd09f299f035d4",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195671527%2F282886793457%2F1%2Foriginal.20261013-085057?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.146&fp-y=0.513&s=bc11fed0b35135af38e71326eaba7041",
       "description": "Scopri uno dei nostri percorsi, dove la freschezza dei formaggi incontra rosati e bollicine aromatiche, con Chiara Carolei (ONAF).",
       "source": "eventbrite"
     },
@@ -1881,7 +1881,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/rocky-horror-live-band-halloween-night-tickets-2002952875970",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195090964%2F275703173669%2F1%2Foriginal.20261005-162138?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=9fd2e920ec83ec83cb07a7eb59ede50a",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195090964%2F275703173669%2F1%2Foriginal.20261005-162138?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=7cd76ccb1f5062c3d9ab5561043c1161",
       "description": "Get ready to rock out with a live band bringing all the spooky vibes for a wild Halloween night bash!",
       "source": "eventbrite"
     },
@@ -1917,7 +1917,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/biglietti-halloween-milano-2026-dinner-show-party-terrazza-collini-hotel-2003213867603",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195465895%2F395321239589%2F1%2Foriginal.20261009-172421?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=a7d0a87522b429404f78a405188c3ed6",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195465895%2F395321239589%2F1%2Foriginal.20261009-172421?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=99daa8ed8d7c0c764b968c7dcaf05103",
       "description": "Cena di Halloween, spettacolo e DJ set a Milano: sabato 31 ottobre 2026 alla Terrazza Collini",
       "source": "eventbrite"
     },
@@ -1953,7 +1953,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/the-cinematic-organ-a-musical-journey-through-film-history-tickets-1984379673020",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173639643%2F2574491721871%2F1%2Foriginal.20251229-104658?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=458275e53dcb5f7e0f6536731f06b3f7",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1173639643%2F2574491721871%2F1%2Foriginal.20251229-104658?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=04e7e615707f8bc4bddd9f7dea892bcc",
       "description": "An immersive musical experience inside a historic church. Live demonstration of cinematic soundtracks and classical music",
       "source": "eventbrite"
     },
@@ -1971,7 +1971,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/inaugurazione-heimi-house-salute-a-voi-che-entrate-tickets-2002936519046",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195788794%2F3014905025758%2F1%2Foriginal.20261014-153551?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=8d2c78b042ca276824eeb090f378d9a5",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195788794%2F3014905025758%2F1%2Foriginal.20261014-153551?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=8b66d9ac34dc5bfce37268c16d86b725",
       "description": "La Heimi House apre alla community con una festa di Halloween! Ingresso libero, free drink, catering e giochi peccaminosi",
       "source": "eventbrite"
     },
@@ -1989,7 +1989,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.com/e/halloween-with-persians-tickets-2003355243462",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195864119%2F2981826575181%2F1%2Foriginal.20261015-134643?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.077&fp-y=0.459&s=da90ae010db22ebba091e5acdff774f5",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195864119%2F2981826575181%2F1%2Foriginal.20261015-134643?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.077&fp-y=0.459&s=5f498d7b7ca88ec4c000441fa543b5dd",
       "description": "Halloween with Persians is a vibrant evening hosted by Arthur, bringing together Persian food, drinks, music, and the incredible atmosphere",
       "source": "eventbrite"
     },
@@ -2025,7 +2025,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/maison-milano-halloween-night-tickets-2003244466124",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195523151%2F2289763293583%2F1%2Foriginal.20261010-201418?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.488&fp-y=0.066&s=64706c95ee1f6c37325cbc02aba51bfd",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195523151%2F2289763293583%2F1%2Foriginal.20261010-201418?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.488&fp-y=0.066&s=7138a77389e411266fd918e99d0ded22",
       "description": "Halloween takes over Maison Milano: DJ set, drinks, costumes and a dark night from 00:30 to 04:00.",
       "source": "eventbrite"
     },
@@ -2043,7 +2043,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/biglietti-2-novembre-le-cinque-giornate-wow-milano-1999513896891",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193649638%2F799775158543%2F1%2Foriginal.20260916-132433?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=f087c05bb6ed01d0958e9f759f41711f",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193649638%2F799775158543%2F1%2Foriginal.20260916-132433?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=e958faa339c761108fbbb58deeb2ee9d",
       "description": "In degustazione i vini vincitori della nona edizione di WOW! The Italian Wine Competition: le medaglie e i premi speciali.",
       "source": "eventbrite"
     },
@@ -2079,7 +2079,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/biglietti-academie-du-champagne-2026-2002116345886",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194192562%2F188673858254%2F1%2Foriginal.20260923-140640?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.434&fp-y=0.52&s=5e84a0497a805f7cf7c94e217fa5219b",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194192562%2F188673858254%2F1%2Foriginal.20260923-140640?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.434&fp-y=0.52&s=08bcb7231a073532d60ba351e2feecc5",
       "description": "Percorsi di formazione diversificati in base ai tuoi interessi della durata di 3 ore: scegli il tuo!",
       "source": "eventbrite"
     },
@@ -2133,7 +2133,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/biglietti-afterall-presents-traffic-light-party-2003374664551",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195724981%2F1504604819593%2F1%2Foriginal.20261013-201958?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=85a5a4e4264d585020beb9af298460cf",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195724981%2F1504604819593%2F1%2Foriginal.20261013-201958?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=17c8fa88c6f8c416c412acfec03117d3",
       "description": "Powered by GattoMatto - commercial music",
       "source": "eventbrite"
     },
@@ -2151,7 +2151,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.com/e/sipping-roero-tickets-2003057671416",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195268334%2F2997977361800%2F1%2Foriginal.20261007-115611?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.516&fp-y=0.469&s=4c2819a42ade2aa21a583cdd3c7cbca9",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195268334%2F2997977361800%2F1%2Foriginal.20261007-115611?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.516&fp-y=0.469&s=b33f07e446fda910a727c081f4332e29",
       "description": "Unisciti a noi per scoprire i sapori unici del Roero con Braja",
       "source": "eventbrite"
     },
@@ -2187,7 +2187,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/cena-cantata-miscusi-cadorna-tickets-2000415458486",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193155434%2F283920769980%2F1%2Foriginal.20260910-124635?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=fbbd4563be6f770f7409b744a34abce5",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1193155434%2F283920769980%2F1%2Foriginal.20260910-124635?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=6dcdf34fc5e5cec81aeb739163f93a52",
       "description": "Cena Cantata - Miscusi Cadorna dalle 20:00 di ogni venerdì di novembre",
       "source": "eventbrite"
     },
@@ -2205,7 +2205,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/gen-genealogie-di-eterna-natura-tickets-2003136782038",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195358718%2F2988154000268%2F1%2Foriginal.20261008-114719?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.509&fp-y=0.204&s=359d4c42e2f28ca5e7dcc938ac04b2a6",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195358718%2F2988154000268%2F1%2Foriginal.20261008-114719?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.509&fp-y=0.204&s=b985e7e40ef9ad49d95be7dad288c1a1",
       "description": "un laboratorio di movimento e improvvisazione, un percorso di ricerca sul rapporto tra corpo, natura e origine.",
       "source": "eventbrite"
     },
@@ -2295,7 +2295,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/milano-in-vino-milano-wine-district-2026-ingresso-omaggio-con-accredito-tickets-2002574016792",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194653681%2F1218477853593%2F1%2Foriginal.20260929-182027?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=fe1ea932b88895633cacabd2400dc90b",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194653681%2F1218477853593%2F1%2Foriginal.20260929-182027?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=7ac5fe56f85d200988267e60df86fb80",
       "description": "Degustazioni Illimitate • Cantine • Produttori • Gourmet Street Food",
       "source": "eventbrite"
     },
@@ -2331,7 +2331,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.com/e/biglietti-sustainable-creative-art-inspiration-from-nature-scin-2nd-edition-1985226745637",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179873357%2F2128978362763%2F1%2Foriginal.20260315-111932?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=f917e222afa782dae1f986fe3b2f42d9",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1179873357%2F2128978362763%2F1%2Foriginal.20260315-111932?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=e0e79d4be31ad0d95ead21eca7690181",
       "description": "Get hands-on with art inspired by nature and learn how to create sustainably at SCIN’s 2nd edition!",
       "source": "eventbrite"
     },
@@ -2367,7 +2367,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/ett-presenta-to-yasemi-alveare-culturale-studio-tickets-2003197850696",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195438166%2F2741877034191%2F1%2Foriginal.20261009-103203?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=6149c995b4c572e722de89c824ab7a2d",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195438166%2F2741877034191%2F1%2Foriginal.20261009-103203?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=7b43ecbd0f4376a5f1f831a6e414204b",
       "description": "ETT presenta To yasemi @ Alveare Culturale Studio",
       "source": "eventbrite"
     },
@@ -2385,7 +2385,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.com/e/100-cities-project-milan-dinner-with-new-friends-tickets-1936691038029",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1166724793%2F2590974569761%2F1%2Foriginal.20251030-192908?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=75c51d28e02c99646761b7e3bb601c96",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1166724793%2F2590974569761%2F1%2Foriginal.20251030-192908?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=205d41d651a6680649d2241332425723",
       "description": "Life can feel lonely when you’re always working on your passion. Take the opportunity to meet other locals over dinner!",
       "source": "eventbrite"
     },
@@ -2421,7 +2421,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.co.uk/e/biglietti-immersive-meditation-experience-milan-november-15th-2001883163431",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194009071%2F209674604595%2F1%2Foriginal.20260921-141429?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=e9a106f43a6d5a0895fd53b1d9544272",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1194009071%2F209674604595%2F1%2Foriginal.20260921-141429?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=c6114733b6bc2aca302e36ff1ffe4bf9",
       "description": "Esperienza di meditazione immersiva – Una serata ricca di musica dal vivo, canti di mantra e immagini coinvolgenti.",
       "source": "eventbrite"
     },
@@ -2439,7 +2439,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/biglietti-crea-il-tuo-gin-a-milano-masterclass-workshop-2003448801296",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195849173%2F3017788043597%2F1%2Foriginal.20261015-090431?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=47ab5aeeee24843b516cc8c00cc6ca10",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195849173%2F3017788043597%2F1%2Foriginal.20261015-090431?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=2d03a5996af3d8488256651b3bda129c",
       "description": "Impara a mixare il gin perfetto e porta a casa la tua creazione unica in questa super masterclass pratica!",
       "source": "eventbrite"
     },
@@ -2457,7 +2457,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/gin-tasting-experience-by-mixology-academy-tickets-1995918219122",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189863593%2F152494375345%2F1%2Foriginal.20260729-100145?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.687&fp-y=0.392&s=3dd4c462625a959f1538633cd973a948",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189863593%2F152494375345%2F1%2Foriginal.20260729-100145?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.687&fp-y=0.392&s=8a4d476b2eb4a6bd1a0ebb424fd66b63",
       "description": "Masterclass con degustazione di 5 distillati e food pairing: scopri aromi, tecniche e segreti della degustazione guidato dai professionisti.",
       "source": "eventbrite"
     },
@@ -2475,7 +2475,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.com.au/e/i-brueghel-a-palazzo-reale-visita-guidata-adulti-e-teens-tickets-1995901105936",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189861200%2F104077680407%2F1%2Foriginal.20260729-090845?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=acff66fbe1e90e8fad85d3471a62e73a",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189861200%2F104077680407%2F1%2Foriginal.20260729-090845?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=48bff6300815077d732d21854448c843",
       "description": "Una visita guidata a Palazzo reale  alla mostra I BRUEGHEL. L'ORIGINE DEI GENERI PITTORICI IN EUROPA.",
       "source": "eventbrite"
     },
@@ -2511,7 +2511,7 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.it/e/biglietti-gianluca-sambataro-e-rejoice-gospel-choir-in-concerto-a-milano-2003404842815",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195775168%2F1636263936963%2F1%2Foriginal.20261014-125859?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.772&fp-y=0.462&s=4348376f0e3af46c8d6e5a85918765cf",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195775168%2F1636263936963%2F1%2Foriginal.20261014-125859?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.772&fp-y=0.462&s=874d63d6be5da5bbc02c4b8721fa926f",
       "description": "Dopo il successo dello scorso anno, Fondazione Asilo Mariuccia presenta un concerto gospel a sostegno dei giovani in difficoltà.",
       "source": "eventbrite"
     },
@@ -2565,8 +2565,44 @@
       "priceFrom": null,
       "priceTo": null,
       "url": "https://www.eventbrite.com/e/biglietti-gospel-a-milano-3a-edizione-2003262063759",
-      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195554418%2F2510906992761%2F1%2Foriginal.20261011-175016?crop=focalpoint&fit=crop&w=400&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=12b25772d2e6136a6ab696444c77d447",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1195554418%2F2510906992761%2F1%2Foriginal.20261011-175016?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.5&fp-y=0.5&s=1e913b51fba1ecdcec3898f641b196a4",
       "description": "Una serata di musica gospel a Milano che ti farà ballare, cantare e sentire la gioia nel cuore!",
+      "source": "eventbrite"
+    },
+    {
+      "id": "eb-1995920452803",
+      "title": "Whisky Tasting Experience by MIXOLOGY Academy",
+      "titleIt": "Whisky Tasting Experience by MIXOLOGY Academy",
+      "start": "2026-12-17T20:00:00+01:00",
+      "end": "2026-12-17T20:00:00+01:00",
+      "category": "food",
+      "city": "Milano",
+      "zone": "Milano",
+      "venue": "Viale Monza, 258",
+      "free": false,
+      "priceFrom": null,
+      "priceTo": null,
+      "url": "https://www.eventbrite.it/e/whisky-tasting-experience-by-mixology-academy-tickets-1995920452803",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189863593%2F152494375345%2F1%2Foriginal.20260729-100145?crop=focalpoint&fit=crop&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.687&fp-y=0.392&s=8a4d476b2eb4a6bd1a0ebb424fd66b63",
+      "description": "Masterclass con degustazione di 5 distillati e food pairing: scopri aromi, tecniche e segreti della degustazione guidato dai professionisti.",
+      "source": "eventbrite"
+    },
+    {
+      "id": "eb-1995944364323",
+      "title": "DALì E LA MODA A PALAZZO REALE. VISITA GUIDATA ADULTI E TEENS",
+      "titleIt": "DALì E LA MODA A PALAZZO REALE. VISITA GUIDATA ADULTI E TEENS",
+      "start": "2026-12-17T20:00:00+01:00",
+      "end": "2026-12-17T20:00:00+01:00",
+      "category": "culture",
+      "city": "Milano",
+      "zone": "Milano",
+      "venue": "Palazzo Reale Milano",
+      "free": false,
+      "priceFrom": null,
+      "priceTo": null,
+      "url": "https://www.eventbrite.com.au/e/dali-e-la-moda-a-palazzo-reale-visita-guidata-adulti-e-teens-tickets-1995944364323",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F1189880537%2F104077680407%2F1%2Foriginal.20260729-145344?crop=focalpoint&fit=crop&w=512&auto=format%2Ccompress&q=75&sharp=10&fp-x=0.502&fp-y=0.805&s=d03bc1661c0e04e55f1220efc562aa65",
+      "description": "Una visita guidata a Palazzo Reale alla mostra DALì E LA MODA per adulti e ragazzi dai 12 anni",
       "source": "eventbrite"
     }
   ]
