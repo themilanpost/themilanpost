@@ -179,10 +179,18 @@ async function fetchPage(listingSlug, category, page, startDate, endDate) {
   if (page > 1) url.searchParams.set('page', String(page));
 
   const res = await fetch(url, {
-    headers: { Accept: 'text/html', 'User-Agent': UA },
+    headers: {
+      Accept: 'text/html,application/xhtml+xml',
+      'Accept-Language': 'en-US,en;q=0.9',
+      'User-Agent': UA,
+    },
     signal: AbortSignal.timeout(30000),
   });
-  if (!res.ok) throw new Error(`Eventbrite HTTP ${res.status} (${listingSlug} page ${page})`);
+  if (!res.ok) {
+    const err = new Error(`Eventbrite HTTP ${res.status} (${listingSlug} page ${page})`);
+    err.status = res.status;
+    throw err;
+  }
 
   const html = await res.text();
   const priceMeta = parseListingPriceMeta(html);
@@ -271,8 +279,23 @@ async function main() {
   if (skippedPhone) console.log(`  skipped ${skippedPhone} with phone numbers in title/description`);
 }
 
+/** Datacenter / bot blocks (common on GitHub Actions). Keep cached JSON. */
+function isSoftBlock(err) {
+  const status = err?.status;
+  if (status === 403 || status === 405 || status === 429) return true;
+  return /Eventbrite HTTP (403|405|429)\b/.test(String(err?.message || ''));
+}
+
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   main().catch((err) => {
+    if (isSoftBlock(err)) {
+      const existing = readExisting();
+      console.warn(
+        `Eventbrite blocked (${err.message}). Keeping existing eventbrite.json` +
+          (existing?.events?.length != null ? ` (${existing.events.length} events).` : '.'),
+      );
+      process.exit(0);
+    }
     console.error(err);
     process.exit(1);
   });
