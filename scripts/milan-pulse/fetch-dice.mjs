@@ -85,7 +85,8 @@ function normalizeEvent(raw) {
     zone: city,
     venue: venue?.name || city,
     ...pricing,
-    url: `https://dice.fm/event/${raw.perm_name}`,
+    // Browse __NEXT_DATA__ no longer includes perm_name; /event/{id} redirects to the slug page.
+    url: `https://dice.fm/event/${raw.perm_name || raw.id}`,
     image: raw.images?.landscape || raw.images?.square || null,
     description: raw.summary?.slice(0, 280) || null,
     source: 'dice',
