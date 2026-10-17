@@ -202,8 +202,11 @@ const EMBED_CONSENT_KEY = 'milanpost_optional_embeds';
 
         const banner = document.getElementById('embed-consent-banner');
 
+        /** Tracker has no embeds; banner would cover the mobile bottom dock. */
+        const isTrackerPage = () => /(?:^|\/)tracker\/?$/.test(location.pathname);
+
         const showBanner = () => {
-          if (!(banner instanceof HTMLElement)) return;
+          if (!(banner instanceof HTMLElement) || isTrackerPage()) return;
           banner.hidden = false;
           banner.classList.remove('hidden');
         };
@@ -326,6 +329,10 @@ const EMBED_CONSENT_KEY = 'milanpost_optional_embeds';
         };
 
         const initBanner = () => {
+          if (isTrackerPage()) {
+            hideBanner();
+            return;
+          }
           const current = getConsent();
           if (current === ACCEPTED || current === REFUSED) {
             hideBanner();

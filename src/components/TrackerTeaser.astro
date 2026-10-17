@@ -1,0 +1,130 @@
+---
+/**
+ * Homepage sneak-peek into Milan Tracker.
+ * Rotating lines from build-time JSON (same feeds as /tracker/).
+ * Rotation pauses on hover/focus; reduced-motion = static first line.
+ */
+import { getTrackerTeaserLines } from '../lib/milan-pulse-summary';
+import { localePath } from '../i18n/paths';
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang?: Lang;
+}
+
+const { lang = 'en' } = Astro.props;
+const lines = getTrackerTeaserLines(lang === 'it' ? 'it' : 'en');
+const href = localePath('/tracker', lang);
+const label = lang === 'it' ? 'Apri Milan Tracker' : 'Open Milan Tracker';
+const kicker = lang === 'it' ? 'Milan Tracker' : 'Milan Tracker';
+---
+
+<section
+  class="tracker-teaser border-b border-border bg-[#fff0f0]"
+  aria-roledescription="carousel"
+  aria-label={kicker}
+  data-tracker-teaser
+  data-interval="6500"
+>
+  <div class="mx-auto flex max-w-site items-stretch px-4 py-3 sm:px-6 sm:py-3.5">
+    <a
+      href={href}
+      data-astro-reload
+      class="group flex min-w-0 flex-1 items-center gap-3 no-underline"
+    >
+      <span
+        class="hidden shrink-0 rounded-sm bg-primary px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-primary-fg sm:inline"
+      >
+        {kicker}
+      </span>
+      <span class="relative min-h-[1.5rem] min-w-0 flex-1 overflow-hidden">
+        {
+          lines.map((line, i) => (
+            <span
+              class:list={[
+                'tracker-teaser-line block text-sm font-semibold leading-snug text-text transition-opacity duration-500 sm:text-base',
+                i === 0 ? 'relative opacity-100' : 'pointer-events-none absolute inset-0 opacity-0',
+              ]}
+              data-teaser-line
+              data-active={i === 0 ? 'true' : 'false'}
+              aria-hidden={i === 0 ? 'false' : 'true'}
+            >
+              {line.text}
+            </span>
+          ))
+        }
+      </span>
+      <span
+        class="inline-flex shrink-0 items-center gap-1 text-xs font-bold uppercase tracking-wide text-primary group-hover:text-primary-light sm:text-sm"
+      >
+        {label}
+        <svg class="size-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </span>
+    </a>
+  </div>
+</section>
+
+<style>
+  @media (prefers-reduced-motion: reduce) {
+    .tracker-teaser-line {
+      transition: none !important;
+    }
+  }
+</style>
+
+<script>
+  function initTrackerTeaser(root: HTMLElement) {
+    const lines = [...root.querySelectorAll<HTMLElement>('[data-teaser-line]')];
+    if (lines.length < 2) return;
+
+    const intervalMs = Number(root.dataset.interval || 6500);
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion) return;
+
+    let index = 0;
+    let timer: ReturnType<typeof setInterval> | null = null;
+
+    function show(i: number) {
+      index = (i + lines.length) % lines.length;
+      lines.forEach((el, n) => {
+        const on = n === index;
+        el.dataset.active = on ? 'true' : 'false';
+        el.setAttribute('aria-hidden', on ? 'false' : 'true');
+        el.classList.toggle('opacity-100', on);
+        el.classList.toggle('relative', on);
+        el.classList.toggle('opacity-0', !on);
+        el.classList.toggle('absolute', !on);
+        el.classList.toggle('pointer-events-none', !on);
+        el.classList.toggle('inset-0', !on);
+      });
+    }
+
+    function stop() {
+      if (timer) clearInterval(timer);
+      timer = null;
+    }
+
+    function start() {
+      stop();
+      timer = setInterval(() => show(index + 1), intervalMs);
+    }
+
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+    root.addEventListener('focusin', stop);
+    root.addEventListener('focusout', (e) => {
+      if (!root.contains(e.relatedTarget as Node)) start();
+    });
+
+    start();
+  }
+
+  function boot() {
+    document.querySelectorAll<HTMLElement>('[data-tracker-teaser]').forEach(initTrackerTeaser);
+  }
+
+  document.addEventListener('astro:page-load', boot);
+  boot();
+</script>

@@ -28,7 +28,17 @@
     "test": "playwright test",
     "test:ui": "playwright test --ui",
     "test:perf": "playwright test tests/performance.spec.ts",
-    "test:report": "playwright show-report"
+    "test:report": "playwright show-report",
+    "fetch:strikes": "node scripts/milan-pulse/fetch-strikes.mjs",
+    "fetch:strikes:force": "node scripts/milan-pulse/fetch-strikes.mjs --force",
+    "fetch:eventbrite": "node scripts/milan-pulse/fetch-eventbrite.mjs",
+    "fetch:eventbrite:force": "node scripts/milan-pulse/fetch-eventbrite.mjs --force",
+    "fetch:dice": "node scripts/milan-pulse/fetch-dice.mjs",
+    "fetch:dice:force": "node scripts/milan-pulse/fetch-dice.mjs --force",
+    "fetch:mobility": "node scripts/milan-pulse/fetch-mobility.mjs",
+    "fetch:mobility:force": "node scripts/milan-pulse/fetch-mobility.mjs --force",
+    "write:shards": "node scripts/milan-pulse/write-shards.mjs",
+    "fetch:milan-pulse": "npm run fetch:strikes && npm run fetch:eventbrite && npm run fetch:dice && npm run fetch:mobility && npm run write:shards"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.1",
@@ -36,6 +46,7 @@
     "@tailwindcss/vite": "^4.2.1",
     "astro": "^6.0.4",
     "astro-robots-txt": "^1.0.0",
+    "deepl-node": "^1.28.1",
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {

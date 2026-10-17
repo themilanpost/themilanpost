@@ -4,12 +4,12 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { brand } from '../config/brand';
 
-const lastUpdated = '10 September 2026';
+const lastUpdated = '17 October 2026';
 ---
 
 <BaseLayout
   title="Privacy & copyright"
-  description={`Privacy policy and copyright terms for ${brand.name}: personal data, reuse of guides, and brand assets.`}
+  description={`Privacy, copyright, mission, and how ${brand.name} creates guides: AI-assisted drafts with human editorial review. Non-commercial community project.`}
   alternates={[
     { hreflang: 'en', href: `${brand.url}/privacy/` },
     { hreflang: 'it', href: `${brand.url}/it/privacy/` },
@@ -24,16 +24,50 @@ const lastUpdated = '10 September 2026';
       <h1 class="mt-3 font-heading text-h1 font-semibold text-text">Privacy &amp; copyright</h1>
       <p class="mt-4 text-sm text-text-muted">Last updated: {lastUpdated}</p>
       <p class="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm font-semibold">
+        <a href="#mission" class="text-primary hover:text-primary-light">Mission &amp; how we write</a>
         <a href="#privacy" class="text-primary hover:text-primary-light">Privacy</a>
+        <a href="#tracker-data" class="text-primary hover:text-primary-light">Tracker data</a>
         <a href="#copyright" class="text-primary hover:text-primary-light">Copyright &amp; reuse</a>
       </p>
       <p class="mt-6 text-lead leading-relaxed text-text-muted">
-        This page covers how {brand.name} (“we”) handles personal data and how our content may be used.
-        It is written for transparency under the EU GDPR and Italian copyright law (L. 633/1941). It is not
-        legal advice.
+        This page covers our mission, how we produce guides, how {brand.name} (“we”) handles personal data,
+        and how our content may be used. It is written for transparency under the EU GDPR and Italian copyright
+        law (L. 633/1941). It is not legal advice.
       </p>
 
       <div class="prose-privacy mt-10 space-y-8 text-text-muted leading-relaxed">
+        <section id="mission" class="rounded-md border border-border bg-surface p-6 sm:p-8">
+          <h2 class="font-heading text-h3 font-semibold text-text">Mission &amp; how we write</h2>
+          <p class="mt-3">
+            {brand.name} exists to help people settle in Milan with clear, practical guides—paperwork,
+            housing, healthcare, transport, and everyday life. We are a <strong class="text-text">non-commercial,
+            community-backed project</strong> linked to New in Milan: we do not sell products or run ads on these
+            pages, and we do not take payment to rank or recommend services.
+          </p>
+          <p class="mt-3">
+            <strong class="text-text">Who:</strong> volunteer editors in the New in Milan community take editorial
+            responsibility for what we publish. Guides are not attributed to an AI system as “author.”
+          </p>
+          <p class="mt-3">
+            <strong class="text-text">How:</strong> we use AI tools to help draft, structure, and refresh copy so we
+            can cover more ground. Every published guide is then <strong class="text-text">manually reviewed and
+            validated</strong> by a person against official and other trusted sources (e.g. Comune, Questura,
+            Agenzia delle Entrate, regional health sites, and established open data). We correct, cut, or rewrite
+            anything that does not hold up. Where rules change often, we say so and point you to the primary source.
+          </p>
+          <p class="mt-3">
+            <strong class="text-text">Why:</strong> settling in Milan involves money, residency, and health topics.
+            Speed without checks would be reckless; drafting everything by hand alone would leave newcomers without
+            guides for months. Our compromise is AI-assisted production with human editorial control—so readers know
+            both that we move quickly and that a person stands behind the page.
+          </p>
+          <p class="mt-3">
+            Guides are educational orientation, not legal, tax, or medical advice. Always confirm deadlines and
+            requirements with the competent office before you act. See also our
+            <a href="/about/" class="font-semibold text-primary hover:text-primary-light">About</a> page.
+          </p>
+        </section>
+
         <section id="privacy">
           <h2 class="font-heading text-h3 font-semibold text-text">1. Controller</h2>
           <p class="mt-3">
@@ -169,12 +203,46 @@ const lastUpdated = '10 September 2026';
           </p>
         </section>
 
+        <section id="tracker-data" class="border-t border-border pt-10">
+          <h2 class="font-heading text-h3 font-semibold text-text">9. Milan Tracker data sources</h2>
+          <p class="mt-3">
+            <a href="/tracker/" class="font-semibold text-primary hover:text-primary-light">Milan Tracker</a>{' '}
+            is a non-commercial snapshot of public information for newcomers. We are not affiliated with ATM,
+            Comune di Milano, Eventbrite, DICE, or the Italian Ministry of Transport.
+          </p>
+          <ul class="mt-3 list-disc space-y-2 pl-5">
+            <li>
+              <strong class="text-text">Strikes:</strong> MIT Osservatorio Scioperi public RSS, filtered for Milan
+              relevance. English labels may be machine-translated (DeepL) and human-checked in context; Italian shows
+              the MIT text.
+            </li>
+            <li>
+              <strong class="text-text">Transport alerts:</strong> ATM Info Traffico public pages — service-change
+              notices, not live vehicle tracking.
+            </li>
+            <li>
+              <strong class="text-text">Event listings:</strong> aggregated from public Eventbrite and DICE Milan
+              pages for convenience. This is <strong class="text-text">not</strong> an official city calendar and is
+              not exhaustive. Where possible we prefer licensed or official APIs (e.g. open civic calendars); until
+              then, always open the source link before you go.
+            </li>
+          </ul>
+          <p class="mt-3">
+            Feeds refresh on a schedule; numbers on the page can lag the source. For travel decisions use{' '}
+            <a href="https://www.atm.it" class="font-semibold text-primary hover:text-primary-light" target="_blank" rel="noopener noreferrer">atm.it</a>
+            {' '}and the MIT strike portal.
+          </p>
+        </section>
+
         <section id="copyright" class="border-t border-border pt-10">
-          <h2 class="font-heading text-h3 font-semibold text-text">9. Copyright and reuse</h2>
+          <h2 class="font-heading text-h3 font-semibold text-text">10. Copyright and reuse</h2>
           <p class="mt-3">
             Unless a page says otherwise, all original content on this website — including guides, articles,
             glossaries, copy, graphics, and brand artwork — is protected by copyright. © {new Date().getFullYear()}{' '}
             {brand.name}. <strong class="text-text">All rights reserved.</strong>
+            Editorial responsibility for published text rests with {brand.name} and our volunteer editors, including
+            where AI tools assisted in drafting (see{' '}
+            <a href="#mission" class="font-semibold text-primary hover:text-primary-light">Mission &amp; how we write</a>).
           </p>
           <p class="mt-3">You may:</p>
           <ul class="mt-3 list-disc space-y-2 pl-5">
@@ -188,8 +256,8 @@ const lastUpdated = '10 September 2026';
             <li>Use our name, logo, or branding in a way that suggests endorsement or affiliation.</li>
           </ul>
           <p class="mt-3">
-            Official maps, open data, and third-party embeds remain owned by their respective rights holders
-            and are subject to their licences. Permission requests:{' '}
+            Official maps, open data, public event calendars, and third-party embeds remain owned by their
+            respective rights holders and are subject to their licences. Permission requests:{' '}
             <a href="/contact" class="font-semibold text-primary hover:text-primary-light">contact form</a>.
           </p>
         </section>

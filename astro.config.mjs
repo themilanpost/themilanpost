@@ -24,11 +24,17 @@ export default defineConfig({
 
   integrations: [
     sitemap({
-      filter: (page) =>
-        !page.includes('/contact/success') &&
-        // Soft-redirect shells (Astro HTML refresh on GitHub Pages) — do not advertise in sitemap
-        page.replace(/\/$/, '') !== 'https://www.themilanpost.it/blog' &&
-        !page.includes('/blog/milan-paperwork-first-month'),
+      filter: (page) => {
+        const bare = page.replace(/\/$/, '');
+        return (
+          !page.includes('/contact/success') &&
+          // Soft-redirect shells (Astro HTML refresh on GitHub Pages) — do not advertise in sitemap
+          bare !== 'https://www.themilanpost.it/blog' &&
+          !page.includes('/blog/milan-paperwork-first-month') &&
+          bare !== 'https://www.themilanpost.it/events' &&
+          bare !== 'https://www.themilanpost.it/it/events'
+        );
+      },
     }),
     robotsTxt(),
   ],

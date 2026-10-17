@@ -6,6 +6,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import Hero from '../../components/Hero.astro';
+import TrackerTeaser from '../../components/TrackerTeaser.astro';
 import { getCollection } from 'astro:content';
 import { brand } from '../../config/brand';
 import { homeAlternates } from '../../i18n/alternates';
@@ -53,6 +54,8 @@ const featuredGuides = featuredGuideIds
   ]}
 >
   <Header slot="header" />
+
+  <TrackerTeaser lang="it" />
 
   <Hero
     heading="Guide pratiche per vivere a Milano."

@@ -10,6 +10,11 @@ permissions:
   pages: write
   id-token: write
 
+# Share with refresh-milan-pulse.yml so cron refresh and push deploys cannot clobber each other.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest

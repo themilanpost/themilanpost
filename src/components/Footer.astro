@@ -17,6 +17,7 @@ const navCols =
         {
           title: 'Esplora',
           links: [
+            { label: 'Milan Tracker', href: '/it/tracker/' },
             { label: 'Guide', href: '/it/guides/' },
             { label: 'Documenti e pratiche', href: '/it/paperwork/' },
             { label: 'Vivere a Milano', href: '/it/living-in-milan/' },
@@ -36,6 +37,7 @@ const navCols =
           title: 'Explore',
           links: [
             { label: 'New in Milan', href: '/new-in-milan' },
+            { label: 'Milan Tracker', href: '/tracker/' },
             { label: 'Guides', href: '/guides' },
             { label: 'Paperwork', href: '/paperwork' },
             { label: 'Living in Milan', href: '/living-in-milan' },
@@ -76,7 +78,11 @@ const byLabel = lang === 'it' ? 'da' : 'by';
           <ul class="mt-3 space-y-2">
             {col.links.map(({ label, href }) => (
               <li>
-                <a href={href} class="text-sm transition-colors hover:text-primary">
+                <a
+                  href={href}
+                  class="text-sm transition-colors hover:text-primary"
+                  data-astro-reload={href.includes('/tracker') ? true : undefined}
+                >
                   {label}
                 </a>
               </li>

@@ -14,6 +14,7 @@ export const defaultLang: Lang = 'en';
 export const ui = {
   en: {
     'nav.newInMilan': 'New in Milan',
+    'nav.tracker': 'Milan Tracker',
     'nav.guides': 'Guides',
     'nav.about': 'About',
     'nav.contact': 'Contact',
@@ -24,6 +25,7 @@ export const ui = {
   },
   it: {
     'nav.newInMilan': 'New in Milan',
+    'nav.tracker': 'Milan Tracker',
     'nav.guides': 'Guide',
     'nav.about': 'Chi siamo',
     'nav.contact': 'Contatti',

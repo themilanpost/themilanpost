@@ -13,6 +13,8 @@ const t = useTranslations(lang);
 const homeHref = localePath('/', lang);
 /** NiM is EN-only (international community); omit from Italian chrome. */
 const newInMilanHref = lang === 'en' ? '/new-in-milan' : null;
+/** Full page load: pulse app must re-init (View Transitions skip module scripts). */
+const trackerHref = localePath('/tracker', lang);
 const guidesNavItems = guidesNavFor(lang);
 
 const aboutNavItems = [
@@ -79,6 +81,20 @@ const mobileLinkClass = (href: string) =>
           </a>
         )
       }
+
+      <a
+        href={trackerHref}
+        data-astro-reload
+        aria-current={isLinkActive(trackerHref, currentPath) ? 'page' : undefined}
+        class:list={[
+          'rounded-md px-3 py-2 text-sm font-medium transition-colors',
+          isLinkActive(trackerHref, currentPath)
+            ? 'bg-primary/10 text-primary'
+            : 'text-text-muted hover:text-text',
+        ]}
+      >
+        {t('nav.tracker')}
+      </a>
 
       <details class="relative" name="desktop-nav">
         <summary class={summaryClass(guidesActive)}>
@@ -172,6 +188,10 @@ const mobileLinkClass = (href: string) =>
               </a>
             )
           }
+
+          <a href={trackerHref} data-astro-reload class={mobileLinkClass(trackerHref)}>
+            {t('nav.tracker')}
+          </a>
 
           <div>
             <p class="px-3 pt-2 text-xs font-bold uppercase tracking-widest text-text-muted">{t('nav.guides')}</p>

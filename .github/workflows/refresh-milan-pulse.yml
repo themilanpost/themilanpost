@@ -1,0 +1,94 @@
+# Refresh Milano Pulse static JSON (Eventbrite, DICE, MIT strikes, ATM).
+# Commits under public/data/milan-pulse/ — push with a PAT or deploy in-job
+# because GITHUB_TOKEN commits often do not re-trigger Pages deploy.
+name: Refresh Milan Pulse feeds
+
+on:
+  schedule:
+    - cron: '0 6 * * 1,3,5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Share with deploy.yml so cron refresh and push deploys cannot clobber each other.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Fetch MIT strikes if feed changed
+        id: strikes
+        run: npm run fetch:strikes
+        env:
+          DEEPL_AUTH_KEY: ${{ secrets.DEEPL_AUTH_KEY }}
+        continue-on-error: true
+
+      - name: Fetch Eventbrite events if listings changed
+        id: eventbrite
+        run: npm run fetch:eventbrite
+        continue-on-error: true
+
+      - name: Fetch DICE events if listings changed
+        id: dice
+        run: npm run fetch:dice
+        continue-on-error: true
+
+      - name: Fetch ATM mobility alerts if feed changed
+        id: mobility
+        run: npm run fetch:mobility
+        continue-on-error: true
+
+      - name: Fail if every feed fetch failed
+        if: >-
+          steps.strikes.outcome == 'failure' &&
+          steps.eventbrite.outcome == 'failure' &&
+          steps.dice.outcome == 'failure' &&
+          steps.mobility.outcome == 'failure'
+        run: |
+          echo "All Milan Pulse fetches failed — refusing to commit/deploy stale silence."
+          exit 1
+
+      # today/agenda shards must rebuild even when full dumps are unchanged (calendar day moves).
+      - name: Write slim Tracker shards
+        run: npm run write:shards
+
+      - name: Commit updated data files
+        id: commit
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'chore: refresh Milan Pulse feeds'
+          file_pattern: public/data/milan-pulse/*.json
+
+      - name: Build site
+        if: steps.commit.outputs.changes_detected == 'true' || github.event_name == 'workflow_dispatch'
+        run: npm run build
+        env:
+          PUBLIC_FORMSPREE_FORM_ID: xwlkndra
+          PUBLIC_HIT_COUNTER_URL: ${{ vars.PUBLIC_HIT_COUNTER_URL || 'https://themilanpost-hit-counter.tmp-themilanpost.workers.dev' }}
+
+      - uses: actions/configure-pages@v5
+        if: steps.commit.outputs.changes_detected == 'true' || github.event_name == 'workflow_dispatch'
+
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.commit.outputs.changes_detected == 'true' || github.event_name == 'workflow_dispatch'
+        with:
+          path: dist
+
+      - id: deployment
+        if: steps.commit.outputs.changes_detected == 'true' || github.event_name == 'workflow_dispatch'
+        uses: actions/deploy-pages@v4

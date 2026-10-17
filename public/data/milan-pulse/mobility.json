@@ -1,0 +1,42 @@
+{
+  "updatedAt": "2026-10-17T20:27:15.168Z",
+  "source": "ATM Info Traffico RSS (English alerts)",
+  "sourceUrl": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico",
+  "live": true,
+  "filter": "Alerts with official English translation on atm.it",
+  "disclaimer": "Priority service changes from ATM — not live vehicle tracking. Use the ATM app for real-time departures.",
+  "fingerprint": "ba1c9017f9e21e65",
+  "lines": [
+    {
+      "id": "M3",
+      "name": "Linea M3 (Gialla)",
+      "status": "warning",
+      "note": "Nuovi ascensori e scale mobili su M3: impianti fuori servizio durante i cantieri",
+      "noteEn": "Accessibility improvements on the M3 line: lifts and escalators temporarily out of service"
+    }
+  ],
+  "alerts": [
+    {
+      "id": "7a61a27908ef",
+      "severity": "warning",
+      "titleIt": "Nuovi ascensori e scale mobili su M3: impianti fuori servizio durante i cantieri",
+      "bodyIt": "Stiamo sostituendo gli ascensori e le scale mobili della M3 arrivati a fine vita, per garantire l’accessibilità della linea nei prossimi anni. Ci scusiamo per i disagi: durante i cantieri, gli ascensori e le scale di alcune stazioni sono fuori servizio (le stazioni sono aperte e i treni fermano come al solito). Stazioni oggi non accessibili con ascensori Turati: 3 ascensori sono fuori servizio fino a metà ottobre. Stazioni con alcune scale mobili fuori servizio Maciachini : sono fuori servizio 2 scale mobili fino a metà novembre. Ascensori e montascale in tempo reale Controllate il funzionamen",
+      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/NuoviascensoriescalemobilisuM3.aspx",
+      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/AccessibilityimprovementsonM3linereplacementworks.aspx",
+      "pubDate": "Thu, 28 Nov 2024 14:49:30 GMT",
+      "titleEn": "Accessibility improvements on the M3 line: lifts and escalators temporarily out of service",
+      "bodyEn": "We are installing new lifts and new escalators to ensure the M3 line remains accessible to all passengers. We apologize for any inconvenience this may cause to your journey. Please note: during replacement works, lifts and escalators in some stations are out of service (the stations remain open and trains stop as usual). For real-time information about disruptions affecting lifts and stairlifts, please check our app or visit this page . You can also call 02 48 607 607 and press 1 for information about accessible options and to plan a step-free journey."
+    },
+    {
+      "id": "14d330ba6338",
+      "severity": "warning",
+      "titleIt": "PittaRosso Pink Parade: tram e bus deviano domenica 18/10",
+      "bodyIt": "Domenica 18 ottobre, dalle 9 alle 14 circa , c’è la PittaRosso Pink Parade. In questa pagina trovate tutti i cambiamenti delle nostre linee. Tram 1 Non passa tra via 20 Settembre e Sempione/Arona. Verso Greco devia e salta le fermate da Domodossola a via 20 Settembre. Verso Roserio devia e salta le fermate da largo Quinto Alpini a corso Sempione/via Arona. Tram 2 Nelle due direzioni, devia e salta le fermate di Cusani, Lanza, Arena, Lega Lombarda, viale Montello e Baiamonti (solo verso Bausan). Passa da Foro Buonaparte, Cadorna, Boccaccio, via Monti, piazza Sei Febbraio, viale Boezio, Domodoss",
+      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/Pittarosso2026.aspx",
+      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/RunningracetramandbusdivertedonSunday18October.aspx",
+      "pubDate": "Thu, 15 Oct 2026 15:35:46 GMT",
+      "titleEn": "PittaRosso Pink Parade: tram and bus diversions on Sunday 18 October",
+      "bodyEn": "On Sunday 18 October , the PittaRosso Pink Parade will take place from 9 am to 2 pm . On this page you will find all the service changes. No service between via 20 Settembre and Sempione/Arona. Towards Greco, trams divert and skip the stops from Domodossola to via 20 Settembre. Towards Roserio, they divert and skip the stops from largo Quinto Alpini to corso Sempione/via Arona. In both directions, trams divert and skip the stops of Cusani, Lanza, Arena, Lega Lombarda, viale Montello and Baiamonti (only towards Bausan). They run along Foro Buonaparte, Cadorna, Boccaccio, via Monti, piazza Sei F"
+    }
+  ]
+}

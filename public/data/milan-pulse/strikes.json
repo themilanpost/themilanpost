@@ -1,0 +1,575 @@
+{
+  "updatedAt": "2026-10-17T20:39:31.980Z",
+  "feedUpdated": "2026-10-17",
+  "feedPubDate": "Sat, 17 Oct 2026 20:49:24 +0000",
+  "feedFingerprint": "cbc9896d57895b37",
+  "source": "MIT Osservatorio Scioperi · RSS",
+  "sourceUrl": "https://scioperi.mit.gov.it/mit2/public/scioperi/rss",
+  "portalUrl": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+  "fetchSchedule": "Mon, Wed, Fri ~07:00 Rome",
+  "live": true,
+  "strikes": [
+    {
+      "id": "mit-8576",
+      "start": "2026-10-16",
+      "end": "2026-10-20",
+      "sector": "Trasporto merci",
+      "category": "FERMO SERVIZI AUTOTRASPORTO MERCI C/TERZI REGIONE SICILIA",
+      "relevance": "Regionale",
+      "region": "Sicilia",
+      "mode": "120 ORE: DALLE 00.01 DEL 16/10 ALLE 24.00 DEL 20/10",
+      "guaranteed": [],
+      "unions": [
+        "COMITATO TRASPORTO SICILIANO"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8580",
+      "start": "2026-10-16",
+      "end": "2026-10-20",
+      "sector": "Trasporto merci",
+      "category": "FERMO SERVIZIO TRASPORTO MERCI C/TERZI IMPRESE ADERENTI A FEDRALOG REGIONE CALABRIA",
+      "relevance": "Regionale",
+      "region": "Calabria",
+      "mode": "120 ORE: DALLE 00.01 DEL 16/10 ALLE 24.00 DEL 20/10",
+      "guaranteed": [],
+      "unions": [
+        "FEDRALOG CALABRIA"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8593",
+      "start": "2026-10-19",
+      "end": "2026-10-19",
+      "sector": "Trasporto pubblico locale",
+      "category": "PERSONALE SOC. TPL LINEA DI SAVONA",
+      "relevance": "Locale",
+      "region": "Liguria",
+      "mode": "4 ORE: DALLE 10.15 ALLE 14.15",
+      "guaranteed": [],
+      "unions": [
+        "OSP FILT-CGIL",
+        "FIT-CISL",
+        "UILT-UIL",
+        "UGL",
+        "FAISA-CISAL",
+        "SIAL COBAS + RSU"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8600",
+      "start": "2026-10-19",
+      "end": "2026-10-19",
+      "sector": "Trasporto pubblico locale",
+      "category": "PERSONALE SOC. BUS INTERNATIONAL SERVICE DI ROMA",
+      "relevance": "Locale",
+      "region": "Lazio",
+      "mode": "4 ORE: DALLE 08.30 ALLE 12.30",
+      "guaranteed": [],
+      "unions": [
+        "OSR USB LAVORO PRIVATO"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8582",
+      "start": "2026-10-20",
+      "end": "2026-10-20",
+      "sector": "Trasporto pubblico locale",
+      "category": "PERSONALE SOC. ARRIVA UDINE DI UDINE",
+      "relevance": "Locale",
+      "region": "Friuli-Venezia Giulia",
+      "mode": "9 ORE: DALLE 15.00 ALLE 24.00",
+      "guaranteed": [],
+      "unions": [
+        "ASI-AU ASSOCIAZIONE SINDACALE INDIPENDENTE"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8595",
+      "start": "2026-10-23",
+      "end": "2026-10-23",
+      "sector": "Trasporto pubblico locale",
+      "category": "OPERATORI DI ESERCIZIO SOC. FERROVIE SUD EST DI BARI",
+      "relevance": "Locale",
+      "region": "Puglia",
+      "mode": "4 ORE: DALLE 19.45 ALLE 23.45",
+      "guaranteed": [],
+      "unions": [
+        "OSR FILT-CGIL",
+        "FIT-CISL",
+        "UILT-UIL",
+        "FAISA-CISAL"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8596",
+      "start": "2026-10-23",
+      "end": "2026-10-23",
+      "sector": "Trasporto pubblico locale",
+      "category": "PERSONALE ADDETTO ALLA GESTIONE OPERATIVA AUTOLINEE (GOA) SOC. FERROVIE SUD EST DI BARI",
+      "relevance": "Locale",
+      "region": "Puglia",
+      "mode": "4 ORE: DALLE 19.45 ALLE 23.45",
+      "guaranteed": [],
+      "unions": [
+        "OSR FILT-CGIL",
+        "FIT-CISL",
+        "UILT-UIL",
+        "FAISA-CISAL"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8587",
+      "start": "2026-10-27",
+      "end": "2026-10-27",
+      "sector": "Circolazione e sicurezza stradale",
+      "category": "PERSONALE SOC. GSA ADDETTO ALLA SORVEGLIANZA  ANTINCENDIO AUTOSTRADA A1 TRATTA INCISA-SASSO MARCONI",
+      "relevance": "Interregionale",
+      "region": "Italia",
+      "mode": "4 ORE: PRIMO TURNO DALLE 8.00 ALLE 12.00 - SECONDO TURNO DALLE 20.00 ALLE 24.00",
+      "guaranteed": [],
+      "unions": [
+        "OSP SGB"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8597",
+      "start": "2026-10-28",
+      "end": "2026-10-29",
+      "sector": "Ferroviario",
+      "category": "PERSONALE SOC. TRENITALIA DIV. CUSTOMER OPERATIONS SEDI DI BOLOGNA, REGGIO EMILIA STORICA ED AV MEDIOPADANA, RIMINI",
+      "relevance": "Regionale",
+      "region": "Emilia-Romagna",
+      "mode": "24 ORE: DALLE 21.00 DEL 28/10 ALLE 21.00 DEL 29/10",
+      "guaranteed": [],
+      "unions": [
+        "OSR FILT-CGIL",
+        "FIT-CISL",
+        "UILT-UIL",
+        "ORSA FERROVIE"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8583",
+      "start": "2026-10-28",
+      "end": "2026-10-28",
+      "sector": "Trasporto pubblico locale",
+      "category": "PERSONALE SOC. AIR CAMPANIA DI NAPOLI",
+      "relevance": "Locale",
+      "region": "Campania",
+      "mode": "8 ORE: DALLE 08.00 ALLE 16.00",
+      "guaranteed": [],
+      "unions": [
+        "OSR FILT-CGIL",
+        "FIT-CISL",
+        "UILT-UIL",
+        "UGL",
+        "FAISA-CISAL"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8604",
+      "start": "2026-10-29",
+      "end": "2026-10-29",
+      "sector": "Aereo",
+      "category": "PERSONALE SOC. LA LUCENTE IMPIEGATO PRESSO IL SITO DELL'AEROPORTO DI BOLOGNA",
+      "relevance": "Interregionale",
+      "region": "Italia",
+      "mode": "4 ORE: DALLE 12.00 ALLE 16.00",
+      "guaranteed": [],
+      "unions": [
+        "OSP",
+        "OSR FILCAMS-CGIL",
+        "UILT-UIL"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8601",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "sector": "Aereo",
+      "category": "PERSONALE SOCC. TOSCANA AEROPORTI, GH TOSCANA E CONSULTA OPERANTI PRESSO GLI AEROPORTI DI PISA E FIRENZE",
+      "relevance": "Regionale",
+      "region": "Toscana",
+      "mode": "24 ORE: DALLE 00.00 ALLE 23.59",
+      "guaranteed": [],
+      "unions": [
+        "OSP USB LAVORO PRIVATO"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8590",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "sector": "Generale",
+      "category": "SCIOPERO GENERALE SETTORI PUBBLICI E PRIVATI",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "INTERA GIORNATA - AEREO: DALLE 00.00 ALLE 23.59; FERROVIARIO: DALLE 21.00 DEL 29/10 ALLE 20.59 DEL 30/10; AUTOSTRADE: DALLE 22.00 DEL 29/10: TAXI: DALLE 00.01 ALLE 23.59",
+      "guaranteed": [],
+      "unions": [
+        "USB"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "General",
+        "category": "GENERAL STRIKE IN THE PUBLIC AND PRIVATE SECTORS",
+        "mode": "WHOLE DAY – BY PLANE: FROM 00.00 TO 23.59; BY TRAIN: FROM 21.00 ON 29/10 TO 20.59 ON 30/10; MOTORWAYS: FROM 22.00 ON 29/10; TAXIS: FROM 00.01 TO 23.59",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8606",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "sector": "Marittimo",
+      "category": "LAVORATORI SETTORE PORTUALE ( IMPRESE EX ART. 16, 17, 18 L. 84/94, ADSP E SOCIETA' CHE APPLICANO CCNL PORTI )",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "24 ORE",
+      "guaranteed": [],
+      "unions": [
+        "USB LAVORO PRIVATO"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "Maritime",
+        "category": "PORT SECTOR WORKERS (COMPANIES UNDER ARTICLES 16, 17 AND 18 OF LAW 84/94, PORT AUTHORITIES AND COMPANIES THAT APPLY THE NATIONAL COLLECTIVE AGREEMENT FOR PORTS)",
+        "mode": "24 HOURS",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8453",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "sector": "Plurisettoriale",
+      "category": "SCIOPERO GENERALE PERSONALE DIPENDENTE PUBBLICO E PRIVATO",
+      "relevance": "Nazionale",
+      "region": "Toscana",
+      "mode": "INTERA GIORNATA",
+      "guaranteed": [],
+      "unions": [
+        "USI-CIT"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "Multi-sector",
+        "category": "GENERAL STRIKE BY PUBLIC AND PRIVATE SECTOR EMPLOYEES",
+        "mode": "FULL DAY",
+        "relevance": "National",
+        "region": "Tuscany"
+      }
+    },
+    {
+      "id": "mit-8548",
+      "start": "2026-11-06",
+      "end": "2026-11-06",
+      "sector": "Aereo",
+      "category": "PERSONALE SOC. ENAV APT BARI",
+      "relevance": "Interregionale",
+      "region": "Italia",
+      "mode": "4 ORE: DALLE 13.00 ALLE 17.00",
+      "guaranteed": [],
+      "unions": [
+        "RSA FAST-CONFSAL-AV"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8608",
+      "start": "2026-11-10",
+      "end": "2026-11-11",
+      "sector": "Trasporto merci",
+      "category": "PERSONALE SOC. SBB CARGO ITALIA",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "8 ORE: DALLE 21.00 DEL 10/11 ALLE 04.59 DELL'11/11",
+      "guaranteed": [],
+      "unions": [
+        "OSR FILT-CGIL"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "Freight transport",
+        "category": "STAFF OF SBB CARGO ITALIA",
+        "mode": "8 HOURS: FROM 9.00 pm ON 10 November TO 4.59 am ON 11 November",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8598",
+      "start": "2026-11-13",
+      "end": "2026-11-13",
+      "sector": "Trasporto pubblico locale",
+      "category": "PERSONALE SOC. ATVO DI VENEZIA",
+      "relevance": "Locale",
+      "region": "Veneto",
+      "mode": "24 ORE",
+      "guaranteed": [],
+      "unions": [
+        "OSP SGB",
+        "FAST MOBILITA'"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8602",
+      "start": "2026-11-13",
+      "end": "2026-11-13",
+      "sector": "Trasporto pubblico locale",
+      "category": "PERSONALE SOCC. GRUPPO ATM DI MILANO",
+      "relevance": "Provinciale",
+      "region": "Lombardia",
+      "mode": "24 ORE: VARIE MODALITA'",
+      "guaranteed": [],
+      "unions": [
+        "AL-COBAS"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "Local public transport",
+        "category": "STAFF OF THE ATM GROUP IN MILAN",
+        "mode": "24 HOURS: VARIOUS METHODS",
+        "relevance": "Provincial",
+        "region": "Lombardy"
+      }
+    },
+    {
+      "id": "mit-8605",
+      "start": "2026-11-14",
+      "end": "2026-11-14",
+      "sector": "Trasporto pubblico locale",
+      "category": "PERSONALE SOC AMTAB DI BARI",
+      "relevance": "Locale",
+      "region": "Puglia",
+      "mode": "24 ORE: DALLE 00.00 ALLE 24.00",
+      "guaranteed": [],
+      "unions": [
+        "OST FILT-CGIL",
+        "FIT-CISL",
+        "UILT-UIL",
+        "UGL AUTOFERRO"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8603",
+      "start": "2026-11-16",
+      "end": "2026-11-16",
+      "sector": "Trasporto pubblico locale",
+      "category": "PERSONALE SOC. ANM DI NAPOLI",
+      "relevance": "Locale",
+      "region": "Campania",
+      "mode": "4 ORE: DALLE 11.00 ALLE 15.00",
+      "guaranteed": [],
+      "unions": [
+        "OSR FILT-CGIL",
+        "FIT-CISL",
+        "UILT-UIL",
+        "UGL-FNA",
+        "FAISA-CISAL"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8592",
+      "start": "2026-11-20",
+      "end": "2026-11-21",
+      "sector": "Plurisettoriale",
+      "category": "PERSONALE IMPRESE CHE SVOLGONO ATTIVITA' FERROVIARIA",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "SETTORE FERROVIARIO, TRASPORTO MERCI SU ROTAIA 23 ORE: DALLE 21.00 DEL 20/11 ALLE 20.00 DEL 21/11; *TPL: INTERA PRESTAZIONE DEL 21/11",
+      "guaranteed": [],
+      "unions": [
+        "CUB TRASPORTI",
+        "SGB FERROVIE"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "Multi-sector",
+        "category": "STAFF OF COMPANIES OPERATING IN THE RAILWAY SECTOR",
+        "mode": "RAILWAY SECTOR, RAIL FREIGHT TRANSPORT: 23 HOURS – FROM 9.00 pm ON 20/11 TO 8.00 pm ON 21/11; *Local public transport: all services on 21/11",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8571",
+      "start": "2026-11-21",
+      "end": "2026-11-21",
+      "sector": "Aereo",
+      "category": "PERSONALE SOC. ENAV",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "4 ORE: DALLE 13.00 ALLE 17.00",
+      "guaranteed": [],
+      "unions": [
+        "FILT-CGIL",
+        "UGL-TA"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "Aircraft",
+        "category": "ENAV STAFF",
+        "mode": "4 HOURS: FROM 1.00 PM TO 5.00 PM",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8579",
+      "start": "2026-11-22",
+      "end": "2026-11-22",
+      "sector": "Aereo",
+      "category": "PERSONALE SOC. ENAV AEROPORTO DI MILANO MALPENSA",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "24 ORE: DALLE 00.01 ALLE 24.00",
+      "guaranteed": [],
+      "unions": [
+        "RSA FAST-CONFSAL-AV"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "Aircraft",
+        "category": "ENAV STAFF AT MILAN MALPENSA AIRPORT",
+        "mode": "24 HOURS: FROM 00.01 TO 24.00",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8588",
+      "start": "2026-11-22",
+      "end": "2026-11-22",
+      "sector": "Aereo",
+      "category": "PERSONALE SOC. SICURITALIA IVRI AEROPORTO MARCO POLO DI VENEZIA",
+      "relevance": "Interregionale",
+      "region": "Italia",
+      "mode": "24 ORE: DALLE 00.00 ALLE 23.59",
+      "guaranteed": [],
+      "unions": [
+        "OST FISASCAT-CISL"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8575",
+      "start": "2026-12-04",
+      "end": "2026-12-04",
+      "sector": "Generale",
+      "category": "SCIOPERO GENERALE CATEGORIE PUBBLICHE E PRIVATE",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "INTERA GIORNATA - AEREO: MODALITA' NON COMUNICATE; FERROVIARIO DALLE 21.00 DEL 3/12 ALLE 21.00 DEL 4/12; AUTOSTRADE: DALLE 22.00 DEL 3/12 ALLE 22.00 DEL 4/12, TPL: MODALITA' TERRITORIALI",
+      "guaranteed": [],
+      "unions": [
+        "CUB",
+        "ADL VARESE",
+        "SGB",
+        "CIB-UNICOBAS",
+        "SBM",
+        "SGC",
+        "SI-COBAS"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "General",
+        "category": "GENERAL STRIKE IN THE PUBLIC AND PRIVATE SECTORS",
+        "mode": "ALL DAY – AIR TRAVEL: ARRANGEMENTS NOT YET ANNOUNCED; RAIL TRAVEL FROM 9.00 pm on 3 December TO 9.00 pm on 4 December; MOTORWAYS: FROM 10.00 pm ON 3 December TO 10.00 pm ON 4 December; LOCAL PUBLIC TRANSPORT: ARRANGEMENTS VARY BY AREA",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8594",
+      "start": "2026-12-14",
+      "end": "2026-12-14",
+      "sector": "Aereo",
+      "category": "PERSONALE SOC. AVIATION SERVICES AEROPORTI DI ROMA FIUMICINO E CIAMPINO",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "24 ORE: DALLE 00.00 ALLE 24.00",
+      "guaranteed": [],
+      "unions": [
+        "OSR FAST-CONFSAL"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "Aircraft",
+        "category": "STAFF OF AVIATION SERVICES AT ROME’S FIUMICINO AND CIAMPINO AIRPORTS",
+        "mode": "24 HOURS: FROM 00.00 TO 24.00",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8607",
+      "start": "2026-12-15",
+      "end": "2026-12-15",
+      "sector": "Aereo",
+      "category": "PERSONALE SOC. ENAV APT BOLOGNA",
+      "relevance": "Interregionale",
+      "region": "Emilia-Romagna",
+      "mode": "24 ORE: DALLE 00.00 ALLE 24.00",
+      "guaranteed": [],
+      "unions": [
+        "RSA UILT-UIL"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    }
+  ],
+  "translation": {
+    "engine": "deepl",
+    "at": "2026-10-17T20:39:32.520Z",
+    "strikes": 10,
+    "chars": 1304,
+    "reused": 0,
+    "newStrings": 31
+  }
+}

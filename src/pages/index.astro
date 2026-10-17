@@ -5,6 +5,7 @@ import { getCollection } from 'astro:content';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
+import TrackerTeaser from '../components/TrackerTeaser.astro';
 import { brand } from '../config/brand';
 import { homeAlternates } from '../i18n/alternates';
 import {
@@ -71,6 +72,8 @@ const instagramCanonicalUrls = instagramEmbedUrls
   ]}
 >
   <Header slot="header" />
+
+  <TrackerTeaser lang="en" />
 
   <Hero />
 
@@ -232,7 +235,7 @@ const instagramCanonicalUrls = instagramEmbedUrls
     <div class="mx-auto max-w-site px-4 sm:px-6">
       <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p class="text-topper font-bold uppercase tracking-widest text-primary">Events</p>
+          <p class="text-topper font-bold uppercase tracking-widest text-primary">Community meetups</p>
           <h2 id="home-events-heading" class="mt-2 font-heading text-h2 font-semibold text-text">
             Upcoming New in Milan meetups
           </h2>

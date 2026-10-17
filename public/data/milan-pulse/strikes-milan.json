@@ -1,0 +1,257 @@
+{
+  "updatedAt": "2026-10-17T20:39:31.980Z",
+  "feedUpdated": "2026-10-17",
+  "source": "MIT Osservatorio Scioperi · RSS",
+  "sourceUrl": "https://scioperi.mit.gov.it/mit2/public/scioperi/rss",
+  "portalUrl": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+  "live": true,
+  "translation": {
+    "engine": "deepl",
+    "at": "2026-10-17T20:39:32.520Z",
+    "strikes": 10,
+    "chars": 1304,
+    "reused": 0,
+    "newStrings": 31
+  },
+  "count": 10,
+  "strikes": [
+    {
+      "id": "mit-8590",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "sector": "Generale",
+      "category": "SCIOPERO GENERALE SETTORI PUBBLICI E PRIVATI",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "INTERA GIORNATA - AEREO: DALLE 00.00 ALLE 23.59; FERROVIARIO: DALLE 21.00 DEL 29/10 ALLE 20.59 DEL 30/10; AUTOSTRADE: DALLE 22.00 DEL 29/10: TAXI: DALLE 00.01 ALLE 23.59",
+      "guaranteed": [],
+      "unions": [
+        "USB"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "General",
+        "category": "GENERAL STRIKE IN THE PUBLIC AND PRIVATE SECTORS",
+        "mode": "WHOLE DAY – BY PLANE: FROM 00.00 TO 23.59; BY TRAIN: FROM 21.00 ON 29/10 TO 20.59 ON 30/10; MOTORWAYS: FROM 22.00 ON 29/10; TAXIS: FROM 00.01 TO 23.59",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8606",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "sector": "Marittimo",
+      "category": "LAVORATORI SETTORE PORTUALE ( IMPRESE EX ART. 16, 17, 18 L. 84/94, ADSP E SOCIETA' CHE APPLICANO CCNL PORTI )",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "24 ORE",
+      "guaranteed": [],
+      "unions": [
+        "USB LAVORO PRIVATO"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "Maritime",
+        "category": "PORT SECTOR WORKERS (COMPANIES UNDER ARTICLES 16, 17 AND 18 OF LAW 84/94, PORT AUTHORITIES AND COMPANIES THAT APPLY THE NATIONAL COLLECTIVE AGREEMENT FOR PORTS)",
+        "mode": "24 HOURS",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8453",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "sector": "Plurisettoriale",
+      "category": "SCIOPERO GENERALE PERSONALE DIPENDENTE PUBBLICO E PRIVATO",
+      "relevance": "Nazionale",
+      "region": "Toscana",
+      "mode": "INTERA GIORNATA",
+      "guaranteed": [],
+      "unions": [
+        "USI-CIT"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "Multi-sector",
+        "category": "GENERAL STRIKE BY PUBLIC AND PRIVATE SECTOR EMPLOYEES",
+        "mode": "FULL DAY",
+        "relevance": "National",
+        "region": "Tuscany"
+      }
+    },
+    {
+      "id": "mit-8608",
+      "start": "2026-11-10",
+      "end": "2026-11-11",
+      "sector": "Trasporto merci",
+      "category": "PERSONALE SOC. SBB CARGO ITALIA",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "8 ORE: DALLE 21.00 DEL 10/11 ALLE 04.59 DELL'11/11",
+      "guaranteed": [],
+      "unions": [
+        "OSR FILT-CGIL"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "Freight transport",
+        "category": "STAFF OF SBB CARGO ITALIA",
+        "mode": "8 HOURS: FROM 9.00 pm ON 10 November TO 4.59 am ON 11 November",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8602",
+      "start": "2026-11-13",
+      "end": "2026-11-13",
+      "sector": "Trasporto pubblico locale",
+      "category": "PERSONALE SOCC. GRUPPO ATM DI MILANO",
+      "relevance": "Provinciale",
+      "region": "Lombardia",
+      "mode": "24 ORE: VARIE MODALITA'",
+      "guaranteed": [],
+      "unions": [
+        "AL-COBAS"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "Local public transport",
+        "category": "STAFF OF THE ATM GROUP IN MILAN",
+        "mode": "24 HOURS: VARIOUS METHODS",
+        "relevance": "Provincial",
+        "region": "Lombardy"
+      }
+    },
+    {
+      "id": "mit-8592",
+      "start": "2026-11-20",
+      "end": "2026-11-21",
+      "sector": "Plurisettoriale",
+      "category": "PERSONALE IMPRESE CHE SVOLGONO ATTIVITA' FERROVIARIA",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "SETTORE FERROVIARIO, TRASPORTO MERCI SU ROTAIA 23 ORE: DALLE 21.00 DEL 20/11 ALLE 20.00 DEL 21/11; *TPL: INTERA PRESTAZIONE DEL 21/11",
+      "guaranteed": [],
+      "unions": [
+        "CUB TRASPORTI",
+        "SGB FERROVIE"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "Multi-sector",
+        "category": "STAFF OF COMPANIES OPERATING IN THE RAILWAY SECTOR",
+        "mode": "RAILWAY SECTOR, RAIL FREIGHT TRANSPORT: 23 HOURS – FROM 9.00 pm ON 20/11 TO 8.00 pm ON 21/11; *Local public transport: all services on 21/11",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8571",
+      "start": "2026-11-21",
+      "end": "2026-11-21",
+      "sector": "Aereo",
+      "category": "PERSONALE SOC. ENAV",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "4 ORE: DALLE 13.00 ALLE 17.00",
+      "guaranteed": [],
+      "unions": [
+        "FILT-CGIL",
+        "UGL-TA"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "Aircraft",
+        "category": "ENAV STAFF",
+        "mode": "4 HOURS: FROM 1.00 PM TO 5.00 PM",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8579",
+      "start": "2026-11-22",
+      "end": "2026-11-22",
+      "sector": "Aereo",
+      "category": "PERSONALE SOC. ENAV AEROPORTO DI MILANO MALPENSA",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "24 ORE: DALLE 00.01 ALLE 24.00",
+      "guaranteed": [],
+      "unions": [
+        "RSA FAST-CONFSAL-AV"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "Aircraft",
+        "category": "ENAV STAFF AT MILAN MALPENSA AIRPORT",
+        "mode": "24 HOURS: FROM 00.01 TO 24.00",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8575",
+      "start": "2026-12-04",
+      "end": "2026-12-04",
+      "sector": "Generale",
+      "category": "SCIOPERO GENERALE CATEGORIE PUBBLICHE E PRIVATE",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "INTERA GIORNATA - AEREO: MODALITA' NON COMUNICATE; FERROVIARIO DALLE 21.00 DEL 3/12 ALLE 21.00 DEL 4/12; AUTOSTRADE: DALLE 22.00 DEL 3/12 ALLE 22.00 DEL 4/12, TPL: MODALITA' TERRITORIALI",
+      "guaranteed": [],
+      "unions": [
+        "CUB",
+        "ADL VARESE",
+        "SGB",
+        "CIB-UNICOBAS",
+        "SBM",
+        "SGC",
+        "SI-COBAS"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "General",
+        "category": "GENERAL STRIKE IN THE PUBLIC AND PRIVATE SECTORS",
+        "mode": "ALL DAY – AIR TRAVEL: ARRANGEMENTS NOT YET ANNOUNCED; RAIL TRAVEL FROM 9.00 pm on 3 December TO 9.00 pm on 4 December; MOTORWAYS: FROM 10.00 pm ON 3 December TO 10.00 pm ON 4 December; LOCAL PUBLIC TRANSPORT: ARRANGEMENTS VARY BY AREA",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8594",
+      "start": "2026-12-14",
+      "end": "2026-12-14",
+      "sector": "Aereo",
+      "category": "PERSONALE SOC. AVIATION SERVICES AEROPORTI DI ROMA FIUMICINO E CIAMPINO",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "24 ORE: DALLE 00.00 ALLE 24.00",
+      "guaranteed": [],
+      "unions": [
+        "OSR FAST-CONFSAL"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "Aircraft",
+        "category": "STAFF OF AVIATION SERVICES AT ROME’S FIUMICINO AND CIAMPINO AIRPORTS",
+        "mode": "24 HOURS: FROM 00.00 TO 24.00",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    }
+  ]
+}

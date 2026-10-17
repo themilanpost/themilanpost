@@ -10,6 +10,7 @@ export const italianContentPaths = new Set<string>([
   '/guides',
   '/paperwork',
   '/living-in-milan',
+  '/tracker',
   '/about',
   '/contact',
   '/privacy',
