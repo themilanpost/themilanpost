@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-10-17T20:39:31.980Z",
-  "feedUpdated": "2026-10-17",
+  "updatedAt": "2026-10-19T12:17:54.774Z",
+  "feedUpdated": "2026-10-19",
   "source": "MIT Osservatorio Scioperi · RSS",
   "sourceUrl": "https://scioperi.mit.gov.it/mit2/public/scioperi/rss",
   "portalUrl": "https://scioperi.mit.gov.it/mit2/public/scioperi",
   "live": true,
   "translation": {
     "engine": "deepl",
-    "at": "2026-10-17T20:39:32.520Z",
+    "at": "2026-10-19T12:17:55.743Z",
     "strikes": 10,
-    "chars": 1304,
-    "reused": 0,
-    "newStrings": 31
+    "chars": 227,
+    "reused": 49,
+    "newStrings": 1
   },
   "count": 10,
   "strikes": [
@@ -23,7 +23,7 @@
       "category": "SCIOPERO GENERALE SETTORI PUBBLICI E PRIVATI",
       "relevance": "Nazionale",
       "region": "Italia",
-      "mode": "INTERA GIORNATA - AEREO: DALLE 00.00 ALLE 23.59; FERROVIARIO: DALLE 21.00 DEL 29/10 ALLE 20.59 DEL 30/10; AUTOSTRADE: DALLE 22.00 DEL 29/10: TAXI: DALLE 00.01 ALLE 23.59",
+      "mode": "INTERA GIORNATA - AEREO: DALLE 00.00 ALLE 23.59; FERROVIARIO: DALLE 21.00 DEL 29/10 ALLE 20.59 DEL 30/10; TPL: DURATA E MODALITA' STABILITE A LIVELLO TERRITORIALE; AUTOSTRADE: DALLE 22.00 DEL 29/10: TAXI: DALLE 00.01 ALLE 23.59",
       "guaranteed": [],
       "unions": [
         "USB"
@@ -33,9 +33,9 @@
       "en": {
         "sector": "General",
         "category": "GENERAL STRIKE IN THE PUBLIC AND PRIVATE SECTORS",
-        "mode": "WHOLE DAY – BY PLANE: FROM 00.00 TO 23.59; BY TRAIN: FROM 21.00 ON 29/10 TO 20.59 ON 30/10; MOTORWAYS: FROM 22.00 ON 29/10; TAXIS: FROM 00.01 TO 23.59",
         "relevance": "National",
-        "region": "Italy"
+        "region": "Italy",
+        "mode": "WHOLE DAY – AIR TRAVEL: FROM 00.00 TO 23.59; RAIL TRAVEL: FROM 21.00 ON 29/10 TO 20.59 ON 30/10; PUBLIC TRANSPORT: DURATION AND ARRANGEMENTS DETERMINED AT LOCAL LEVEL; MOTORWAYS: FROM 22.00 ON 29/10; TAXIS: FROM 00.01 TO 23.59"
       }
     },
     {

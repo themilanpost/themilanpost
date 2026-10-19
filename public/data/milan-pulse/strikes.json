@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-10-17T20:39:31.980Z",
-  "feedUpdated": "2026-10-17",
-  "feedPubDate": "Sat, 17 Oct 2026 20:49:24 +0000",
-  "feedFingerprint": "cbc9896d57895b37",
+  "updatedAt": "2026-10-19T12:17:54.774Z",
+  "feedUpdated": "2026-10-19",
+  "feedPubDate": "Mon, 19 Oct 2026 12:27:50 +0000",
+  "feedFingerprint": "bd5c49e76b0b9fda",
   "source": "MIT Osservatorio Scioperi · RSS",
   "sourceUrl": "https://scioperi.mit.gov.it/mit2/public/scioperi/rss",
   "portalUrl": "https://scioperi.mit.gov.it/mit2/public/scioperi",
@@ -90,6 +90,22 @@
       "guaranteed": [],
       "unions": [
         "ASI-AU ASSOCIAZIONE SINDACALE INDIPENDENTE"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": false
+    },
+    {
+      "id": "mit-8609",
+      "start": "2026-10-21",
+      "end": "2026-10-21",
+      "sector": "Trasporto pubblico locale",
+      "category": "PERSONALE SOC. AMT DI GENOVA",
+      "relevance": "Territoriale",
+      "region": "Liguria",
+      "mode": "4 ORE: DALLE 11.30 ALLE 15.30",
+      "guaranteed": [],
+      "unions": [
+        "OST UGL AUTOFERRO + RSA"
       ],
       "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
       "milanRelevant": false
@@ -229,7 +245,7 @@
       "category": "SCIOPERO GENERALE SETTORI PUBBLICI E PRIVATI",
       "relevance": "Nazionale",
       "region": "Italia",
-      "mode": "INTERA GIORNATA - AEREO: DALLE 00.00 ALLE 23.59; FERROVIARIO: DALLE 21.00 DEL 29/10 ALLE 20.59 DEL 30/10; AUTOSTRADE: DALLE 22.00 DEL 29/10: TAXI: DALLE 00.01 ALLE 23.59",
+      "mode": "INTERA GIORNATA - AEREO: DALLE 00.00 ALLE 23.59; FERROVIARIO: DALLE 21.00 DEL 29/10 ALLE 20.59 DEL 30/10; TPL: DURATA E MODALITA' STABILITE A LIVELLO TERRITORIALE; AUTOSTRADE: DALLE 22.00 DEL 29/10: TAXI: DALLE 00.01 ALLE 23.59",
       "guaranteed": [],
       "unions": [
         "USB"
@@ -239,9 +255,9 @@
       "en": {
         "sector": "General",
         "category": "GENERAL STRIKE IN THE PUBLIC AND PRIVATE SECTORS",
-        "mode": "WHOLE DAY – BY PLANE: FROM 00.00 TO 23.59; BY TRAIN: FROM 21.00 ON 29/10 TO 20.59 ON 30/10; MOTORWAYS: FROM 22.00 ON 29/10; TAXIS: FROM 00.01 TO 23.59",
         "relevance": "National",
-        "region": "Italy"
+        "region": "Italy",
+        "mode": "WHOLE DAY – AIR TRAVEL: FROM 00.00 TO 23.59; RAIL TRAVEL: FROM 21.00 ON 29/10 TO 20.59 ON 30/10; PUBLIC TRANSPORT: DURATION AND ARRANGEMENTS DETERMINED AT LOCAL LEVEL; MOTORWAYS: FROM 22.00 ON 29/10; TAXIS: FROM 00.01 TO 23.59"
       }
     },
     {
@@ -566,10 +582,10 @@
   ],
   "translation": {
     "engine": "deepl",
-    "at": "2026-10-17T20:39:32.520Z",
+    "at": "2026-10-19T12:17:55.743Z",
     "strikes": 10,
-    "chars": 1304,
-    "reused": 0,
-    "newStrings": 31
+    "chars": 227,
+    "reused": 49,
+    "newStrings": 1
   }
 }
