@@ -1,19 +1,19 @@
 {
-  "updatedAt": "2026-10-19T12:17:54.774Z",
-  "feedUpdated": "2026-10-19",
+  "updatedAt": "2026-10-21T11:16:08.708Z",
+  "feedUpdated": "2026-10-21",
   "source": "MIT Osservatorio Scioperi · RSS",
   "sourceUrl": "https://scioperi.mit.gov.it/mit2/public/scioperi/rss",
   "portalUrl": "https://scioperi.mit.gov.it/mit2/public/scioperi",
   "live": true,
   "translation": {
     "engine": "deepl",
-    "at": "2026-10-19T12:17:55.743Z",
-    "strikes": 10,
-    "chars": 227,
-    "reused": 49,
-    "newStrings": 1
+    "at": "2026-10-21T11:16:09.482Z",
+    "strikes": 13,
+    "chars": 269,
+    "reused": 50,
+    "newStrings": 9
   },
-  "count": 10,
+  "count": 13,
   "strikes": [
     {
       "id": "mit-8590",
@@ -33,9 +33,58 @@
       "en": {
         "sector": "General",
         "category": "GENERAL STRIKE IN THE PUBLIC AND PRIVATE SECTORS",
+        "mode": "WHOLE DAY – AIR TRAVEL: FROM 00.00 TO 23.59; RAIL TRAVEL: FROM 21.00 ON 29/10 TO 20.59 ON 30/10; PUBLIC TRANSPORT: DURATION AND ARRANGEMENTS DETERMINED AT LOCAL LEVEL; MOTORWAYS: FROM 22.00 ON 29/10; TAXIS: FROM 00.01 TO 23.59",
         "relevance": "National",
-        "region": "Italy",
-        "mode": "WHOLE DAY – AIR TRAVEL: FROM 00.00 TO 23.59; RAIL TRAVEL: FROM 21.00 ON 29/10 TO 20.59 ON 30/10; PUBLIC TRANSPORT: DURATION AND ARRANGEMENTS DETERMINED AT LOCAL LEVEL; MOTORWAYS: FROM 22.00 ON 29/10; TAXIS: FROM 00.01 TO 23.59"
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8611",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "sector": "Generale",
+      "category": "SCIOPERO GENERALE SETTORI PUBBLICI E PRIVATI*",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "INTERA GIORNATA DALLE 00.01 ALLE 23.59",
+      "guaranteed": [],
+      "unions": [
+        "ADL-COBAS",
+        "CLAP",
+        "SIAL-COBAS",
+        "COBAS"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "General",
+        "category": "GENERAL STRIKE IN THE PUBLIC AND PRIVATE SECTORS*",
+        "mode": "WHOLE DAY FROM 00.01 TO 23.59",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8612",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "sector": "Generale",
+      "category": "SCIOPERO GENERALE CATEGORIE PUBBLICHE E PRIVATE*",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "INTERA GIORNATA",
+      "guaranteed": [],
+      "unions": [
+        "CIB-UNICOBAS"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "General",
+        "category": "GENERAL STRIKE IN THE PUBLIC AND PRIVATE SECTORS*",
+        "mode": "FULL DAY",
+        "relevance": "National",
+        "region": "Italy"
       }
     },
     {
@@ -131,6 +180,29 @@
       }
     },
     {
+      "id": "mit-8610",
+      "start": "2026-11-20",
+      "end": "2026-11-20",
+      "sector": "Generale",
+      "category": "SCIOPERO GENERALE SETTORI PUBBLICI E PRIVATI ANCHE IN APPALTO E STRUMENTALI",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "INTERA GIORNATA DI LAVORO",
+      "guaranteed": [],
+      "unions": [
+        "CGIL"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "General",
+        "category": "GENERAL STRIKE IN THE PUBLIC AND PRIVATE SECTORS, INCLUDING CONTRACTOR AND SUPPORT STAFF",
+        "mode": "FULL WORKING DAY",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
       "id": "mit-8592",
       "start": "2026-11-20",
       "end": "2026-11-21",
@@ -215,7 +287,6 @@
         "CUB",
         "ADL VARESE",
         "SGB",
-        "CIB-UNICOBAS",
         "SBM",
         "SGC",
         "SI-COBAS"

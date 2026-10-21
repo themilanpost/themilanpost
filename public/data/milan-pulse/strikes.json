@@ -1,99 +1,14 @@
 {
-  "updatedAt": "2026-10-19T12:17:54.774Z",
-  "feedUpdated": "2026-10-19",
-  "feedPubDate": "Mon, 19 Oct 2026 12:27:50 +0000",
-  "feedFingerprint": "bd5c49e76b0b9fda",
+  "updatedAt": "2026-10-21T11:16:08.708Z",
+  "feedUpdated": "2026-10-21",
+  "feedPubDate": "Wed, 21 Oct 2026 11:26:09 +0000",
+  "feedFingerprint": "c3c0941892714906",
   "source": "MIT Osservatorio Scioperi · RSS",
   "sourceUrl": "https://scioperi.mit.gov.it/mit2/public/scioperi/rss",
   "portalUrl": "https://scioperi.mit.gov.it/mit2/public/scioperi",
   "fetchSchedule": "Mon, Wed, Fri ~07:00 Rome",
   "live": true,
   "strikes": [
-    {
-      "id": "mit-8576",
-      "start": "2026-10-16",
-      "end": "2026-10-20",
-      "sector": "Trasporto merci",
-      "category": "FERMO SERVIZI AUTOTRASPORTO MERCI C/TERZI REGIONE SICILIA",
-      "relevance": "Regionale",
-      "region": "Sicilia",
-      "mode": "120 ORE: DALLE 00.01 DEL 16/10 ALLE 24.00 DEL 20/10",
-      "guaranteed": [],
-      "unions": [
-        "COMITATO TRASPORTO SICILIANO"
-      ],
-      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
-      "milanRelevant": false
-    },
-    {
-      "id": "mit-8580",
-      "start": "2026-10-16",
-      "end": "2026-10-20",
-      "sector": "Trasporto merci",
-      "category": "FERMO SERVIZIO TRASPORTO MERCI C/TERZI IMPRESE ADERENTI A FEDRALOG REGIONE CALABRIA",
-      "relevance": "Regionale",
-      "region": "Calabria",
-      "mode": "120 ORE: DALLE 00.01 DEL 16/10 ALLE 24.00 DEL 20/10",
-      "guaranteed": [],
-      "unions": [
-        "FEDRALOG CALABRIA"
-      ],
-      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
-      "milanRelevant": false
-    },
-    {
-      "id": "mit-8593",
-      "start": "2026-10-19",
-      "end": "2026-10-19",
-      "sector": "Trasporto pubblico locale",
-      "category": "PERSONALE SOC. TPL LINEA DI SAVONA",
-      "relevance": "Locale",
-      "region": "Liguria",
-      "mode": "4 ORE: DALLE 10.15 ALLE 14.15",
-      "guaranteed": [],
-      "unions": [
-        "OSP FILT-CGIL",
-        "FIT-CISL",
-        "UILT-UIL",
-        "UGL",
-        "FAISA-CISAL",
-        "SIAL COBAS + RSU"
-      ],
-      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
-      "milanRelevant": false
-    },
-    {
-      "id": "mit-8600",
-      "start": "2026-10-19",
-      "end": "2026-10-19",
-      "sector": "Trasporto pubblico locale",
-      "category": "PERSONALE SOC. BUS INTERNATIONAL SERVICE DI ROMA",
-      "relevance": "Locale",
-      "region": "Lazio",
-      "mode": "4 ORE: DALLE 08.30 ALLE 12.30",
-      "guaranteed": [],
-      "unions": [
-        "OSR USB LAVORO PRIVATO"
-      ],
-      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
-      "milanRelevant": false
-    },
-    {
-      "id": "mit-8582",
-      "start": "2026-10-20",
-      "end": "2026-10-20",
-      "sector": "Trasporto pubblico locale",
-      "category": "PERSONALE SOC. ARRIVA UDINE DI UDINE",
-      "relevance": "Locale",
-      "region": "Friuli-Venezia Giulia",
-      "mode": "9 ORE: DALLE 15.00 ALLE 24.00",
-      "guaranteed": [],
-      "unions": [
-        "ASI-AU ASSOCIAZIONE SINDACALE INDIPENDENTE"
-      ],
-      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
-      "milanRelevant": false
-    },
     {
       "id": "mit-8609",
       "start": "2026-10-21",
@@ -255,9 +170,58 @@
       "en": {
         "sector": "General",
         "category": "GENERAL STRIKE IN THE PUBLIC AND PRIVATE SECTORS",
+        "mode": "WHOLE DAY – AIR TRAVEL: FROM 00.00 TO 23.59; RAIL TRAVEL: FROM 21.00 ON 29/10 TO 20.59 ON 30/10; PUBLIC TRANSPORT: DURATION AND ARRANGEMENTS DETERMINED AT LOCAL LEVEL; MOTORWAYS: FROM 22.00 ON 29/10; TAXIS: FROM 00.01 TO 23.59",
         "relevance": "National",
-        "region": "Italy",
-        "mode": "WHOLE DAY – AIR TRAVEL: FROM 00.00 TO 23.59; RAIL TRAVEL: FROM 21.00 ON 29/10 TO 20.59 ON 30/10; PUBLIC TRANSPORT: DURATION AND ARRANGEMENTS DETERMINED AT LOCAL LEVEL; MOTORWAYS: FROM 22.00 ON 29/10; TAXIS: FROM 00.01 TO 23.59"
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8611",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "sector": "Generale",
+      "category": "SCIOPERO GENERALE SETTORI PUBBLICI E PRIVATI*",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "INTERA GIORNATA DALLE 00.01 ALLE 23.59",
+      "guaranteed": [],
+      "unions": [
+        "ADL-COBAS",
+        "CLAP",
+        "SIAL-COBAS",
+        "COBAS"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "General",
+        "category": "GENERAL STRIKE IN THE PUBLIC AND PRIVATE SECTORS*",
+        "mode": "WHOLE DAY FROM 00.01 TO 23.59",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
+      "id": "mit-8612",
+      "start": "2026-10-30",
+      "end": "2026-10-30",
+      "sector": "Generale",
+      "category": "SCIOPERO GENERALE CATEGORIE PUBBLICHE E PRIVATE*",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "INTERA GIORNATA",
+      "guaranteed": [],
+      "unions": [
+        "CIB-UNICOBAS"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "General",
+        "category": "GENERAL STRIKE IN THE PUBLIC AND PRIVATE SECTORS*",
+        "mode": "FULL DAY",
+        "relevance": "National",
+        "region": "Italy"
       }
     },
     {
@@ -425,6 +389,29 @@
       "milanRelevant": false
     },
     {
+      "id": "mit-8610",
+      "start": "2026-11-20",
+      "end": "2026-11-20",
+      "sector": "Generale",
+      "category": "SCIOPERO GENERALE SETTORI PUBBLICI E PRIVATI ANCHE IN APPALTO E STRUMENTALI",
+      "relevance": "Nazionale",
+      "region": "Italia",
+      "mode": "INTERA GIORNATA DI LAVORO",
+      "guaranteed": [],
+      "unions": [
+        "CGIL"
+      ],
+      "link": "https://scioperi.mit.gov.it/mit2/public/scioperi",
+      "milanRelevant": true,
+      "en": {
+        "sector": "General",
+        "category": "GENERAL STRIKE IN THE PUBLIC AND PRIVATE SECTORS, INCLUDING CONTRACTOR AND SUPPORT STAFF",
+        "mode": "FULL WORKING DAY",
+        "relevance": "National",
+        "region": "Italy"
+      }
+    },
+    {
       "id": "mit-8592",
       "start": "2026-11-20",
       "end": "2026-11-21",
@@ -525,7 +512,6 @@
         "CUB",
         "ADL VARESE",
         "SGB",
-        "CIB-UNICOBAS",
         "SBM",
         "SGC",
         "SI-COBAS"
@@ -582,10 +568,10 @@
   ],
   "translation": {
     "engine": "deepl",
-    "at": "2026-10-19T12:17:55.743Z",
-    "strikes": 10,
-    "chars": 227,
-    "reused": 49,
-    "newStrings": 1
+    "at": "2026-10-21T11:16:09.482Z",
+    "strikes": 13,
+    "chars": 269,
+    "reused": 50,
+    "newStrings": 9
   }
 }
