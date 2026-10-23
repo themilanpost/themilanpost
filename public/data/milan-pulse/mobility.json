@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-10-21T11:16:15.256Z",
+  "updatedAt": "2026-10-23T11:06:33.712Z",
   "source": "ATM Info Traffico RSS (English alerts)",
   "sourceUrl": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico",
   "live": true,
   "filter": "Alerts with official English translation on atm.it",
   "disclaimer": "Priority service changes from ATM — not live vehicle tracking. Use the ATM app for real-time departures.",
-  "fingerprint": "7b057b72834c2ac6",
+  "fingerprint": "952aefa306d12c09",
   "lines": [
     {
       "id": "M3",
@@ -13,6 +13,13 @@
       "status": "warning",
       "note": "Nuove scale mobili su M3: impianti fuori servizio durante i cantieri",
       "noteEn": "Accessibility improvements on the M3 line: escalators temporarily out of service"
+    },
+    {
+      "id": "T4",
+      "name": "Tram 4",
+      "status": "warning",
+      "note": "Linee 4, B4, 42, 51, 52, 83, 166 e 172: deviazioni",
+      "noteEn": "Lines 4, B4, 42, 51, 52, 83, 166 and 172: diversions"
     }
   ],
   "alerts": [
@@ -26,6 +33,17 @@
       "pubDate": "Thu, 28 Nov 2024 14:49:30 GMT",
       "titleEn": "Accessibility improvements on the M3 line: escalators temporarily out of service",
       "bodyEn": "We are installing new escalators to ensure the M3 line remains accessible to all passengers. We apologize for any inconvenience this may cause to your journey. Please note: during replacement works, escalators in some stations are out of service (the stations remain open and trains stop as usual). For real-time information about disruptions affecting lifts and stairlifts, please check our app or visit this page . You can also call 02 48 607 607 and press 1 for information about accessible options and to plan a step-free journey."
+    },
+    {
+      "id": "6f4a161cb463",
+      "severity": "warning",
+      "titleIt": "Linee 4, B4, 42, 51, 52, 83, 166 e 172: deviazioni",
+      "bodyIt": "version È iniziata la riqualificazione di via Ornato (rinnovo strada, acquedotto, fognature, rete elettrica e binari del tram). Fino ad aprile 2027: Il tram 4 è in parte sostituito dai bus B4 . i bus 4, 42, 51, 52, 83, 166 e 172 cambiano percorso è in servizio la linea circolare 162 nel quartiere di Niguarda, con fermate e itinerari che possono servire da alternativa alle linee deviate durante i lavori CAMBIAMENTI FINO AD APRILE 2027 - MAPPA Tram 4. È sostituito dal bus B4 tra Niguarda e Parco Nord. Incontra le metropolitane a Zara I tram fanno servizio tra Cairoli e la fermata Niguarda (Osped",
+      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/RiqualificazioneOrnato.aspx",
+      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/Lines4,B4,42,51,52,83,166and172divertedfromOctober6th926.aspx",
+      "pubDate": "Mon, 28 Sep 2026 09:14:16 GMT",
+      "titleEn": "Lines 4, B4, 42, 51, 52, 83, 166 and 172: diversions",
+      "bodyEn": "The redevelopment of via Ornato is underway (renewal of the road, aqueduct, sewers, electrical network and tram platforms). Until April 2027 : The trams operate between Cairoli and the Niguarda (Ospedale) stop. From here they turn into viale Ca' Granda and Fulvio Testi and follow the same route as tram 7 until piazzale Lagosta. They meet metro lines M3 and M5 at Zara. They do not pass through via Donatelli, via Graziano Imperatore and via Ornato (Parco Nord). Buses depart and terminate on via Terruggia , at the intersection with via Val d'Ossola (at the same stop as bus route 172)."
     }
   ]
 }
