@@ -1,19 +1,12 @@
 {
-  "updatedAt": "2026-10-23T11:06:33.712Z",
+  "updatedAt": "2026-10-28T12:13:23.927Z",
   "source": "ATM Info Traffico RSS (English alerts)",
   "sourceUrl": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico",
   "live": true,
   "filter": "Alerts with official English translation on atm.it",
   "disclaimer": "Priority service changes from ATM — not live vehicle tracking. Use the ATM app for real-time departures.",
-  "fingerprint": "952aefa306d12c09",
+  "fingerprint": "4a40079c44632b8e",
   "lines": [
-    {
-      "id": "M3",
-      "name": "Linea M3 (Gialla)",
-      "status": "warning",
-      "note": "Nuove scale mobili su M3: impianti fuori servizio durante i cantieri",
-      "noteEn": "Accessibility improvements on the M3 line: escalators temporarily out of service"
-    },
     {
       "id": "T4",
       "name": "Tram 4",
@@ -23,17 +16,6 @@
     }
   ],
   "alerts": [
-    {
-      "id": "7a61a27908ef",
-      "severity": "warning",
-      "titleIt": "Nuove scale mobili su M3: impianti fuori servizio durante i cantieri",
-      "bodyIt": "Stiamo sostituendo le scale mobili della M3 arrivate a fine vita, per garantire l’accessibilità della linea nei prossimi anni. Ci scusiamo per i disagi: durante i cantieri le scale di alcune stazioni sono fuori servizio (le stazioni sono aperte e i treni fermano come al solito). Stazioni con alcune scale mobili fuori servizio Maciachini : sono fuori servizio 2 scale mobili fino a metà novembre. Ascensori e montascale in tempo reale Controllate il funzionamento degli ascensori e dei montascale di tutte le stazioni da questa pagina o sulla nostra app. Per informazioni e assistenza su viaggi acce",
-      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/NuoviascensoriescalemobilisuM3.aspx",
-      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/AccessibilityimprovementsonM3linereplacementworks.aspx",
-      "pubDate": "Thu, 28 Nov 2024 14:49:30 GMT",
-      "titleEn": "Accessibility improvements on the M3 line: escalators temporarily out of service",
-      "bodyEn": "We are installing new escalators to ensure the M3 line remains accessible to all passengers. We apologize for any inconvenience this may cause to your journey. Please note: during replacement works, escalators in some stations are out of service (the stations remain open and trains stop as usual). For real-time information about disruptions affecting lifts and stairlifts, please check our app or visit this page . You can also call 02 48 607 607 and press 1 for information about accessible options and to plan a step-free journey."
-    },
     {
       "id": "6f4a161cb463",
       "severity": "warning",

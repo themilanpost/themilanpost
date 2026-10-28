@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-10-26T12:21:31.266Z",
+  "updatedAt": "2026-10-28T12:13:23.206Z",
   "live": true,
   "range": {
-    "from": "2026-10-26",
-    "to": "2026-11-02"
+    "from": "2026-10-28",
+    "to": "2026-11-04"
   },
   "sources": [
     {
@@ -16,200 +16,11 @@
       "id": "dice",
       "label": "DICE",
       "url": "https://dice.fm/browse/milano-5d68e89f7f285e094f60b00e",
-      "updatedAt": "2026-10-26T12:21:31.266Z"
+      "updatedAt": "2026-10-28T12:13:23.206Z"
     }
   ],
-  "count": 89,
+  "count": 87,
   "events": [
-    {
-      "id": "eb-2002620686382",
-      "title": "LA CREPA. CHARLOTTE CASIRAGHI / FERRUCCIO DE BORTOLI / HILDEGARD DE STEFANO",
-      "titleIt": "LA CREPA. CHARLOTTE CASIRAGHI / FERRUCCIO DE BORTOLI / HILDEGARD DE STEFANO",
-      "start": "2026-10-26T20:00:00+02:00",
-      "end": "2026-10-26T20:00:00+02:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Teatro Franco Parenti",
-      "free": false,
-      "url": "https://www.eventbrite.it/e/la-crepa-charlotte-casiraghi-ferruccio-de-bortoli-hildegard-de-stefano-tickets-2002620686382",
-      "source": "eventbrite"
-    },
-    {
-      "id": "eb-1999394057448",
-      "title": "26 ottobre • Le cinque giornate WOW! Milano",
-      "titleIt": "26 ottobre • Le cinque giornate WOW! Milano",
-      "start": "2026-10-26T20:00:00+02:00",
-      "end": "2026-10-26T20:00:00+02:00",
-      "category": "food",
-      "zone": "Milano",
-      "venue": "Enoluogo - L’enoteca e spazio eventi di Civiltà del bere",
-      "free": false,
-      "url": "https://www.eventbrite.it/e/biglietti-26-ottobre-le-cinque-giornate-wow-milano-1999394057448",
-      "source": "eventbrite"
-    },
-    {
-      "id": "dice-69e23074ae17bb00011b6514",
-      "title": "THE LEMONHEADS",
-      "titleIt": "THE LEMONHEADS",
-      "start": "2026-10-26T20:30:00+01:00",
-      "end": "2026-10-26T23:00:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "ARCI Bellezza",
-      "free": false,
-      "priceFrom": 19.9,
-      "url": "https://dice.fm/event/69e23074ae17bb00011b6514",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6a44d8fa568bbc00019014ba",
-      "title": "Inner_Spaces HELENE VOGELSINGER, WASIFUDDIN DAGAR",
-      "titleIt": "Inner_Spaces HELENE VOGELSINGER, WASIFUDDIN DAGAR",
-      "start": "2026-10-26T20:30:00+01:00",
-      "end": "2026-10-26T22:30:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Auditorium San Fedele",
-      "free": false,
-      "priceFrom": 19,
-      "url": "https://dice.fm/event/6a44d8fa568bbc00019014ba",
-      "source": "dice"
-    },
-    {
-      "id": "eb-2000891517391",
-      "title": "Concerto di beneficenza \"L'UCRAINA CANTA CON IL CUORE\"",
-      "titleIt": "Concerto di beneficenza \"L'UCRAINA CANTA CON IL CUORE\"",
-      "start": "2026-10-27T20:00:00+02:00",
-      "end": "2026-10-27T20:00:00+02:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Auditorium \"Enzo Baldoni\"",
-      "free": false,
-      "url": "https://www.eventbrite.it/e/biglietti-concerto-di-beneficenza-lucraina-canta-con-il-cuore-2000891517391",
-      "source": "eventbrite"
-    },
-    {
-      "id": "eb-2002805674687",
-      "title": "Effervescenze Lombarde – Quattro territori a confronto",
-      "titleIt": "Effervescenze Lombarde – Quattro territori a confronto",
-      "start": "2026-10-27T20:00:00+02:00",
-      "end": "2026-10-27T20:00:00+02:00",
-      "category": "food",
-      "zone": "Milano",
-      "venue": "Mercato Coperto di Campagna Amica LIMA 3",
-      "free": false,
-      "url": "https://www.eventbrite.it/e/effervescenze-lombarde-quattro-territori-a-confronto-tickets-2002805674687",
-      "source": "eventbrite"
-    },
-    {
-      "id": "eb-2003212558688",
-      "title": "Intrecciare [ciò che portiamo]: workshop di tessitura al telaio artigianale",
-      "titleIt": "Intrecciare [ciò che portiamo]: workshop di tessitura al telaio artigianale",
-      "start": "2026-10-27T20:00:00+02:00",
-      "end": "2026-10-27T20:00:00+02:00",
-      "category": "culture",
-      "zone": "Milano",
-      "venue": "Via San Fermo, 5",
-      "free": false,
-      "url": "https://www.eventbrite.com/e/intrecciare-cio-che-portiamo-workshop-di-tessitura-al-telaio-artigianale-tickets-2003212558688",
-      "source": "eventbrite"
-    },
-    {
-      "id": "dice-6ad7b0453dafd60001ad62fd",
-      "title": "Labrutepoque Ground Medianoche  Fumo Sola  Clapnet",
-      "titleIt": "Labrutepoque Ground Medianoche  Fumo Sola  Clapnet",
-      "start": "2026-10-27T19:00:00+01:00",
-      "end": "2026-10-27T23:30:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Labrutepoque",
-      "free": false,
-      "priceFrom": 7,
-      "url": "https://dice.fm/event/6ad7b0453dafd60001ad62fd",
-      "source": "dice"
-    },
-    {
-      "id": "dice-69d91bbd23b4130001d56ace",
-      "title": "And So I Watch You From Afar + Caspian & Otay:onii live a Magnolia",
-      "titleIt": "And So I Watch You From Afar + Caspian & Otay:onii live a Magnolia",
-      "start": "2026-10-27T19:00:00+01:00",
-      "end": "2026-10-27T23:30:00+01:00",
-      "category": "music",
-      "zone": "Segrate",
-      "venue": "Circolo Magnolia (Indoor)",
-      "free": false,
-      "priceFrom": 33.9,
-      "url": "https://dice.fm/event/69d91bbd23b4130001d56ace",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6ad74ac19f4e0200012fdc17",
-      "title": "Carla Lonzi - Dentro e fuori dal mondo",
-      "titleIt": "Carla Lonzi - Dentro e fuori dal mondo",
-      "start": "2026-10-27T19:40:00+01:00",
-      "end": "2026-10-27T21:30:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Cinema Beltrade",
-      "free": false,
-      "priceFrom": 9,
-      "url": "https://dice.fm/event/6ad74ac19f4e0200012fdc17",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6ad5d94f04e56f000183e60b",
-      "title": "JAZZMI 2026 / Sessioni Sotterranee //  Psoas",
-      "titleIt": "JAZZMI 2026 / Sessioni Sotterranee //  Psoas",
-      "start": "2026-10-27T20:00:00+01:00",
-      "end": "2026-10-28T00:00:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Bachelite cLab",
-      "free": true,
-      "url": "https://dice.fm/event/6ad5d94f04e56f000183e60b",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6ad1d05f63b3180001643108",
-      "title": "Lati Umani presenta: GURUNG - I cacciatori di miele allucinogeno",
-      "titleIt": "Lati Umani presenta: GURUNG - I cacciatori di miele allucinogeno",
-      "start": "2026-10-27T20:30:00+01:00",
-      "end": "2026-10-27T23:45:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Santeria Toscana 31",
-      "free": true,
-      "url": "https://dice.fm/event/6ad1d05f63b3180001643108",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6a4e6a7af0146d0001559af5",
-      "title": "Rokia Traoré - JAZZMI 2026",
-      "titleIt": "Rokia Traoré - JAZZMI 2026",
-      "start": "2026-10-27T21:00:00+01:00",
-      "end": "2026-10-27T23:00:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Alcatraz Milano",
-      "free": false,
-      "priceFrom": 30.68,
-      "url": "https://dice.fm/event/6a4e6a7af0146d0001559af5",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6a60b980a8d4980001a77b79",
-      "title": "Azymuth / JZ:RF Series",
-      "titleIt": "Azymuth / JZ:RF Series",
-      "start": "2026-10-27T21:30:00+01:00",
-      "end": "2026-10-27T23:00:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "ARCI Bellezza",
-      "free": false,
-      "priceFrom": 29.9,
-      "url": "https://dice.fm/event/6a60b980a8d4980001a77b79",
-      "source": "dice"
-    },
     {
       "id": "dice-6ad781654de677000179dcc3",
       "title": "Opening | The Shape of Human Values",
@@ -276,17 +87,16 @@
       "source": "eventbrite"
     },
     {
-      "id": "dice-69eb18b692610b0001909626",
-      "title": "Heretoir + Unreqvited",
-      "titleIt": "Heretoir + Unreqvited",
+      "id": "dice-6abe6476c2ea1300013b25d0",
+      "title": "Alessio Bertallot \"Ascolti inauditi\" - JAZZMI free",
+      "titleIt": "Alessio Bertallot \"Ascolti inauditi\" - JAZZMI free",
       "start": "2026-10-28T19:00:00+01:00",
-      "end": "2026-10-28T23:45:00+01:00",
+      "end": "2026-10-28T20:00:00+01:00",
       "category": "music",
       "zone": "Milano",
-      "venue": "Legend Club",
-      "free": false,
-      "priceFrom": 28.75,
-      "url": "https://dice.fm/event/69eb18b692610b0001909626",
+      "venue": "Combo",
+      "free": true,
+      "url": "https://dice.fm/event/6abe6476c2ea1300013b25d0",
       "source": "dice"
     },
     {
@@ -304,9 +114,9 @@
     },
     {
       "id": "dice-6a7b52215c6b3600015f3848",
-      "title": "Swamp Fest w/ Kim Salmon's Smoked Salmon & Guests",
-      "titleIt": "Swamp Fest w/ Kim Salmon's Smoked Salmon & Guests",
-      "start": "2026-10-28T20:00:00+01:00",
+      "title": "Swamp 1st Fest w/ Kim Salmon's Smoked Salmon & Guests",
+      "titleIt": "Swamp 1st Fest w/ Kim Salmon's Smoked Salmon & Guests",
+      "start": "2026-10-28T20:30:00+01:00",
       "end": "2026-10-28T23:00:00+01:00",
       "category": "music",
       "zone": "Milano",
@@ -345,31 +155,17 @@
       "source": "dice"
     },
     {
-      "id": "dice-6ac8f205c5cdbb0001749d61",
-      "title": "Pescato del Giorno | Comedy Show - secondo turno",
-      "titleIt": "Pescato del Giorno | Comedy Show - secondo turno",
-      "start": "2026-10-28T21:45:00+01:00",
-      "end": "2026-10-28T23:45:00+01:00",
+      "id": "dice-6adf86c65fe1a20001848f12",
+      "title": "Music for Staying - dischi & tempo",
+      "titleIt": "Music for Staying - dischi & tempo",
+      "start": "2026-10-29T18:00:00+01:00",
+      "end": "2026-10-29T23:45:00+01:00",
       "category": "music",
       "zone": "Milano",
-      "venue": "SALONE 14 @ Yellowsquare",
+      "venue": "Lento",
       "free": false,
-      "priceFrom": 14,
-      "url": "https://dice.fm/event/6ac8f205c5cdbb0001749d61",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6a1470ee36632f0001815c96",
-      "title": "ÃO",
-      "titleIt": "ÃO",
-      "start": "2026-10-28T22:00:00+01:00",
-      "end": "2026-10-28T23:00:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "ARCI Bellezza",
-      "free": false,
-      "priceFrom": 17.25,
-      "url": "https://dice.fm/event/6a1470ee36632f0001815c96",
+      "priceFrom": 5,
+      "url": "https://dice.fm/event/6adf86c65fe1a20001848f12",
       "source": "dice"
     },
     {
@@ -487,7 +283,7 @@
       "end": "2026-10-29T23:00:00+01:00",
       "category": "music",
       "zone": "Milano",
-      "venue": "L'anfiteatro del Liberty",
+      "venue": "Teatro San Babila",
       "free": true,
       "url": "https://dice.fm/event/6ab3d1c5703e1800019bc16a",
       "source": "dice"
@@ -520,6 +316,19 @@
       "source": "dice"
     },
     {
+      "id": "dice-6ab5401fdb25910001fd1c98",
+      "title": "Soulstice at the Sanctuary Milan - Every Thu.",
+      "titleIt": "Soulstice at the Sanctuary Milan - Every Thu.",
+      "start": "2026-10-29T22:00:00+01:00",
+      "end": "2026-10-30T03:00:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "The Sanctuary Milan",
+      "free": true,
+      "url": "https://dice.fm/event/6ab5401fdb25910001fd1c98",
+      "source": "dice"
+    },
+    {
       "id": "dice-6aca7ec91c8dc60001d7ec69",
       "title": "Blue Nights pres. ZARO TRIO *live*",
       "titleIt": "Blue Nights pres. ZARO TRIO *live*",
@@ -534,16 +343,17 @@
       "source": "dice"
     },
     {
-      "id": "dice-6ab5401fdb25910001fd1c98",
-      "title": "Soulstice at the Sanctuary Milan - Every Thu.",
-      "titleIt": "Soulstice at the Sanctuary Milan - Every Thu.",
+      "id": "dice-6a4231bafb79450001d69b58",
+      "title": "Idris Ackamoor & The Pyramids - JAZZMI 2026",
+      "titleIt": "Idris Ackamoor & The Pyramids - JAZZMI 2026",
       "start": "2026-10-29T22:00:00+01:00",
-      "end": "2026-10-30T03:00:00+01:00",
+      "end": "2026-10-30T01:00:00+01:00",
       "category": "music",
       "zone": "Milano",
-      "venue": "The Sanctuary Milan",
-      "free": true,
-      "url": "https://dice.fm/event/6ab5401fdb25910001fd1c98",
+      "venue": "BIKO",
+      "free": false,
+      "priceFrom": 26,
+      "url": "https://dice.fm/event/6a4231bafb79450001d69b58",
       "source": "dice"
     },
     {
@@ -557,6 +367,20 @@
       "venue": "Pavilion Fuorimano",
       "free": true,
       "url": "https://dice.fm/event/6ac62275cda4560001c0b457",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6ac3d51be902670001172df4",
+      "title": "FORME DI LUCE",
+      "titleIt": "FORME DI LUCE",
+      "start": "2026-10-30T18:00:00+01:00",
+      "end": "2026-10-30T20:30:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "Museo Nazionale della Scienza e della Tecnologia Leonardo Da Vinci",
+      "free": false,
+      "priceFrom": 2.1,
+      "url": "https://dice.fm/event/6ac3d51be902670001172df4",
       "source": "dice"
     },
     {
@@ -647,8 +471,50 @@
       "zone": "Milano",
       "venue": "Circolo Canottieri Milano",
       "free": false,
-      "priceFrom": 18,
+      "priceFrom": 19.46,
       "url": "https://dice.fm/event/6adbca3e79b935000129ce1a",
+      "source": "dice"
+    },
+    {
+      "id": "dice-69fa0e6fd798b400014f7cec",
+      "title": "Oranssi Pazuzu + Múr live a Magnolia",
+      "titleIt": "Oranssi Pazuzu + Múr live a Magnolia",
+      "start": "2026-10-30T19:00:00+01:00",
+      "end": "2026-10-30T23:30:00+01:00",
+      "category": "music",
+      "zone": "Segrate",
+      "venue": "Circolo Magnolia (Indoor)",
+      "free": false,
+      "priceFrom": 33.9,
+      "url": "https://dice.fm/event/69fa0e6fd798b400014f7cec",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6ace1e463380150001fded38",
+      "title": "WADDAFUZZ NIGHT - CIRCOLO AGORA'",
+      "titleIt": "WADDAFUZZ NIGHT - CIRCOLO AGORA'",
+      "start": "2026-10-30T20:00:00+01:00",
+      "end": "2026-10-30T23:45:00+01:00",
+      "category": "music",
+      "zone": "Cusano Milanino",
+      "venue": "Circolo Agorà",
+      "free": false,
+      "priceFrom": 10,
+      "url": "https://dice.fm/event/6ace1e463380150001fded38",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6a4f3bac3bb278000105f04c",
+      "title": "FAN FATH AL",
+      "titleIt": "FAN FATH AL",
+      "start": "2026-10-30T20:30:00+01:00",
+      "end": "2026-10-31T01:00:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "ARCI Bellezza",
+      "free": false,
+      "priceFrom": 14.95,
+      "url": "https://dice.fm/event/6a4f3bac3bb278000105f04c",
       "source": "dice"
     },
     {
@@ -661,7 +527,7 @@
       "zone": "Milano",
       "venue": "Gate Milano",
       "free": false,
-      "priceFrom": 20,
+      "priceFrom": 25,
       "url": "https://dice.fm/event/6a9c2426eb5ece000104c23d",
       "source": "dice"
     },
@@ -677,6 +543,33 @@
       "free": false,
       "priceFrom": 23,
       "url": "https://dice.fm/event/6a72f7c473af320001415d8b",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6acf8b6c454f740001e20fc1",
+      "title": "The Blues Ensemble // JAZZMI 2026",
+      "titleIt": "The Blues Ensemble // JAZZMI 2026",
+      "start": "2026-10-30T21:00:00+01:00",
+      "end": "2026-10-31T01:00:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "Bachelite cLab",
+      "free": true,
+      "url": "https://dice.fm/event/6acf8b6c454f740001e20fc1",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6abcc73f80da890001c5cf11",
+      "title": "Bepi and The Prismas",
+      "titleIt": "Bepi and The Prismas",
+      "start": "2026-10-30T21:00:00+01:00",
+      "end": "2026-10-31T01:00:00+01:00",
+      "category": "music",
+      "zone": "Bergamo",
+      "venue": "Daste",
+      "free": false,
+      "priceFrom": 11,
+      "url": "https://dice.fm/event/6abcc73f80da890001c5cf11",
       "source": "dice"
     },
     {
@@ -707,6 +600,19 @@
       "source": "dice"
     },
     {
+      "id": "dice-6ac7750d1aeaab0001682937",
+      "title": "Berlin Calling | A Journey Through 2000's Techno w/ Madù, Roti, Dj Stammig - Main Room",
+      "titleIt": "Berlin Calling | A Journey Through 2000's Techno w/ Madù, Roti, Dj Stammig - Main Room",
+      "start": "2026-10-30T23:00:00+01:00",
+      "end": "2026-10-31T04:00:00+01:00",
+      "category": "music",
+      "zone": "Segrate",
+      "venue": "Circolo Magnolia (Indoor)",
+      "free": true,
+      "url": "https://dice.fm/event/6ac7750d1aeaab0001682937",
+      "source": "dice"
+    },
+    {
       "id": "dice-6adf3b09152b5700014968d8",
       "title": "MUM with Young Gaina",
       "titleIt": "MUM with Young Gaina",
@@ -734,19 +640,6 @@
       "source": "dice"
     },
     {
-      "id": "dice-6ac7750d1aeaab0001682937",
-      "title": "Berlin Calling | A Journey Through 2000's Techno w/ Madù, Roti, Dj Stammig - Main Room",
-      "titleIt": "Berlin Calling | A Journey Through 2000's Techno w/ Madù, Roti, Dj Stammig - Main Room",
-      "start": "2026-10-30T23:00:00+01:00",
-      "end": "2026-10-31T04:00:00+01:00",
-      "category": "music",
-      "zone": "Segrate",
-      "venue": "Circolo Magnolia (Indoor)",
-      "free": true,
-      "url": "https://dice.fm/event/6ac7750d1aeaab0001682937",
-      "source": "dice"
-    },
-    {
       "id": "dice-6abbc853a94a22000100cf2a",
       "title": "Echo | Jen Cardini - Lele Sacchi ",
       "titleIt": "Echo | Jen Cardini - Lele Sacchi ",
@@ -758,6 +651,20 @@
       "free": false,
       "priceFrom": 11.5,
       "url": "https://dice.fm/event/6abbc853a94a22000100cf2a",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6ad75258d9e52e0001e502ee",
+      "title": "It’s ALT good ",
+      "titleIt": "It’s ALT good ",
+      "start": "2026-10-30T23:30:00+01:00",
+      "end": "2026-10-31T05:00:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "Magazzini Generali.",
+      "free": false,
+      "priceFrom": 0,
+      "url": "https://dice.fm/event/6ad75258d9e52e0001e502ee",
       "source": "dice"
     },
     {
@@ -959,6 +866,19 @@
       "source": "dice"
     },
     {
+      "id": "dice-6ad76e4af2e7b0000134c639",
+      "title": "HALLOWEEN PARTY • Karaoke degli Orrori + DJ set",
+      "titleIt": "HALLOWEEN PARTY • Karaoke degli Orrori + DJ set",
+      "start": "2026-10-31T20:30:00+01:00",
+      "end": "2026-11-01T00:30:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "Ostello Bello Milano Duomo",
+      "free": true,
+      "url": "https://dice.fm/event/6ad76e4af2e7b0000134c639",
+      "source": "dice"
+    },
+    {
       "id": "dice-6ad10327f8ed6100010a0509",
       "title": "Halloween VaiTra",
       "titleIt": "Halloween VaiTra",
@@ -995,7 +915,7 @@
       "zone": "Milano",
       "venue": "Legend Club",
       "free": false,
-      "priceFrom": 17.25,
+      "priceFrom": 19.25,
       "url": "https://dice.fm/event/6abdf8346c22d50001c867f7",
       "source": "dice"
     },
@@ -1014,16 +934,17 @@
       "source": "dice"
     },
     {
-      "id": "dice-6ad780d501dca00001be0d00",
-      "title": "RM1949 Halloween Party, Part III",
-      "titleIt": "RM1949 Halloween Party, Part III",
+      "id": "dice-6ac523f48b59950001f544d0",
+      "title": "CIRCO DE LOS MUERTOS / Halloween Party 2026",
+      "titleIt": "CIRCO DE LOS MUERTOS / Halloween Party 2026",
       "start": "2026-10-31T22:00:00+01:00",
-      "end": "2026-11-01T03:00:00+01:00",
+      "end": "2026-11-01T04:00:00+01:00",
       "category": "music",
-      "zone": "Monza",
-      "venue": "Rugby Monza 1949",
-      "free": true,
-      "url": "https://dice.fm/event/6ad780d501dca00001be0d00",
+      "zone": "Milano",
+      "venue": "Fabbrica del Vapore",
+      "free": false,
+      "priceFrom": 21.8,
+      "url": "https://dice.fm/event/6ac523f48b59950001f544d0",
       "source": "dice"
     },
     {
@@ -1041,17 +962,16 @@
       "source": "dice"
     },
     {
-      "id": "dice-6ac523f48b59950001f544d0",
-      "title": "CIRCO DE LOS MUERTOS / Halloween Party 2026",
-      "titleIt": "CIRCO DE LOS MUERTOS / Halloween Party 2026",
+      "id": "dice-6ad780d501dca00001be0d00",
+      "title": "RM1949 Halloween Party, Part III",
+      "titleIt": "RM1949 Halloween Party, Part III",
       "start": "2026-10-31T22:00:00+01:00",
-      "end": "2026-11-01T04:00:00+01:00",
+      "end": "2026-11-01T03:00:00+01:00",
       "category": "music",
-      "zone": "Milano",
-      "venue": "Fabbrica del Vapore",
-      "free": false,
-      "priceFrom": 21.8,
-      "url": "https://dice.fm/event/6ac523f48b59950001f544d0",
+      "zone": "Monza",
+      "venue": "Rugby Monza 1949",
+      "free": true,
+      "url": "https://dice.fm/event/6ad780d501dca00001be0d00",
       "source": "dice"
     },
     {
@@ -1078,7 +998,7 @@
       "zone": "Milano",
       "venue": "Studionotte",
       "free": false,
-      "priceFrom": 30,
+      "priceFrom": 35,
       "url": "https://dice.fm/event/6ad79abc9dbbd9000174b691",
       "source": "dice"
     },
@@ -1161,8 +1081,22 @@
       "zone": "Milano",
       "venue": "APOLLO CLUB MILANO ",
       "free": false,
-      "priceFrom": 23,
+      "priceFrom": 28.75,
       "url": "https://dice.fm/event/6ace10d70817fb0001d21ab7",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6ace8082cb03a70001863421",
+      "title": "LOST Halloween ",
+      "titleIt": "LOST Halloween ",
+      "start": "2026-10-31T23:45:00+01:00",
+      "end": "2026-11-01T05:00:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "APOLLO CLUB MILANO ",
+      "free": false,
+      "priceFrom": 23,
+      "url": "https://dice.fm/event/6ace8082cb03a70001863421",
       "source": "dice"
     },
     {
@@ -1215,6 +1149,45 @@
       "venue": "Randstad Box",
       "free": false,
       "url": "https://www.eventbrite.it/e/biglietti-alla-scoperta-dellikebana-arte-giapponese-della-composizione-floreale-2002948501887",
+      "source": "eventbrite"
+    },
+    {
+      "id": "eb-2002116345886",
+      "title": "Académie du Champagne 2026",
+      "titleIt": "Académie du Champagne 2026",
+      "start": "2026-11-03T20:00:00+01:00",
+      "end": "2026-11-03T20:00:00+01:00",
+      "category": "food",
+      "zone": "Milano",
+      "venue": "Principe di Savoia",
+      "free": false,
+      "url": "https://www.eventbrite.it/e/biglietti-academie-du-champagne-2026-2002116345886",
+      "source": "eventbrite"
+    },
+    {
+      "id": "eb-1977800694117",
+      "title": "Yellowdicomedy--Standup Comedy Workshop, Jokes Writing and Performing",
+      "titleIt": "Yellowdicomedy--Standup Comedy Workshop, Jokes Writing and Performing",
+      "start": "2026-11-04T20:00:00+01:00",
+      "end": "2026-11-04T20:00:00+01:00",
+      "category": "culture",
+      "zone": "Milano",
+      "venue": "YellowSquare Milan",
+      "free": false,
+      "url": "https://www.eventbrite.it/e/yellowdicomedy-standup-comedy-workshop-jokes-writing-and-performing-tickets-1977800694117",
+      "source": "eventbrite"
+    },
+    {
+      "id": "eb-1994153144737",
+      "title": "Presentazione del Libro \"Meno dodici\"",
+      "titleIt": "Presentazione del Libro \"Meno dodici\"",
+      "start": "2026-11-04T20:00:00+01:00",
+      "end": "2026-11-04T20:00:00+01:00",
+      "category": "culture",
+      "zone": "Milano",
+      "venue": "Ospedale MultiMedica San Giuseppe",
+      "free": false,
+      "url": "https://www.eventbrite.it/e/presentazione-del-libro-meno-dodici-tickets-1994153144737",
       "source": "eventbrite"
     }
   ]
