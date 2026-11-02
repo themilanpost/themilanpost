@@ -1,31 +1,11 @@
 {
-  "updatedAt": "2026-10-28T12:13:23.927Z",
+  "updatedAt": "2026-11-02T14:53:31.696Z",
   "source": "ATM Info Traffico RSS (English alerts)",
   "sourceUrl": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico",
   "live": true,
   "filter": "Alerts with official English translation on atm.it",
   "disclaimer": "Priority service changes from ATM — not live vehicle tracking. Use the ATM app for real-time departures.",
-  "fingerprint": "4a40079c44632b8e",
-  "lines": [
-    {
-      "id": "T4",
-      "name": "Tram 4",
-      "status": "warning",
-      "note": "Linee 4, B4, 42, 51, 52, 83, 166 e 172: deviazioni",
-      "noteEn": "Lines 4, B4, 42, 51, 52, 83, 166 and 172: diversions"
-    }
-  ],
-  "alerts": [
-    {
-      "id": "6f4a161cb463",
-      "severity": "warning",
-      "titleIt": "Linee 4, B4, 42, 51, 52, 83, 166 e 172: deviazioni",
-      "bodyIt": "version È iniziata la riqualificazione di via Ornato (rinnovo strada, acquedotto, fognature, rete elettrica e binari del tram). Fino ad aprile 2027: Il tram 4 è in parte sostituito dai bus B4 . i bus 4, 42, 51, 52, 83, 166 e 172 cambiano percorso è in servizio la linea circolare 162 nel quartiere di Niguarda, con fermate e itinerari che possono servire da alternativa alle linee deviate durante i lavori CAMBIAMENTI FINO AD APRILE 2027 - MAPPA Tram 4. È sostituito dal bus B4 tra Niguarda e Parco Nord. Incontra le metropolitane a Zara I tram fanno servizio tra Cairoli e la fermata Niguarda (Osped",
-      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/RiqualificazioneOrnato.aspx",
-      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/Lines4,B4,42,51,52,83,166and172divertedfromOctober6th926.aspx",
-      "pubDate": "Mon, 28 Sep 2026 09:14:16 GMT",
-      "titleEn": "Lines 4, B4, 42, 51, 52, 83, 166 and 172: diversions",
-      "bodyEn": "The redevelopment of via Ornato is underway (renewal of the road, aqueduct, sewers, electrical network and tram platforms). Until April 2027 : The trams operate between Cairoli and the Niguarda (Ospedale) stop. From here they turn into viale Ca' Granda and Fulvio Testi and follow the same route as tram 7 until piazzale Lagosta. They meet metro lines M3 and M5 at Zara. They do not pass through via Donatelli, via Graziano Imperatore and via Ornato (Parco Nord). Buses depart and terminate on via Terruggia , at the intersection with via Val d'Ossola (at the same stop as bus route 172)."
-    }
-  ]
+  "fingerprint": "e3b0c44298fc1c14",
+  "lines": [],
+  "alerts": []
 }
