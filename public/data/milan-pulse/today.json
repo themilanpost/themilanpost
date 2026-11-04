@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-11-02T14:53:30.215Z",
+  "updatedAt": "2026-11-04T13:52:22.019Z",
   "live": true,
   "range": {
-    "from": "2026-11-02",
-    "to": "2026-11-02"
+    "from": "2026-11-04",
+    "to": "2026-11-04"
   },
   "sources": [
     {
@@ -16,49 +16,115 @@
       "id": "dice",
       "label": "DICE",
       "url": "https://dice.fm/browse/milano-5d68e89f7f285e094f60b00e",
-      "updatedAt": "2026-11-02T14:53:30.215Z"
+      "updatedAt": "2026-11-04T13:52:22.019Z"
     }
   ],
-  "count": 3,
+  "count": 8,
   "events": [
     {
-      "id": "eb-1999513896891",
-      "title": "2 novembre • Le cinque giornate WOW! Milano",
-      "titleIt": "2 novembre • Le cinque giornate WOW! Milano",
-      "start": "2026-11-02T20:00:00+01:00",
-      "end": "2026-11-02T20:00:00+01:00",
-      "category": "food",
+      "id": "dice-6aa9748339a7be0001884486",
+      "title": "Annalisa Parisi & Sandro Di Pisa - JAZZMI free",
+      "titleIt": "Annalisa Parisi & Sandro Di Pisa - JAZZMI free",
+      "start": "2026-11-04T19:30:00+01:00",
+      "end": "2026-11-04T20:30:00+01:00",
+      "category": "music",
       "zone": "Milano",
-      "venue": "Enoluogo - L’enoteca e spazio eventi di Civiltà del bere",
-      "free": false,
-      "url": "https://www.eventbrite.it/e/biglietti-2-novembre-le-cinque-giornate-wow-milano-1999513896891",
-      "source": "eventbrite"
+      "venue": "Event Room Brera - Casa Brera, a Luxury Collection Hotel, Milan",
+      "free": true,
+      "url": "https://dice.fm/event/6aa9748339a7be0001884486",
+      "source": "dice"
     },
     {
-      "id": "eb-2002948501887",
-      "title": "Alla scoperta dell’Ikebana – Arte giapponese della composizione floreale",
-      "titleIt": "Alla scoperta dell’Ikebana – Arte giapponese della composizione floreale",
-      "start": "2026-11-02T20:00:00+01:00",
-      "end": "2026-11-02T20:00:00+01:00",
+      "id": "eb-1977800694117",
+      "title": "Yellowdicomedy--Standup Comedy Workshop, Jokes Writing and Performing",
+      "titleIt": "Yellowdicomedy--Standup Comedy Workshop, Jokes Writing and Performing",
+      "start": "2026-11-04T20:00:00+01:00",
+      "end": "2026-11-04T20:00:00+01:00",
       "category": "culture",
       "zone": "Milano",
-      "venue": "Randstad Box",
+      "venue": "YellowSquare Milan",
       "free": false,
-      "url": "https://www.eventbrite.it/e/biglietti-alla-scoperta-dellikebana-arte-giapponese-della-composizione-floreale-2002948501887",
+      "url": "https://www.eventbrite.it/e/yellowdicomedy-standup-comedy-workshop-jokes-writing-and-performing-tickets-1977800694117",
       "source": "eventbrite"
     },
     {
-      "id": "dice-6a710673b061d8000180667f",
-      "title": "A.CHAL",
-      "titleIt": "A.CHAL",
-      "start": "2026-11-02T20:30:00+01:00",
-      "end": "2026-11-02T23:00:00+01:00",
+      "id": "eb-1994153144737",
+      "title": "Presentazione del Libro \"Meno dodici\"",
+      "titleIt": "Presentazione del Libro \"Meno dodici\"",
+      "start": "2026-11-04T20:00:00+01:00",
+      "end": "2026-11-04T20:00:00+01:00",
+      "category": "culture",
+      "zone": "Milano",
+      "venue": "Ospedale MultiMedica San Giuseppe",
+      "free": false,
+      "url": "https://www.eventbrite.it/e/presentazione-del-libro-meno-dodici-tickets-1994153144737",
+      "source": "eventbrite"
+    },
+    {
+      "id": "dice-6ad88f99eb57900001ae59b3",
+      "title": "SiamoSottobosco w/ Marash, Camillewhy, Storma & Jeflako",
+      "titleIt": "SiamoSottobosco w/ Marash, Camillewhy, Storma & Jeflako",
+      "start": "2026-11-04T20:00:00+01:00",
+      "end": "2026-11-05T00:00:00+01:00",
+      "category": "music",
+      "zone": "Segrate",
+      "venue": "Circolo Magnolia (Indoor)",
+      "free": true,
+      "url": "https://dice.fm/event/6ad88f99eb57900001ae59b3",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6aa975144e3a280001dd1e5a",
+      "title": "Crabs & Feathers - JAZZMI free",
+      "titleIt": "Crabs & Feathers - JAZZMI free",
+      "start": "2026-11-04T20:00:00+01:00",
+      "end": "2026-11-04T21:00:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "21 House of Stories Navigli",
+      "free": true,
+      "url": "https://dice.fm/event/6aa975144e3a280001dd1e5a",
+      "source": "dice"
+    },
+    {
+      "id": "dice-69d76d36dee58a0001076739",
+      "title": "My New Band Believe",
+      "titleIt": "My New Band Believe",
+      "start": "2026-11-04T20:30:00+01:00",
+      "end": "2026-11-04T23:00:00+01:00",
       "category": "music",
       "zone": "Milano",
       "venue": "ARCI Bellezza",
       "free": false,
-      "priceFrom": 19.25,
-      "url": "https://dice.fm/event/6a710673b061d8000180667f",
+      "priceFrom": 18,
+      "url": "https://dice.fm/event/69d76d36dee58a0001076739",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6ad7416cb9dfd00001d43dfe",
+      "title": "This is CLab Jazz // The Jam Session / JAZZMI 2026",
+      "titleIt": "This is CLab Jazz // The Jam Session / JAZZMI 2026",
+      "start": "2026-11-04T21:00:00+01:00",
+      "end": "2026-11-05T01:00:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "Bachelite cLab",
+      "free": true,
+      "url": "https://dice.fm/event/6ad7416cb9dfd00001d43dfe",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6adb7c684b84a8000133f53d",
+      "title": "LA MENEGHINA: IL TANGO A MILANO",
+      "titleIt": "LA MENEGHINA: IL TANGO A MILANO",
+      "start": "2026-11-04T21:30:00+01:00",
+      "end": "2026-11-05T01:30:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "Club Dept 184",
+      "free": false,
+      "priceFrom": 11.5,
+      "url": "https://dice.fm/event/6adb7c684b84a8000133f53d",
       "source": "dice"
     }
   ]

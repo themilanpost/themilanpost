@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-11-02T14:53:30.215Z",
+  "updatedAt": "2026-11-04T13:52:22.019Z",
   "live": true,
   "range": {
-    "from": "2026-11-02",
-    "to": "2026-11-09"
+    "from": "2026-11-04",
+    "to": "2026-11-11"
   },
   "sources": [
     {
@@ -16,161 +16,11 @@
       "id": "dice",
       "label": "DICE",
       "url": "https://dice.fm/browse/milano-5d68e89f7f285e094f60b00e",
-      "updatedAt": "2026-11-02T14:53:30.215Z"
+      "updatedAt": "2026-11-04T13:52:22.019Z"
     }
   ],
   "count": 66,
   "events": [
-    {
-      "id": "eb-1999513896891",
-      "title": "2 novembre • Le cinque giornate WOW! Milano",
-      "titleIt": "2 novembre • Le cinque giornate WOW! Milano",
-      "start": "2026-11-02T20:00:00+01:00",
-      "end": "2026-11-02T20:00:00+01:00",
-      "category": "food",
-      "zone": "Milano",
-      "venue": "Enoluogo - L’enoteca e spazio eventi di Civiltà del bere",
-      "free": false,
-      "url": "https://www.eventbrite.it/e/biglietti-2-novembre-le-cinque-giornate-wow-milano-1999513896891",
-      "source": "eventbrite"
-    },
-    {
-      "id": "eb-2002948501887",
-      "title": "Alla scoperta dell’Ikebana – Arte giapponese della composizione floreale",
-      "titleIt": "Alla scoperta dell’Ikebana – Arte giapponese della composizione floreale",
-      "start": "2026-11-02T20:00:00+01:00",
-      "end": "2026-11-02T20:00:00+01:00",
-      "category": "culture",
-      "zone": "Milano",
-      "venue": "Randstad Box",
-      "free": false,
-      "url": "https://www.eventbrite.it/e/biglietti-alla-scoperta-dellikebana-arte-giapponese-della-composizione-floreale-2002948501887",
-      "source": "eventbrite"
-    },
-    {
-      "id": "dice-6a710673b061d8000180667f",
-      "title": "A.CHAL",
-      "titleIt": "A.CHAL",
-      "start": "2026-11-02T20:30:00+01:00",
-      "end": "2026-11-02T23:00:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "ARCI Bellezza",
-      "free": false,
-      "priceFrom": 19.25,
-      "url": "https://dice.fm/event/6a710673b061d8000180667f",
-      "source": "dice"
-    },
-    {
-      "id": "eb-2002116345886",
-      "title": "Académie du Champagne 2026",
-      "titleIt": "Académie du Champagne 2026",
-      "start": "2026-11-03T20:00:00+01:00",
-      "end": "2026-11-03T20:00:00+01:00",
-      "category": "food",
-      "zone": "Milano",
-      "venue": "Principe di Savoia",
-      "free": false,
-      "url": "https://www.eventbrite.it/e/biglietti-academie-du-champagne-2026-2002116345886",
-      "source": "eventbrite"
-    },
-    {
-      "id": "dice-6a9844065d39c20001ecabc7",
-      "title": "Dizzy Dros live a Magnolia",
-      "titleIt": "Dizzy Dros live a Magnolia",
-      "start": "2026-11-03T20:00:00+01:00",
-      "end": "2026-11-03T23:00:00+01:00",
-      "category": "music",
-      "zone": "Segrate",
-      "venue": "Circolo Magnolia (Indoor)",
-      "free": false,
-      "priceFrom": 28.59,
-      "url": "https://dice.fm/event/6a9844065d39c20001ecabc7",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6a5de6b76619b300010bb73b",
-      "title": "SAULTS",
-      "titleIt": "SAULTS",
-      "start": "2026-11-03T20:00:00+01:00",
-      "end": "2026-11-03T23:45:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Legend Club",
-      "free": false,
-      "priceFrom": 25,
-      "url": "https://dice.fm/event/6a5de6b76619b300010bb73b",
-      "source": "dice"
-    },
-    {
-      "id": "dice-69ef9f384bfd4a0001393d8c",
-      "title": "Gregory Porter - JAZZMI 2026",
-      "titleIt": "Gregory Porter - JAZZMI 2026",
-      "start": "2026-11-03T21:00:00+01:00",
-      "end": "2026-11-03T23:00:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Alcatraz Milano",
-      "free": false,
-      "priceFrom": 61.36,
-      "url": "https://dice.fm/event/69ef9f384bfd4a0001393d8c",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6ae21c0c6a4c9700011a8f3c",
-      "title": "JAZZMI 2026 / Sessioni Sotterranee // Moontell",
-      "titleIt": "JAZZMI 2026 / Sessioni Sotterranee // Moontell",
-      "start": "2026-11-03T21:00:00+01:00",
-      "end": "2026-11-04T01:00:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Bachelite cLab",
-      "free": true,
-      "url": "https://dice.fm/event/6ae21c0c6a4c9700011a8f3c",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6ad1f6f1ca4ce40001dbefeb",
-      "title": "Spoon Baboon @ Taste of Jazz",
-      "titleIt": "Spoon Baboon @ Taste of Jazz",
-      "start": "2026-11-03T21:00:00+01:00",
-      "end": "2026-11-04T01:00:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "mare culturale urbano - cascina torrette",
-      "free": false,
-      "priceFrom": 1.15,
-      "url": "https://dice.fm/event/6ad1f6f1ca4ce40001dbefeb",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6a9703b38ca2d30001052bcb",
-      "title": "yung paninaru",
-      "titleIt": "yung paninaru",
-      "start": "2026-11-03T21:00:00+01:00",
-      "end": "2026-11-03T23:00:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "ARCI Bellezza",
-      "free": false,
-      "priceFrom": 16.95,
-      "url": "https://dice.fm/event/6a9703b38ca2d30001052bcb",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6a2c4a596fd42a00010326c3",
-      "title": " NOAPOLOGY + ODC Band",
-      "titleIt": " NOAPOLOGY + ODC Band",
-      "start": "2026-11-04T19:00:00+01:00",
-      "end": "2026-11-04T23:45:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Legend Club",
-      "free": false,
-      "priceFrom": 28.75,
-      "url": "https://dice.fm/event/6a2c4a596fd42a00010326c3",
-      "source": "dice"
-    },
     {
       "id": "dice-6aa9748339a7be0001884486",
       "title": "Annalisa Parisi & Sandro Di Pisa - JAZZMI free",
@@ -467,6 +317,33 @@
       "source": "dice"
     },
     {
+      "id": "dice-6ae9bc051efe91000138b538",
+      "title": "Mixer and Mixology - Nodo Bar",
+      "titleIt": "Mixer and Mixology - Nodo Bar",
+      "start": "2026-11-06T18:30:00+01:00",
+      "end": "2026-11-06T23:45:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "Nodo bar",
+      "free": true,
+      "url": "https://dice.fm/event/6ae9bc051efe91000138b538",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6acf49e752d04d0001d8be17",
+      "title": "BLINDYOGA",
+      "titleIt": "BLINDYOGA",
+      "start": "2026-11-06T19:00:00+01:00",
+      "end": "2026-11-06T21:00:00+01:00",
+      "category": "music",
+      "zone": "Novara",
+      "venue": "Gerico – Società cooperativa sociale",
+      "free": false,
+      "priceFrom": 10,
+      "url": "https://dice.fm/event/6acf49e752d04d0001d8be17",
+      "source": "dice"
+    },
+    {
       "id": "eb-2000415458486",
       "title": "Cena Cantata - Miscusi Cadorna",
       "titleIt": "Cena Cantata - Miscusi Cadorna",
@@ -521,6 +398,34 @@
       "source": "dice"
     },
     {
+      "id": "dice-6ac79bf08c5c470001193fcf",
+      "title": "Porgy and Bess revisited - Cernusco Jazz",
+      "titleIt": "Porgy and Bess revisited - Cernusco Jazz",
+      "start": "2026-11-06T20:30:00+01:00",
+      "end": "2026-11-06T23:30:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "mare culturale urbano - cascina torrette",
+      "free": false,
+      "priceFrom": 16.35,
+      "url": "https://dice.fm/event/6ac79bf08c5c470001193fcf",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6a91b09c69be3b0001a7b174",
+      "title": "YERAI CORTÉS",
+      "titleIt": "YERAI CORTÉS",
+      "start": "2026-11-06T20:30:00+01:00",
+      "end": "2026-11-06T23:00:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "ARCI Bellezza",
+      "free": false,
+      "priceFrom": 23,
+      "url": "https://dice.fm/event/6a91b09c69be3b0001a7b174",
+      "source": "dice"
+    },
+    {
       "id": "dice-6ad72da66162c800018a28a5",
       "title": "Test Drive",
       "titleIt": "Test Drive",
@@ -534,6 +439,46 @@
       "source": "dice"
     },
     {
+      "id": "dice-6acf8be1d2ce38000164b272",
+      "title": "The Blues Ensemble // JAZZMI 2026",
+      "titleIt": "The Blues Ensemble // JAZZMI 2026",
+      "start": "2026-11-06T21:00:00+01:00",
+      "end": "2026-11-07T01:00:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "Bachelite cLab",
+      "free": true,
+      "url": "https://dice.fm/event/6acf8be1d2ce38000164b272",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6a3aa1b49ae817000163299a",
+      "title": "MT Jones - JAZZMI 2026",
+      "titleIt": "MT Jones - JAZZMI 2026",
+      "start": "2026-11-06T21:30:00+01:00",
+      "end": "2026-11-06T23:30:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "Santeria Toscana 31",
+      "free": false,
+      "priceFrom": 30.68,
+      "url": "https://dice.fm/event/6a3aa1b49ae817000163299a",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6aeb31ea4266e400019554d4",
+      "title": "Jazz Night + Jam Session",
+      "titleIt": "Jazz Night + Jam Session",
+      "start": "2026-11-06T21:30:00+01:00",
+      "end": "2026-11-07T00:00:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "Cascina Nascosta",
+      "free": true,
+      "url": "https://dice.fm/event/6aeb31ea4266e400019554d4",
+      "source": "dice"
+    },
+    {
       "id": "dice-6ace40d5c70cfd0001988965",
       "title": "Hi-Fi Weekends with YOKAI *Free Entry*",
       "titleIt": "Hi-Fi Weekends with YOKAI *Free Entry*",
@@ -544,6 +489,20 @@
       "venue": "Bluesquare Milano",
       "free": true,
       "url": "https://dice.fm/event/6ace40d5c70cfd0001988965",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6ae8afa625be9b000110e048",
+      "title": "Video Killed The Radio Star",
+      "titleIt": "Video Killed The Radio Star",
+      "start": "2026-11-06T22:00:00+01:00",
+      "end": "2026-11-07T02:00:00+01:00",
+      "category": "music",
+      "zone": "Bergamo",
+      "venue": "Daste",
+      "free": false,
+      "priceFrom": 11,
+      "url": "https://dice.fm/event/6ae8afa625be9b000110e048",
       "source": "dice"
     },
     {
@@ -575,8 +534,8 @@
     },
     {
       "id": "dice-6ab2a45e1c4ef70001955885",
-      "title": "Noise Orchestra | Marrøn - Pre Silent ",
-      "titleIt": "Noise Orchestra | Marrøn - Pre Silent ",
+      "title": "Noise Orchestra | Marrøn | Pre Silent ",
+      "titleIt": "Noise Orchestra | Marrøn | Pre Silent ",
       "start": "2026-11-06T23:00:00+01:00",
       "end": "2026-11-07T05:00:00+01:00",
       "category": "music",
@@ -610,8 +569,21 @@
       "zone": "Milano",
       "venue": "Studionotte",
       "free": false,
-      "priceFrom": 17.25,
+      "priceFrom": 23,
       "url": "https://dice.fm/event/6ae0c7455f25d40001456672",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6aea2c8a5c15a40001091aec",
+      "title": "TVUKDB Dj set di Gabriele Anzaldi",
+      "titleIt": "TVUKDB Dj set di Gabriele Anzaldi",
+      "start": "2026-11-06T23:30:00+01:00",
+      "end": "2026-11-07T01:00:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "mare culturale urbano - cascina torrette",
+      "free": true,
+      "url": "https://dice.fm/event/6aea2c8a5c15a40001091aec",
       "source": "dice"
     },
     {
@@ -764,6 +736,19 @@
       "source": "eventbrite"
     },
     {
+      "id": "dice-6ad1dad36f29d90001c83172",
+      "title": "Concerto con l'Orchestra dell'Accademia Teatro alla Scala",
+      "titleIt": "Concerto con l'Orchestra dell'Accademia Teatro alla Scala",
+      "start": "2026-11-07T21:00:00+01:00",
+      "end": "2026-11-07T22:30:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "Teatro Dal Verme",
+      "free": true,
+      "url": "https://dice.fm/event/6ad1dad36f29d90001c83172",
+      "source": "dice"
+    },
+    {
       "id": "dice-6aca063f21d6680001c3edfb",
       "title": "Hi-Fi Weekends with DOUBLE. *Free Entry*",
       "titleIt": "Hi-Fi Weekends with DOUBLE. *Free Entry*",
@@ -819,48 +804,6 @@
       "source": "dice"
     },
     {
-      "id": "dice-6a91a464a0dc52000128dba6",
-      "title": "OXYGÈNE | Vera Logdanidi | Shkedul",
-      "titleIt": "OXYGÈNE | Vera Logdanidi | Shkedul",
-      "start": "2026-11-07T23:00:00+01:00",
-      "end": "2026-11-08T05:00:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Duro",
-      "free": false,
-      "priceFrom": 11.5,
-      "url": "https://dice.fm/event/6a91a464a0dc52000128dba6",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6ae2234600259b0001f09810",
-      "title": "Funky Express is back in his second city!",
-      "titleIt": "Funky Express is back in his second city!",
-      "start": "2026-11-07T23:45:00+01:00",
-      "end": "2026-11-08T04:45:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Spazio Diaz",
-      "free": false,
-      "priceFrom": 11.3,
-      "url": "https://dice.fm/event/6ae2234600259b0001f09810",
-      "source": "dice"
-    },
-    {
-      "id": "dice-6ada3406f8a08900017dcc13",
-      "title": "Take It Easy x Rinse with Dr Banana [ACCESSO RISERVATO AI TESSERATI ARCA]",
-      "titleIt": "Take It Easy x Rinse with Dr Banana [ACCESSO RISERVATO AI TESSERATI ARCA]",
-      "start": "2026-11-07T23:59:00+01:00",
-      "end": "2026-11-08T06:00:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "ARCA",
-      "free": false,
-      "priceFrom": 15,
-      "url": "https://dice.fm/event/6ada3406f8a08900017dcc13",
-      "source": "dice"
-    },
-    {
       "id": "dice-6acfa6a7e5ae0c000123db01",
       "title": "Le Orrende [ACCESSO RISERVATO AI TESSERATI ARCA]",
       "titleIt": "Le Orrende [ACCESSO RISERVATO AI TESSERATI ARCA]",
@@ -875,9 +818,22 @@
       "source": "dice"
     },
     {
+      "id": "dice-6ae1bc1689048300010987cf",
+      "title": "MOLTO Launch Party",
+      "titleIt": "MOLTO Launch Party",
+      "start": "2026-11-08T14:00:00+01:00",
+      "end": "2026-11-09T00:00:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "Club Giovanile Milano",
+      "free": true,
+      "url": "https://dice.fm/event/6ae1bc1689048300010987cf",
+      "source": "dice"
+    },
+    {
       "id": "dice-6adf4cb382cc87000134538d",
-      "title": "Jazz Mi x Mother Tongue",
-      "titleIt": "Jazz Mi x Mother Tongue",
+      "title": "Mother Tongue x JAZZMI",
+      "titleIt": "Mother Tongue x JAZZMI",
       "start": "2026-11-08T16:00:00+01:00",
       "end": "2026-11-09T00:00:00+01:00",
       "category": "music",
@@ -902,6 +858,20 @@
       "source": "dice"
     },
     {
+      "id": "dice-6a72fa4fb66dba0001e6f9a0",
+      "title": "GAIA BANFI - MASSIMO SILVERIO / LE CANNIBALE - FAROUT Live Arts Festival",
+      "titleIt": "GAIA BANFI - MASSIMO SILVERIO / LE CANNIBALE - FAROUT Live Arts Festival",
+      "start": "2026-11-08T20:30:00+01:00",
+      "end": "2026-11-08T22:30:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "BASE Milano",
+      "free": false,
+      "priceFrom": 17.5,
+      "url": "https://dice.fm/event/6a72fa4fb66dba0001e6f9a0",
+      "source": "dice"
+    },
+    {
       "id": "eb-1975576227678",
       "title": "Design come arte (programmata)  - Mostra posticipata",
       "titleIt": "Design come arte (programmata)  - Mostra posticipata",
@@ -912,6 +882,32 @@
       "venue": "Careof - No profit organization for contemporary art",
       "free": false,
       "url": "https://www.eventbrite.it/e/design-come-arte-programmata-mostra-posticipata-tickets-1975576227678",
+      "source": "eventbrite"
+    },
+    {
+      "id": "dice-6ae39cafaecd2c0001ce50a4",
+      "title": " Swing Tuesday by TWIST COMMUNITY",
+      "titleIt": " Swing Tuesday by TWIST COMMUNITY",
+      "start": "2026-11-10T19:30:00+01:00",
+      "end": "2026-11-10T23:30:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "BASE Milano",
+      "free": true,
+      "url": "https://dice.fm/event/6ae39cafaecd2c0001ce50a4",
+      "source": "dice"
+    },
+    {
+      "id": "eb-1985226745637",
+      "title": "Sustainable Creative Art: Inspiration from Nature (SCIN) - 2nd edition",
+      "titleIt": "Sustainable Creative Art: Inspiration from Nature (SCIN) - 2nd edition",
+      "start": "2026-11-10T20:00:00+01:00",
+      "end": "2026-11-10T20:00:00+01:00",
+      "category": "culture",
+      "zone": "Milano",
+      "venue": "Leonardo da Vinci Museum of Science and Technology",
+      "free": false,
+      "url": "https://www.eventbrite.com/e/biglietti-sustainable-creative-art-inspiration-from-nature-scin-2nd-edition-1985226745637",
       "source": "eventbrite"
     }
   ]
