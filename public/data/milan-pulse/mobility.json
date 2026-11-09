@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-06T13:50:01.600Z",
+  "updatedAt": "2026-11-09T15:21:40.883Z",
   "source": "ATM Info Traffico RSS (English alerts)",
   "sourceUrl": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico",
   "live": true,
   "filter": "Alerts with official English translation on atm.it",
   "disclaimer": "Priority service changes from ATM — not live vehicle tracking. Use the ATM app for real-time departures.",
-  "fingerprint": "6ffd0989052421d6",
+  "fingerprint": "125dd63953dbeced",
   "lines": [
     {
       "id": "T12",
@@ -18,8 +18,8 @@
       "id": "T16",
       "name": "Tram 16",
       "status": "warning",
-      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 83, 86, 92, 166 e 172: cambiamenti del servizio",
-      "noteEn": "Urban Redevelopment: diversions and service changes"
+      "note": "Tram 16: devia e cambia capolinea",
+      "noteEn": "Tram 16: service changes"
     },
     {
       "id": "T166",
@@ -121,6 +121,17 @@
       "pubDate": "Fri, 06 Mar 2026 12:14:23 GMT",
       "titleEn": "Tram 7: service changes",
       "bodyEn": "The works of the Municipality of Milan and MM continue for the construction of the northern tramway. We will update this page with the changes related to the next phases of the works. Trams will be running between the Tremelloni/Anassagora and Testi/Santa Marcellina (the stop located after via Smith). The service is suspended at the Quartiere Adriano and between Testi/Santa Marcellina and piazzale Lagosta terminus: • For the M1 Precotto station: take bus 86 or 86/. • For the M2 Crescenzago station: take bus 86, 86/, or bus 56. The stop Università Bicocca Scienza towards Precotto M1 is moved 35"
+    },
+    {
+      "id": "57e7f2403540",
+      "severity": "warning",
+      "titleIt": "Tram 16: devia e cambia capolinea",
+      "bodyIt": "version Continuano i lavori del Comune di Milano e di MM per la costruzione della nuova corsia preferenziale dei filobus nella zona di viale Umbria e via Comelico. Il 16 cambia servizio fino alla fine dell’anno. Il 16 fa servizio tra San Siro e via Lamarmora Da via Lamarmora, i tram poi deviano in viale Monte Nero. Passano da piazza Cinque Giornate, corso XXII Marzo, piazza Emilia, viale Umbria, piazzale Martini. Fanno le stesse fermate del tram 12 fino al capolinea Molise. Da lì ripartono verso San Siro sullo stesso percorso. Tra via Cadore e via Monte Velino i tram sono sostituiti dai bus B1",
+      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/Tram16deviaecambiacapolineadal31agosto.aspx",
+      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/Tram16changeofservicefromAugust31.aspx",
+      "pubDate": "Fri, 28 Aug 2026 06:44:50 GMT",
+      "titleEn": "Tram 16: service changes",
+      "bodyEn": "There are road works for the construction of the new lane for trolleybuses in viale Umbria. Tram 16 will change service until the end of the year. From via Lamarmora, trams divert on viale Monte Nero. Then they run on piazza Cinque Giornate, corso XXIII Marzo, piazza Emilia, viale Umbria, piazzale Martini. They stop at the same stops as tram 12 until Molise terminus. From Molise they return to the stadium on the same route. Alight at the tram 16 stop of corso XXII Marzo/Cadore and take the bus B16 towards Monte Velino on via Cadore, at the same stop as bus 66. Take the bus B16 on via Varsavia "
     },
     {
       "id": "6f4a161cb463",
