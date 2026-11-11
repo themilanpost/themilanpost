@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-09T15:21:40.883Z",
+  "updatedAt": "2026-11-11T13:39:42.981Z",
   "source": "ATM Info Traffico RSS (English alerts)",
   "sourceUrl": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico",
   "live": true,
   "filter": "Alerts with official English translation on atm.it",
   "disclaimer": "Priority service changes from ATM — not live vehicle tracking. Use the ATM app for real-time departures.",
-  "fingerprint": "125dd63953dbeced",
+  "fingerprint": "bcbbe7167c5c1171",
   "lines": [
     {
       "id": "T12",
@@ -74,8 +74,8 @@
       "id": "T7",
       "name": "Tram 7",
       "status": "warning",
-      "note": "Tram 7: cambiamenti del servizio",
-      "noteEn": "Tram 7: service changes"
+      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 83, 86, 92, 166 e 172: cambiamenti del servizio",
+      "noteEn": "Urban Redevelopment: diversions and service changes"
     },
     {
       "id": "T83",
@@ -110,17 +110,6 @@
       "pubDate": "Fri, 20 Feb 2026 12:00:43 GMT",
       "titleEn": "Urban Redevelopment: diversions and service changes",
       "bodyEn": "The redevelopment works on via Correnti and via Ornato are underway. The project involves the renewal of roads, the water supply system, the sewers and the tram tracks. There are also construction works for the new metrotram North of the city and the new trolleybus lane on viale Umbria and via Comelico."
-    },
-    {
-      "id": "de5a310e1f83",
-      "severity": "warning",
-      "titleIt": "Tram 7: cambiamenti del servizio",
-      "bodyIt": "Continuano i lavori del Comune di Milano e di MM per la costruzione della metrotranvia nord. Aggiorneremo questa pagina con i cambiamenti legati alle prossime fasi dei lavori. Il servizio oggi, fino al termine dei cantieri al Quartiere Adriano e in viale Fulvio Testi I tram fanno servizio tra le fermate Tremelloni/Anassagora e Testi/Santa Marcellina. Sono sospese le fermate al Quartiere Adriano e tra Testi/Marcellina e il capolinea Lagosta: Tremelloni/Gassman Tremelloni/Tognazzi Adriano/Lussu Adriano/Vipiteno Testi Pianell Ca Granda M5 viale Testi /via Dolcebuono Istria M5 viale Zara/via Laura",
-      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/Tram7dal9marzoèsospesonelquartiereAdriano.aspx",
-      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/Tram7noserviceinQuartiereAdrianofromMarch9.aspx",
-      "pubDate": "Fri, 06 Mar 2026 12:14:23 GMT",
-      "titleEn": "Tram 7: service changes",
-      "bodyEn": "The works of the Municipality of Milan and MM continue for the construction of the northern tramway. We will update this page with the changes related to the next phases of the works. Trams will be running between the Tremelloni/Anassagora and Testi/Santa Marcellina (the stop located after via Smith). The service is suspended at the Quartiere Adriano and between Testi/Santa Marcellina and piazzale Lagosta terminus: • For the M1 Precotto station: take bus 86 or 86/. • For the M2 Crescenzago station: take bus 86, 86/, or bus 56. The stop Università Bicocca Scienza towards Precotto M1 is moved 35"
     },
     {
       "id": "57e7f2403540",

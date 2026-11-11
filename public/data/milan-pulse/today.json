@@ -1,9 +1,9 @@
 {
-  "updatedAt": "2026-11-09T15:21:39.144Z",
+  "updatedAt": "2026-11-11T13:39:42.165Z",
   "live": true,
   "range": {
-    "from": "2026-11-09",
-    "to": "2026-11-09"
+    "from": "2026-11-11",
+    "to": "2026-11-11"
   },
   "sources": [
     {
@@ -16,64 +16,91 @@
       "id": "dice",
       "label": "DICE",
       "url": "https://dice.fm/browse/milano-5d68e89f7f285e094f60b00e",
-      "updatedAt": "2026-11-09T15:21:39.144Z"
+      "updatedAt": "2026-11-11T13:39:42.165Z"
     }
   ],
-  "count": 4,
+  "count": 6,
   "events": [
     {
-      "id": "dice-69ddd73a44902900016f48c8",
-      "title": "ARCHSPIRE - EUROPEAN VACATION TOUR 2026",
-      "titleIt": "ARCHSPIRE - EUROPEAN VACATION TOUR 2026",
-      "start": "2026-11-09T18:00:00+01:00",
-      "end": "2026-11-09T22:00:00+01:00",
+      "id": "dice-697b897c76aebd0001b4454f",
+      "title": "Zimmer90 -  Milano",
+      "titleIt": "Zimmer90 -  Milano",
+      "start": "2026-11-11T19:00:00+01:00",
+      "end": "2026-11-11T23:00:00+01:00",
       "category": "music",
       "zone": "Milano",
-      "venue": "Legend Club",
+      "venue": "Spazio Teatro 89",
       "free": false,
-      "priceFrom": 39.95,
-      "url": "https://dice.fm/event/69ddd73a44902900016f48c8",
+      "priceFrom": 29.9,
+      "url": "https://dice.fm/event/697b897c76aebd0001b4454f",
       "source": "dice"
     },
     {
-      "id": "eb-1975576227678",
-      "title": "Design come arte (programmata)  - Mostra posticipata",
-      "titleIt": "Design come arte (programmata)  - Mostra posticipata",
-      "start": "2026-11-09T20:00:00+01:00",
-      "end": "2026-11-09T20:00:00+01:00",
-      "category": "culture",
-      "zone": "Milano",
-      "venue": "Careof - No profit organization for contemporary art",
-      "free": false,
-      "url": "https://www.eventbrite.it/e/design-come-arte-programmata-mostra-posticipata-tickets-1975576227678",
-      "source": "eventbrite"
-    },
-    {
-      "id": "dice-6a44d9b9dd26080001b4a853",
-      "title": "Inner_Spaces COLAPESCE, ALFIO ANTICO, MARIO CONTE",
-      "titleIt": "Inner_Spaces COLAPESCE, ALFIO ANTICO, MARIO CONTE",
-      "start": "2026-11-09T20:30:00+01:00",
-      "end": "2026-11-09T22:30:00+01:00",
-      "category": "music",
-      "zone": "Milano",
-      "venue": "Auditorium San Fedele",
-      "free": false,
-      "priceFrom": 19,
-      "url": "https://dice.fm/event/6a44d9b9dd26080001b4a853",
-      "source": "dice"
-    },
-    {
-      "id": "dice-69c637da532b8a000139f370",
-      "title": "Westside Cowboy",
-      "titleIt": "Westside Cowboy",
-      "start": "2026-11-09T20:30:00+01:00",
-      "end": "2026-11-09T23:30:00+01:00",
+      "id": "dice-6ad5414f3a7434000138c0ff",
+      "title": "NELS (live acustico)",
+      "titleIt": "NELS (live acustico)",
+      "start": "2026-11-11T19:30:00+01:00",
+      "end": "2026-11-11T21:30:00+01:00",
       "category": "music",
       "zone": "Milano",
       "venue": "ARCI Bellezza",
       "free": false,
-      "priceFrom": 20,
-      "url": "https://dice.fm/event/69c637da532b8a000139f370",
+      "priceFrom": 14,
+      "url": "https://dice.fm/event/6ad5414f3a7434000138c0ff",
+      "source": "dice"
+    },
+    {
+      "id": "dice-68e8d72103e26a000167aa57",
+      "title": "SPORTS",
+      "titleIt": "SPORTS",
+      "start": "2026-11-11T20:30:00+01:00",
+      "end": "2026-11-11T23:00:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "ARCI Bellezza",
+      "free": false,
+      "priceFrom": 18,
+      "url": "https://dice.fm/event/68e8d72103e26a000167aa57",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6aee1f21bafdc500015cf6e1",
+      "title": "!EVENTO CANCELLATO! SIAMO CARTACEO PRE PARTY | MILANO @ NUOVO ANFITEATRO MARTESANA",
+      "titleIt": "!EVENTO CANCELLATO! SIAMO CARTACEO PRE PARTY | MILANO @ NUOVO ANFITEATRO MARTESANA",
+      "start": "2026-11-11T21:00:00+01:00",
+      "end": "2026-11-12T01:30:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "NAMA (indoor) ",
+      "free": true,
+      "url": "https://dice.fm/event/6aee1f21bafdc500015cf6e1",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6aec648a956b4b000182fcda",
+      "title": "Smooth Jam // La Jam più surtida di Milano",
+      "titleIt": "Smooth Jam // La Jam più surtida di Milano",
+      "start": "2026-11-11T21:00:00+01:00",
+      "end": "2026-11-12T01:00:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "Bachelite cLab",
+      "free": true,
+      "url": "https://dice.fm/event/6aec648a956b4b000182fcda",
+      "source": "dice"
+    },
+    {
+      "id": "dice-6aec5dbe390876000154ab5f",
+      "title": "La Meneghina: Il tango a Milano ",
+      "titleIt": "La Meneghina: Il tango a Milano ",
+      "start": "2026-11-11T21:30:00+01:00",
+      "end": "2026-11-12T01:30:00+01:00",
+      "category": "music",
+      "zone": "Milano",
+      "venue": "Club Dept 184",
+      "free": false,
+      "priceFrom": 11.5,
+      "url": "https://dice.fm/event/6aec5dbe390876000154ab5f",
       "source": "dice"
     }
   ]
