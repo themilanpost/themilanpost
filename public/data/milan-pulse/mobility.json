@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-11T13:39:42.981Z",
+  "updatedAt": "2026-11-13T13:59:59.242Z",
   "source": "ATM Info Traffico RSS (English alerts)",
   "sourceUrl": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico",
   "live": true,
   "filter": "Alerts with official English translation on atm.it",
   "disclaimer": "Priority service changes from ATM — not live vehicle tracking. Use the ATM app for real-time departures.",
-  "fingerprint": "bcbbe7167c5c1171",
+  "fingerprint": "b6b05d24fa2abd33",
   "lines": [
     {
       "id": "T12",
@@ -22,94 +22,24 @@
       "noteEn": "Tram 16: service changes"
     },
     {
-      "id": "T166",
-      "name": "Tram 166",
-      "status": "warning",
-      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 83, 86, 92, 166 e 172: cambiamenti del servizio",
-      "noteEn": "Urban Redevelopment: diversions and service changes"
-    },
-    {
-      "id": "T172",
-      "name": "Tram 172",
-      "status": "warning",
-      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 83, 86, 92, 166 e 172: cambiamenti del servizio",
-      "noteEn": "Urban Redevelopment: diversions and service changes"
-    },
-    {
-      "id": "T31",
-      "name": "Tram 31",
-      "status": "warning",
-      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 83, 86, 92, 166 e 172: cambiamenti del servizio",
-      "noteEn": "Urban Redevelopment: diversions and service changes"
-    },
-    {
-      "id": "T4",
-      "name": "Tram 4",
-      "status": "warning",
-      "note": "Linee 4, B4, 42, 51, 52, 83, 166 e 172: deviazioni",
-      "noteEn": "Lines 4, B4, 42, 51, 52, 83, 166 and 172: diversions"
-    },
-    {
-      "id": "T42",
-      "name": "Tram 42",
-      "status": "warning",
-      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 83, 86, 92, 166 e 172: cambiamenti del servizio",
-      "noteEn": "Urban Redevelopment: diversions and service changes"
-    },
-    {
-      "id": "T51",
-      "name": "Tram 51",
-      "status": "warning",
-      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 83, 86, 92, 166 e 172: cambiamenti del servizio",
-      "noteEn": "Urban Redevelopment: diversions and service changes"
-    },
-    {
-      "id": "T52",
-      "name": "Tram 52",
-      "status": "warning",
-      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 83, 86, 92, 166 e 172: cambiamenti del servizio",
-      "noteEn": "Urban Redevelopment: diversions and service changes"
-    },
-    {
       "id": "T7",
       "name": "Tram 7",
       "status": "warning",
-      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 83, 86, 92, 166 e 172: cambiamenti del servizio",
-      "noteEn": "Urban Redevelopment: diversions and service changes"
-    },
-    {
-      "id": "T83",
-      "name": "Tram 83",
-      "status": "warning",
-      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 83, 86, 92, 166 e 172: cambiamenti del servizio",
-      "noteEn": "Urban Redevelopment: diversions and service changes"
-    },
-    {
-      "id": "T86",
-      "name": "Tram 86",
-      "status": "warning",
-      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 83, 86, 92, 166 e 172: cambiamenti del servizio",
-      "noteEn": "Urban Redevelopment: diversions and service changes"
-    },
-    {
-      "id": "T92",
-      "name": "Tram 92",
-      "status": "warning",
-      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 83, 86, 92, 166 e 172: cambiamenti del servizio",
-      "noteEn": "Urban Redevelopment: diversions and service changes"
+      "note": "Tram 7: cambiamenti del servizio",
+      "noteEn": "Tram 7: service changes"
     }
   ],
   "alerts": [
     {
-      "id": "0c8f2c633884",
+      "id": "de5a310e1f83",
       "severity": "warning",
-      "titleIt": "Linee 4, 7, 16, 31, 42, 51, 52, 83, 86, 92, 166 e 172: cambiamenti del servizio",
-      "bodyIt": "È in corso la riqualificazione di diverse zone della città. I lavori riguardano il rinnovo di strade, acquedotto, fognature, rete elettrica e binari dei tram. Continuano anche i lavori del Comune di Milano e MM per la costruzione della nuova metrotranvia a nord della città e della nuova corsia preferenziale dei filobus in viale Umbria e via Comelico. Linee 4, B4, 42, 51, 52, 83, 166 e 172 Tram 7 Tram 16 Tram 31 Bus 86 Filobus 92",
-      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/Riqualificazioneurbanadeviazioniecambiamentidelservizio.aspx",
-      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/UrbanRedevelopmentdiversionsandservicechanges.aspx",
-      "pubDate": "Fri, 20 Feb 2026 12:00:43 GMT",
-      "titleEn": "Urban Redevelopment: diversions and service changes",
-      "bodyEn": "The redevelopment works on via Correnti and via Ornato are underway. The project involves the renewal of roads, the water supply system, the sewers and the tram tracks. There are also construction works for the new metrotram North of the city and the new trolleybus lane on viale Umbria and via Comelico."
+      "titleIt": "Tram 7: cambiamenti del servizio",
+      "bodyIt": "Continuano i lavori del Comune di Milano e di MM per la costruzione della metrotranvia nord. Aggiorneremo questa pagina con i cambiamenti legati alle prossime fasi dei lavori. Il servizio oggi, fino al termine dei cantieri al Quartiere Adriano e in viale Fulvio Testi I tram fanno servizio tra le fermate Tremelloni/Anassagora e Testi/Santa Marcellina. Sono sospese le fermate al Quartiere Adriano e tra Testi/Marcellina e il capolinea Lagosta: Tremelloni/Gassman Tremelloni/Tognazzi Adriano/Lussu Adriano/Vipiteno Testi Pianell Ca Granda M5 viale Testi /via Dolcebuono Istria M5 viale Zara/via Laura",
+      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/Tram7dal9marzoèsospesonelquartiereAdriano.aspx",
+      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/Tram7noserviceinQuartiereAdrianofromMarch9.aspx",
+      "pubDate": "Fri, 06 Mar 2026 12:14:23 GMT",
+      "titleEn": "Tram 7: service changes",
+      "bodyEn": "The works of the Municipality of Milan and MM continue for the construction of the northern tramway. We will update this page with the changes related to the next phases of the works. Trams will be running between the Tremelloni/Anassagora and Testi/Santa Marcellina (the stop located after via Smith). The service is suspended at the Quartiere Adriano and between Testi/Santa Marcellina and piazzale Lagosta terminus: • For the M1 Precotto station: take bus 86 or 86/. • For the M2 Crescenzago station: take bus 86, 86/, or bus 56."
     },
     {
       "id": "57e7f2403540",
@@ -123,21 +53,10 @@
       "bodyEn": "There are road works for the construction of the new lane for trolleybuses in viale Umbria. Tram 16 will change service until the end of the year. From via Lamarmora, trams divert on viale Monte Nero. Then they run on piazza Cinque Giornate, corso XXIII Marzo, piazza Emilia, viale Umbria, piazzale Martini. They stop at the same stops as tram 12 until Molise terminus. From Molise they return to the stadium on the same route. Alight at the tram 16 stop of corso XXII Marzo/Cadore and take the bus B16 towards Monte Velino on via Cadore, at the same stop as bus 66. Take the bus B16 on via Varsavia "
     },
     {
-      "id": "6f4a161cb463",
-      "severity": "warning",
-      "titleIt": "Linee 4, B4, 42, 51, 52, 83, 166 e 172: deviazioni",
-      "bodyIt": "È in corso la riqualificazione di via Ornato (rinnovo strada, acquedotto, fognature, rete elettrica e binari del tram). Fino ad aprile 2027: Il tram 4 è in parte sostituito dai bus B4 . i bus 4, 42, 51, 52, 83, 166 e 172 cambiano percorso la linea circolare 162 fa servizio nel quartiere di Niguarda, con fermate e itinerari che possono servire da alternativa alle linee deviate durante i lavori CAMBIAMENTI FINO AD APRILE 2027 - MAPPA Tram 4. È sostituito dal bus B4 tra Niguarda e Parco Nord. Incontra le metropolitane a Zara I tram fanno servizio tra Cairoli e la fermata Niguarda (Ospedale). Da q",
-      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/RiqualificazioneOrnato.aspx",
-      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/Lines4,B4,42,51,52,83,166and172divertedfromOctober6th926.aspx",
-      "pubDate": "Mon, 28 Sep 2026 09:14:16 GMT",
-      "titleEn": "Lines 4, B4, 42, 51, 52, 83, 166 and 172: diversions",
-      "bodyEn": "The redevelopment of via Ornato is underway (renewal of the road, aqueduct, sewers, electrical network and tram platforms). Until April 2027 : The trams operate between Cairoli and the Niguarda (Ospedale) stop. From here they turn into viale Ca' Granda and Fulvio Testi and follow the same route as tram 7 until piazzale Lagosta. They meet metro lines M3 and M5 at Zara. They do not pass through via Donatelli, via Graziano Imperatore and via Ornato (Parco Nord). Starting November 9, buses will connect with the M5 at Bicocca, operating all day, every day with 15-minute frequencies."
-    },
-    {
       "id": "becdbecfca13",
       "severity": "warning",
       "titleIt": "Tram 12 e 14: deviazioni",
-      "bodyIt": "Sono in programma lavori agli alberi in via Cenisio. Da lunedì 9 a mercoledì 18 novembre, dalle 10 alle 16 (tranne sabato e domenica), i tram 12 e 14 cambiano servizio. Tram 12 Verso viale Molise, i tram deviano e saltano la fermata Cenisio M5. Da via Cenisio girano in via Messina e continuano in via Procaccini dove fermano prima di via Nono alla stessa fermata del tram 10. Riprendono il percorso di sempre dalla fermata piazzale Cimitero Monumentale/via Bramante. Verso Roserio il percorso non cambia. Tram 14 Nelle due direzioni, i tram deviano tra piazzale Cimitero Monumentale e viale Certosa/",
+      "bodyIt": "Fino al 18 novembre (tranne sabato e domenica) , dalle 10 alle 16, ci sono lavori agli alberi in via Cenisio. I tram 12 e 14 cambiano percorso e fermate. Tram 12 Verso viale Molise, i tram deviano e saltano la fermata Cenisio M5. Da via Cenisio girano in via Messina e continuano in via Procaccini dove fermano prima di via Nono alla stessa fermata del tram 10. Riprendono il percorso di sempre dalla fermata piazzale Cimitero Monumentale/via Bramante. Verso Roserio il percorso non cambia. Tram 14 Nelle due direzioni, i tram deviano tra piazzale Cimitero Monumentale e viale Certosa/viale Serra. Sa",
       "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/Tram1214deviazNov.aspx",
       "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/Trams12and14detours.aspx",
       "pubDate": "Thu, 05 Nov 2026 09:53:44 GMT",
