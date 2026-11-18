@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-11-16T14:56:29.112Z",
+  "updatedAt": "2026-11-18T15:13:23.534Z",
   "source": "ATM Info Traffico RSS (English alerts)",
   "sourceUrl": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico",
   "live": true,
   "filter": "Alerts with official English translation on atm.it",
   "disclaimer": "Priority service changes from ATM — not live vehicle tracking. Use the ATM app for real-time departures.",
-  "fingerprint": "a122cea143fc37e7",
+  "fingerprint": "1e51e0217539f779",
   "lines": [
     {
       "id": "T12",
@@ -13,13 +13,6 @@
       "status": "warning",
       "note": "Tram 12 e 14: deviazioni",
       "noteEn": "Trams 12 and 14: detours"
-    },
-    {
-      "id": "T16",
-      "name": "Tram 16",
-      "status": "warning",
-      "note": "Tram 16: devia e cambia capolinea",
-      "noteEn": "Tram 16: service changes"
     },
     {
       "id": "T31",
@@ -60,17 +53,6 @@
       "bodyEn": "The Municipality of Milan and MM are continuing construction work for the North Metrotranvia. We will update this page with changes related to the next phases of the work. After midnight, tram 31 is suspended between piazzale Lagosta and Bicocca . Between Ca’ Granda and Marche, you can use tram 5 instead."
     },
     {
-      "id": "57e7f2403540",
-      "severity": "warning",
-      "titleIt": "Tram 16: devia e cambia capolinea",
-      "bodyIt": "version Continuano i lavori del Comune di Milano e di MM per la costruzione della nuova corsia preferenziale dei filobus nella zona di viale Umbria e via Comelico. Il 16 cambia servizio fino alla fine dell’anno. Il 16 fa servizio tra San Siro e via Lamarmora Da via Lamarmora, i tram poi deviano in viale Monte Nero. Passano da piazza Cinque Giornate, corso XXII Marzo, piazza Emilia, viale Umbria, piazzale Martini. Fanno le stesse fermate del tram 12 fino al capolinea Molise. Da lì ripartono verso San Siro sullo stesso percorso. Tra via Cadore e via Monte Velino i tram sono sostituiti dai bus B1",
-      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/Tram16deviaecambiacapolineadal31agosto.aspx",
-      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/Tram16changeofservicefromAugust31.aspx",
-      "pubDate": "Fri, 28 Aug 2026 06:44:50 GMT",
-      "titleEn": "Tram 16: service changes",
-      "bodyEn": "There are road works for the construction of the new lane for trolleybuses in viale Umbria. Tram 16 will change service until the end of the year. From via Lamarmora, trams divert on viale Monte Nero. Then they run on piazza Cinque Giornate, corso XXIII Marzo, piazza Emilia, viale Umbria, piazzale Martini. They stop at the same stops as tram 12 until Molise terminus. From Molise they return to the stadium on the same route. Alight at the tram 16 stop of corso XXII Marzo/Cadore and take the bus B16 towards Monte Velino on via Cadore, at the same stop as bus 66. Take the bus B16 on via Varsavia "
-    },
-    {
       "id": "becdbecfca13",
       "severity": "warning",
       "titleIt": "Tram 12 e 14: deviazioni",
@@ -85,7 +67,7 @@
       "id": "29bf63cf4620",
       "severity": "warning",
       "titleIt": "Tram 7 e 31: cambiamenti al servizio",
-      "bodyIt": "Sono in programma lavori stradali in viale Fulvio Testi. I tram cambiano servizio da lunedì 16 a giovedì 19 novembre, dopo le 21:30 . Tram 7 I tram sono sospesi sull’intera linea. Linee alternative M5 tra Zara, Marche, Istria, Ca’ Granda e Bicocca. Tram 4 tra Testi/Dolcebuono e Lagosta. Bus 86 o 86/ (barrato) tra viale Ca’ Granda, Precotto e Quartiere Adriano. Bus 87 tra viale dell’Innovazione, Teatro Arcimboldi, via Chiese (Hangar Bicocca), Precotto e via Anassagora. Tram 31 Tra Bignami e Cinisello è sostituito dal bus B31. Tra Bicocca e Bignami, usate M5. BUS B31 TRA BIGNAMI E CINISELLO – MA",
+      "bodyIt": "Ci sono lavori stradali in viale Fulvio Testi. I tram cambiano servizio fino a giovedì 19 novembre, dopo le 21:30 . Tram 7 I tram sono sospesi sull’intera linea. Linee alternative M5 tra Zara, Marche, Istria, Ca’ Granda e Bicocca. Tram 4 tra Testi/Dolcebuono e Lagosta. Bus 86 o 86/ (barrato) tra viale Ca’ Granda, Precotto e Quartiere Adriano. Bus 87 tra viale dell’Innovazione, Teatro Arcimboldi, via Chiese (Hangar Bicocca), Precotto e via Anassagora. Tram 31 Tra Bignami e Cinisello è sostituito dal bus B31. Tra Bicocca e Bignami, usate M5. BUS B31 TRA BIGNAMI E CINISELLO – MAPPA Verso Cinisell",
       "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/bus731notram.aspx",
       "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/Trams7and31servicechanges.aspx",
       "pubDate": "Wed, 11 Nov 2026 17:03:25 GMT",
