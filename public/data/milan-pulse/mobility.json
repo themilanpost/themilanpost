@@ -1,19 +1,12 @@
 {
-  "updatedAt": "2026-11-18T15:13:23.534Z",
+  "updatedAt": "2026-11-20T14:58:32.934Z",
   "source": "ATM Info Traffico RSS (English alerts)",
   "sourceUrl": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico",
   "live": true,
   "filter": "Alerts with official English translation on atm.it",
   "disclaimer": "Priority service changes from ATM — not live vehicle tracking. Use the ATM app for real-time departures.",
-  "fingerprint": "1e51e0217539f779",
+  "fingerprint": "30d4f063bad33a43",
   "lines": [
-    {
-      "id": "T12",
-      "name": "Tram 12",
-      "status": "warning",
-      "note": "Tram 12 e 14: deviazioni",
-      "noteEn": "Trams 12 and 14: detours"
-    },
     {
       "id": "T31",
       "name": "Tram 31",
@@ -25,8 +18,8 @@
       "id": "T7",
       "name": "Tram 7",
       "status": "warning",
-      "note": "Tram 7 e 31: cambiamenti al servizio",
-      "noteEn": "Trams 7 and 31: service changes"
+      "note": "Tram 7: cambiamenti del servizio",
+      "noteEn": "Tram 7: service changes"
     }
   ],
   "alerts": [
@@ -53,26 +46,15 @@
       "bodyEn": "The Municipality of Milan and MM are continuing construction work for the North Metrotranvia. We will update this page with changes related to the next phases of the work. After midnight, tram 31 is suspended between piazzale Lagosta and Bicocca . Between Ca’ Granda and Marche, you can use tram 5 instead."
     },
     {
-      "id": "becdbecfca13",
+      "id": "ffbe7b86e72e",
       "severity": "warning",
-      "titleIt": "Tram 12 e 14: deviazioni",
-      "bodyIt": "Fino al 18 novembre (tranne sabato e domenica) , dalle 10 alle 16, ci sono lavori agli alberi in via Cenisio. I tram 12 e 14 cambiano percorso e fermate. Tram 12 Verso viale Molise, i tram deviano e saltano la fermata Cenisio M5. Da via Cenisio girano in via Messina e continuano in via Procaccini dove fermano prima di via Nono alla stessa fermata del tram 10. Riprendono il percorso di sempre dalla fermata piazzale Cimitero Monumentale/via Bramante. Verso Roserio il percorso non cambia. Tram 14 Nelle due direzioni, i tram deviano tra piazzale Cimitero Monumentale e viale Certosa/viale Serra. Sa",
-      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/Tram1214deviazNov.aspx",
-      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/Trams12and14detours.aspx",
-      "pubDate": "Thu, 05 Nov 2026 09:53:44 GMT",
-      "titleEn": "Trams 12 and 14: detours",
-      "bodyEn": "Tree maintenance is scheduled on via Cenisio. From Monday 9 to Wednesday 18 November, from 10 am to 4 pm (except for Saturdays and Sundays) , trams 12 and 14 will change service. Towards viale Molise , trams divert and skip the Cenisio M5 stop. From Via Cenisio, they will turn onto via Messina and continue along via Procaccini. They stop before via Nono at the same stop as tram 10. Trams resume their regular route from the piazzale Cimitero Monumentale/via Bramante stop. The route towards Roserio remains the same. In both directions , trams are diverted between piazzale Cimitero Monumentale an"
-    },
-    {
-      "id": "29bf63cf4620",
-      "severity": "warning",
-      "titleIt": "Tram 7 e 31: cambiamenti al servizio",
-      "bodyIt": "Ci sono lavori stradali in viale Fulvio Testi. I tram cambiano servizio fino a giovedì 19 novembre, dopo le 21:30 . Tram 7 I tram sono sospesi sull’intera linea. Linee alternative M5 tra Zara, Marche, Istria, Ca’ Granda e Bicocca. Tram 4 tra Testi/Dolcebuono e Lagosta. Bus 86 o 86/ (barrato) tra viale Ca’ Granda, Precotto e Quartiere Adriano. Bus 87 tra viale dell’Innovazione, Teatro Arcimboldi, via Chiese (Hangar Bicocca), Precotto e via Anassagora. Tram 31 Tra Bignami e Cinisello è sostituito dal bus B31. Tra Bicocca e Bignami, usate M5. BUS B31 TRA BIGNAMI E CINISELLO – MAPPA Verso Cinisell",
-      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/bus731notram.aspx",
-      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/Trams7and31servicechanges.aspx",
-      "pubDate": "Wed, 11 Nov 2026 17:03:25 GMT",
-      "titleEn": "Trams 7 and 31: service changes",
-      "bodyEn": "From Monday 16 to Thursday 19 November service changes are scheduled after 9.30 pm. This is due to road works on viale Fulvio Testi. Service is suspended along the entire line. Between Bignami and Cinisello, trams are replaced by bus B31. Between Bicocca and Bignami, use M5."
+      "titleIt": "Gara di corsa: domenica 22 novembre, diverse linee deviano",
+      "bodyIt": "Domenica 22 novembre, dalle 8 alle 12 circa, c’è la Half Marathon. Qui sotto trovate i cambiamenti al servizio. Tram 1 Nelle due direzioni , devia e salta le fermate tra Repubblica e piazza Firenze . Passa da Monte Santo, Monte Grappa, Rosales, Garibaldi, Monumentale e Cenisio. Tram 2 Fa servizio su due tratte: Negrelli- Colombo e Bausan-Baiamonti. Non passa tra Colombo/Cantore e Biamonti. Tram 3 Non passa tra piazza XXIV Maggio e Duomo. Fa servizio tra Gratosoglio e piazza XXIV Maggio . Tram 4 Fa servizio tra Lagosta e Baiamonti . Poi devia verso Monumentale. Da qui, riparte verso Lagosta sul",
+      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/Garadicorsadomenica22novembre,diverselineedeviano.aspx",
+      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/HalfMarathon26.aspx",
+      "pubDate": "Fri, 20 Nov 2026 10:13:01 GMT",
+      "titleEn": "Running race: service changes on Sunday, 22 November",
+      "bodyEn": "On Sunday, 22 November , the Half Marathon will take place from around 8:00 am to 12:00 pm . Here below you will find all the details on service changes. In both directions, it diverts and skips the stops between Repubblica and piazza Firenze via Monte Santo, Monte Grappa, Rosales, Garibaldi, Monumentale, and Cenisio. It operates on two separate routes: Negrelli-Colombo and Bausan-Baiamonti. No service between Colombo/Cantore and Baiamonti. No service between piazza XXIV Maggio and Duomo. It operates between Gratosoglio and piazza XXIV Maggio."
     }
   ]
 }
