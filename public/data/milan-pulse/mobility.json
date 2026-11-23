@@ -1,60 +1,11 @@
 {
-  "updatedAt": "2026-11-20T14:58:32.934Z",
+  "updatedAt": "2026-11-23T17:30:37.637Z",
   "source": "ATM Info Traffico RSS (English alerts)",
   "sourceUrl": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico",
   "live": true,
   "filter": "Alerts with official English translation on atm.it",
   "disclaimer": "Priority service changes from ATM — not live vehicle tracking. Use the ATM app for real-time departures.",
-  "fingerprint": "30d4f063bad33a43",
-  "lines": [
-    {
-      "id": "T31",
-      "name": "Tram 31",
-      "status": "warning",
-      "note": "Tram 31: sono sospese le corse notturne per Lagosta",
-      "noteEn": "Tram 31: night service to Lagosta is suspended"
-    },
-    {
-      "id": "T7",
-      "name": "Tram 7",
-      "status": "warning",
-      "note": "Tram 7: cambiamenti del servizio",
-      "noteEn": "Tram 7: service changes"
-    }
-  ],
-  "alerts": [
-    {
-      "id": "de5a310e1f83",
-      "severity": "warning",
-      "titleIt": "Tram 7: cambiamenti del servizio",
-      "bodyIt": "Continuano i lavori del Comune di Milano e di MM per la costruzione della metrotranvia nord. Aggiorneremo questa pagina con i cambiamenti legati alle prossime fasi dei lavori. Il servizio oggi, fino al termine dei cantieri al Quartiere Adriano e in viale Fulvio Testi I tram fanno servizio tra le fermate Tremelloni/Anassagora e Testi/Santa Marcellina. Sono sospese le fermate al Quartiere Adriano e tra Testi/Marcellina e il capolinea Lagosta: Tremelloni/Gassman Tremelloni/Tognazzi Adriano/Lussu Adriano/Vipiteno Testi Pianell Ca Granda M5 viale Testi /via Dolcebuono Istria M5 viale Zara/via Laura",
-      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/Tram7dal9marzoèsospesonelquartiereAdriano.aspx",
-      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/Tram7noserviceinQuartiereAdrianofromMarch9.aspx",
-      "pubDate": "Fri, 06 Mar 2026 12:14:23 GMT",
-      "titleEn": "Tram 7: service changes",
-      "bodyEn": "The works of the Municipality of Milan and MM continue for the construction of the northern tramway. We will update this page with the changes related to the next phases of the works. Trams will be running between the Tremelloni/Anassagora and Testi/Santa Marcellina (the stop located after via Smith). The service is suspended at the Quartiere Adriano and between Testi/Santa Marcellina and piazzale Lagosta terminus: • For the M1 Precotto station: take bus 86 or 86/. • For the M2 Crescenzago station: take bus 86, 86/, or bus 56."
-    },
-    {
-      "id": "69104ec87876",
-      "severity": "warning",
-      "titleIt": "Tram 31: sono sospese le corse notturne per Lagosta",
-      "bodyIt": "Continuano i lavori del Comune di Milano e di MM per la costruzione della metrotranvia nord. Aggiorneremo questa pagina con i cambiamenti legati alle prossime fasi dei lavori. Fino al termine dei lavori in viale Fulvio Testi Dopo la mezzanotte, i tram sono sospesi tra piazzale Lagosta e Bicocca . Tra Ca’ Granda e Marche considerate il tram 5. Da lunedì 16 fino a giovedì 19 novembre Dopo le 21:30 , i tram sono sostituiti dal bus B31 tra Bignami e Cinisello . Percorso e fermate a questa pagina .",
-      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/Tram31dal1°lugliosonosospeselecorsenotturneperLagosta.aspx",
-      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/Tram31startingfromJuly1st,nightservicetoLagostaissuspended.aspx",
-      "pubDate": "Thu, 25 Jun 2026 08:17:54 GMT",
-      "titleEn": "Tram 31: night service to Lagosta is suspended",
-      "bodyEn": "The Municipality of Milan and MM are continuing construction work for the North Metrotranvia. We will update this page with changes related to the next phases of the work. After midnight, tram 31 is suspended between piazzale Lagosta and Bicocca . Between Ca’ Granda and Marche, you can use tram 5 instead."
-    },
-    {
-      "id": "ffbe7b86e72e",
-      "severity": "warning",
-      "titleIt": "Gara di corsa: domenica 22 novembre, diverse linee deviano",
-      "bodyIt": "Domenica 22 novembre, dalle 8 alle 12 circa, c’è la Half Marathon. Qui sotto trovate i cambiamenti al servizio. Tram 1 Nelle due direzioni , devia e salta le fermate tra Repubblica e piazza Firenze . Passa da Monte Santo, Monte Grappa, Rosales, Garibaldi, Monumentale e Cenisio. Tram 2 Fa servizio su due tratte: Negrelli- Colombo e Bausan-Baiamonti. Non passa tra Colombo/Cantore e Biamonti. Tram 3 Non passa tra piazza XXIV Maggio e Duomo. Fa servizio tra Gratosoglio e piazza XXIV Maggio . Tram 4 Fa servizio tra Lagosta e Baiamonti . Poi devia verso Monumentale. Da qui, riparte verso Lagosta sul",
-      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/Garadicorsadomenica22novembre,diverselineedeviano.aspx",
-      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/HalfMarathon26.aspx",
-      "pubDate": "Fri, 20 Nov 2026 10:13:01 GMT",
-      "titleEn": "Running race: service changes on Sunday, 22 November",
-      "bodyEn": "On Sunday, 22 November , the Half Marathon will take place from around 8:00 am to 12:00 pm . Here below you will find all the details on service changes. In both directions, it diverts and skips the stops between Repubblica and piazza Firenze via Monte Santo, Monte Grappa, Rosales, Garibaldi, Monumentale, and Cenisio. It operates on two separate routes: Negrelli-Colombo and Bausan-Baiamonti. No service between Colombo/Cantore and Baiamonti. No service between piazza XXIV Maggio and Duomo. It operates between Gratosoglio and piazza XXIV Maggio."
-    }
-  ]
+  "fingerprint": "e3b0c44298fc1c14",
+  "lines": [],
+  "alerts": []
 }
