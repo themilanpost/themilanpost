@@ -1,21 +1,116 @@
 {
-  "updatedAt": "2026-11-25T16:52:15.610Z",
+  "updatedAt": "2026-11-27T16:15:56.737Z",
   "source": "ATM Info Traffico RSS (English alerts)",
   "sourceUrl": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico",
   "live": true,
   "filter": "Alerts with official English translation on atm.it",
   "disclaimer": "Priority service changes from ATM — not live vehicle tracking. Use the ATM app for real-time departures.",
-  "fingerprint": "a810b75bc1cb6148",
+  "fingerprint": "c2987f9b4834a96d",
   "lines": [
+    {
+      "id": "T16",
+      "name": "Tram 16",
+      "status": "warning",
+      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 65, 83, 86, 92, 166, 172 e NM3: cambiamenti del servizio",
+      "noteEn": "Urban Redevelopment: diversions and service changes"
+    },
+    {
+      "id": "T166",
+      "name": "Tram 166",
+      "status": "warning",
+      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 65, 83, 86, 92, 166, 172 e NM3: cambiamenti del servizio",
+      "noteEn": "Urban Redevelopment: diversions and service changes"
+    },
+    {
+      "id": "T172",
+      "name": "Tram 172",
+      "status": "warning",
+      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 65, 83, 86, 92, 166, 172 e NM3: cambiamenti del servizio",
+      "noteEn": "Urban Redevelopment: diversions and service changes"
+    },
+    {
+      "id": "T31",
+      "name": "Tram 31",
+      "status": "warning",
+      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 65, 83, 86, 92, 166, 172 e NM3: cambiamenti del servizio",
+      "noteEn": "Urban Redevelopment: diversions and service changes"
+    },
+    {
+      "id": "T4",
+      "name": "Tram 4",
+      "status": "warning",
+      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 65, 83, 86, 92, 166, 172 e NM3: cambiamenti del servizio",
+      "noteEn": "Urban Redevelopment: diversions and service changes"
+    },
+    {
+      "id": "T42",
+      "name": "Tram 42",
+      "status": "warning",
+      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 65, 83, 86, 92, 166, 172 e NM3: cambiamenti del servizio",
+      "noteEn": "Urban Redevelopment: diversions and service changes"
+    },
+    {
+      "id": "T51",
+      "name": "Tram 51",
+      "status": "warning",
+      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 65, 83, 86, 92, 166, 172 e NM3: cambiamenti del servizio",
+      "noteEn": "Urban Redevelopment: diversions and service changes"
+    },
+    {
+      "id": "T52",
+      "name": "Tram 52",
+      "status": "warning",
+      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 65, 83, 86, 92, 166, 172 e NM3: cambiamenti del servizio",
+      "noteEn": "Urban Redevelopment: diversions and service changes"
+    },
+    {
+      "id": "T65",
+      "name": "Tram 65",
+      "status": "warning",
+      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 65, 83, 86, 92, 166, 172 e NM3: cambiamenti del servizio",
+      "noteEn": "Urban Redevelopment: diversions and service changes"
+    },
     {
       "id": "T7",
       "name": "Tram 7",
       "status": "warning",
       "note": "Tram 7: cambiamenti del servizio",
       "noteEn": "Tram 7: service changes"
+    },
+    {
+      "id": "T83",
+      "name": "Tram 83",
+      "status": "warning",
+      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 65, 83, 86, 92, 166, 172 e NM3: cambiamenti del servizio",
+      "noteEn": "Urban Redevelopment: diversions and service changes"
+    },
+    {
+      "id": "T86",
+      "name": "Tram 86",
+      "status": "warning",
+      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 65, 83, 86, 92, 166, 172 e NM3: cambiamenti del servizio",
+      "noteEn": "Urban Redevelopment: diversions and service changes"
+    },
+    {
+      "id": "T92",
+      "name": "Tram 92",
+      "status": "warning",
+      "note": "Linee 4, 7, 16, 31, 42, 51, 52, 65, 83, 86, 92, 166, 172 e NM3: cambiamenti del servizio",
+      "noteEn": "Urban Redevelopment: diversions and service changes"
     }
   ],
   "alerts": [
+    {
+      "id": "0c8f2c633884",
+      "severity": "warning",
+      "titleIt": "Linee 4, 7, 16, 31, 42, 51, 52, 65, 83, 86, 92, 166, 172 e NM3: cambiamenti del servizio",
+      "bodyIt": "È in corso la riqualificazione di diverse zone della città. I lavori riguardano il rinnovo di strade, acquedotto, fognature, rete elettrica e binari dei tram. Continuano anche i lavori del Comune di Milano e MM per la costruzione della nuova metrotranvia a nord della città e della nuova corsia preferenziale dei filobus in viale Umbria e via Comelico. Linee 4, B4, 42, 51, 52, 83, 166 e 172 Tram 7 Tram 16 Tram 31 Bus 65 e NM3 Bus 86 Filobus 92",
+      "urlIt": "https://www.atm.it/it/ViaggiaConNoi/InfoTraffico/Pagine/Riqualificazioneurbanadeviazioniecambiamentidelservizio.aspx",
+      "urlEn": "https://www.atm.it/en/ViaggiaConNoi/InfoTraffico/Pages/UrbanRedevelopmentdiversionsandservicechanges.aspx",
+      "pubDate": "Fri, 20 Feb 2026 12:00:43 GMT",
+      "titleEn": "Urban Redevelopment: diversions and service changes",
+      "bodyEn": "The redevelopment works on via Correnti and via Ornato are underway. The project involves the renewal of roads, the water supply system, the sewers and the tram tracks. There are also construction works for the new metrotram North of the city and the new trolleybus lane on viale Umbria and via Comelico."
+    },
     {
       "id": "de5a310e1f83",
       "severity": "warning",
